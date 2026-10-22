@@ -17,7 +17,7 @@ const CURVE_CUMULATIVE = [3_360_000, 6_720_000, 26_040_000, 51_240_000, 70_560_0
 function EmissionDetail() {
     return (
         <div className="gp-stack">
-            <PageHeader title={t`GG 排放進度`} back="/" />
+            <PageHeader title={t`GG 排放進度`} back="/overview" />
 
             <div className="gp-grid gp-grid-2">
                 <Card>

@@ -14,7 +14,7 @@ import { allocation, protectionRows, reserveRows } from "./mock";
 function AllocationDetail() {
     return (
         <div className="gp-stack">
-            <PageHeader title={t`資金分配總覽`} back="/" />
+            <PageHeader title={t`資金分配總覽`} back="/overview" />
 
             <Card>
                 <div className="gp-donut-row">

@@ -17,7 +17,7 @@ export type NavItem = {
 };
 
 export const NAV: NavItem[] = [
-    { to: "/", icon: "home", label: () => t`數據總覽`, also: ["/overview"], disabled: true },
+    { to: "/overview", icon: "home", label: () => t`數據總覽`, disabled: true },
     { to: "/fundraise", icon: "coins", label: () => t`募資` },
     { to: "/power", icon: "power", label: () => t`本位倉算力`, disabled: true },
     { to: "/liquidity", icon: "liquidity", label: () => t`生態流動性`, disabled: true },

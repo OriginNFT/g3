@@ -21,13 +21,14 @@ import "./interface/IGold3Fundraise.sol";
  *  Three limits gate subscribe(): `target` (hard cap on totalRaised),
  *  `minContribution` (floor for one subscription) and `maxPerAddress`
  *  (lifetime cap per subscriber). 0 turns a limit off. `closed` stops new
- *  subscriptions outright. Raised USDT stays here until DEFAULT_ADMIN_ROLE
+ *  subscriptions outright; `startTime` holds them back until that unix time
+ *  (0 = no start time). Raised USDT stays here until DEFAULT_ADMIN_ROLE
  *  withdraws it.
  */
 contract Gold3Fundraise is AccessControlEnumerableUpgradeable, ReentrancyGuardUpgradeable, IGold3Fundraise {
     using SafeERC20 for IERC20;
 
-    uint256 public constant IMPL_REV = 1;
+    uint256 public constant IMPL_REV = 2;
 
     // ============ Storage ============
 
@@ -48,7 +49,10 @@ contract Gold3Fundraise is AccessControlEnumerableUpgradeable, ReentrancyGuardUp
     uint256 public override minContribution; // floor for a single subscribe()
     uint256 public override maxPerAddress; // lifetime cap on totalUsdtOf[subscriber]
 
-    uint256[50] private __gap;
+    // IMPL_REV 2: appended, __gap 50 -> 49.
+    uint256 public override startTime; // subscribe() reverts before this unix time; 0 = no start time
+
+    uint256[49] private __gap;
 
     // ============ Initializable ============
 
@@ -68,6 +72,7 @@ contract Gold3Fundraise is AccessControlEnumerableUpgradeable, ReentrancyGuardUp
     ///      fee-on-transfer token cannot inflate the ledger.
     function subscribe(uint256 amount) external override nonReentrant {
         require(!closed, "Fundraise: closed");
+        require(block.timestamp >= startTime, "Fundraise: not started");
         require(amount > 0, "Fundraise: zero amount");
 
         IERC20 token = IERC20(usdt);
@@ -195,6 +200,11 @@ contract Gold3Fundraise is AccessControlEnumerableUpgradeable, ReentrancyGuardUp
     function setClosed(bool closed_) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         closed = closed_;
         emit ClosedUpdated(closed_);
+    }
+
+    function setStartTime(uint256 startTime_) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+        startTime = startTime_;
+        emit StartTimeUpdated(startTime_);
     }
 
     /// @notice Withdraw raised USDT held by this contract.

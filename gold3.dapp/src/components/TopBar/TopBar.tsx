@@ -20,7 +20,7 @@ function TopBar({ onMenu }: Props) {
                 <Icon name="menu" size={22} />
             </button>
 
-            {pathname === "/" && (
+            {pathname === "/overview" && (
                 <div className="gp-tagline">
                     <span>{t`以黃金為錨 · 構建可持續的價值生態`}</span>
                     <span className="gp-tagline-en">GOLDEN PACT · GG GOLD STANDARD</span>

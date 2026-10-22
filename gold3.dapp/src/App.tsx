@@ -37,7 +37,8 @@ function App() {
                 <TopBar onMenu={() => setDrawerOpen(true)} />
                 <main className="gp-page">
                     <Routes>
-                        <Route path="/" element={<Overview />} />
+                        <Route path="/" element={<Navigate to="/fundraise" replace />} />
+                        <Route path="/overview" element={<Overview />} />
                         <Route path="/overview/emission" element={<EmissionDetail />} />
                         <Route path="/overview/allocation" element={<AllocationDetail />} />
                         <Route path="/overview/reserve" element={<ReserveDetail />} />
@@ -54,7 +55,7 @@ function App() {
                         <Route path="/nft" element={<Nft />} />
                         <Route path="/assets" element={<Assets />} />
                         <Route path="/docs" element={<Docs />} />
-                        <Route path="*" element={<Navigate to="/" replace />} />
+                        <Route path="*" element={<Navigate to="/fundraise" replace />} />
                     </Routes>
                 </main>
             </div>

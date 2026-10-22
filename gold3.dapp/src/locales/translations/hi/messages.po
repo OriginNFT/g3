@@ -1,0 +1,1257 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-10-22 10:22+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: hi\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:76
+msgid "{CURRENT} 專屬權益"
+msgstr "{CURRENT} विशेष अधिकार"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:54
+msgid "{CURRENT} 等級要求"
+msgstr "{CURRENT} स्तर की आवश्यकताएँ"
+
+#: src/views/Overview/EmissionDetail.tsx:80
+msgid "{year}年"
+msgstr "वर्ष {year}"
+
+#: src/views/Fundraise/FundraiseRules.tsx:79
+msgid "<0>2,500 USDT</0> 金本位算力權益"
+msgstr "<0>2,500 USDT</0> का गोल्ड स्टैंडर्ड पावर अधिकार"
+
+#: src/views/Fundraise/FundraiseRules.tsx:84
+msgid "<0>200 USDT</0> 等值 NFT 生產權益"
+msgstr "<0>200 USDT</0> मूल्य का NFT उत्पादन अधिकार"
+
+#: src/views/Liquidity/PoolCard.tsx:47
+#: src/views/Overview/Overview.tsx:77
+msgid "24h 交易量"
+msgstr "24h ट्रेडिंग वॉल्यूम"
+
+#: src/views/Liquidity/Liquidity.tsx:44
+#: src/views/Liquidity/mock.ts:67
+#: src/views/Liquidity/mock.ts:94
+#: src/views/Liquidity/PoolDetail.tsx:50
+#: src/views/Liquidity/PoolTable.tsx:17
+msgid "24h 交易量 (USD)"
+msgstr "24h ट्रेडिंग वॉल्यूम (USD)"
+
+#: src/views/Liquidity/mock.ts:69
+#: src/views/Liquidity/mock.ts:96
+msgid "30日交易量 (USD)"
+msgstr "30 दिन का ट्रेडिंग वॉल्यूम (USD)"
+
+#: src/views/Liquidity/mock.ts:68
+#: src/views/Liquidity/mock.ts:95
+msgid "7日交易量 (USD)"
+msgstr "7 दिन का ट्रेडिंग वॉल्यूम (USD)"
+
+#: src/views/Liquidity/mock.ts:26
+#: src/views/Liquidity/mock.ts:80
+#: src/views/Overview/mock.ts:53
+msgid "AUG / GG 池"
+msgstr "AUG / GG पूल"
+
+#: src/views/Community/CommunityStatsPanel.tsx:19
+msgid "DAI 參與算力"
+msgstr "DAI भागीदारी पावर"
+
+#: src/views/Docs/Docs.tsx:59
+msgid "GG 三幣模型與核心機制概覽。"
+msgstr "GG तीन-टोकन मॉडल और मुख्य तंत्र का अवलोकन।"
+
+#: src/views/Overview/Overview.tsx:65
+msgid "GG 實時價格"
+msgstr "GG रियल-टाइम मूल्य"
+
+#: src/views/Fundraise/Fundraise.tsx:336
+msgid "GG 市場價格"
+msgstr "GG बाज़ार मूल्य"
+
+#: src/views/Overview/EmissionDetail.tsx:20
+msgid "GG 排放進度"
+msgstr "GG एमिशन प्रगति"
+
+#: src/views/Overview/Overview.tsx:95
+msgid "GG 排放進度（10年計劃）"
+msgstr "GG एमिशन प्रगति (10 वर्ष की योजना)"
+
+#: src/views/Overview/AllocationDetail.tsx:23
+#: src/views/Overview/Overview.tsx:117
+msgid "GG 總量"
+msgstr "GG कुल आपूर्ति"
+
+#: src/views/Overview/Overview.tsx:56
+msgid "GG 聖甲蟲"
+msgstr "GG स्कारब"
+
+#: src/views/Community/CommunityStatsPanel.tsx:21
+msgid "GG 貢獻算力"
+msgstr "GG योगदान पावर"
+
+#: src/views/Docs/Docs.tsx:37
+msgid "GG 黃金協議白皮書"
+msgstr "GG गोल्ड प्रोटोकॉल व्हाइटपेपर"
+
+#: src/views/Overview/Overview.tsx:43
+msgid "GG 黃金本位倉"
+msgstr "GG गोल्ड स्टैंडर्ड वॉल्ट"
+
+#: src/views/Liquidity/mock.ts:12
+#: src/views/Liquidity/mock.ts:53
+#: src/views/Overview/mock.ts:39
+msgid "GOT2 / GG 池"
+msgstr "GOT2 / GG पूल"
+
+#: src/views/Community/CommunityStatsPanel.tsx:20
+msgid "GOT2 貢獻算力"
+msgstr "GOT2 योगदान पावर"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:76
+msgid "LP 代幣數量"
+msgstr "LP टोकन की मात्रा"
+
+#: src/views/Overview/Overview.tsx:36
+msgid "NFT 已發放數量"
+msgstr "जारी किए गए NFT"
+
+#: src/components/Sidebar/nav.ts:25
+#: src/views/Nft/Nft.tsx:33
+msgid "NFT 權益"
+msgstr "NFT अधिकार"
+
+#: src/views/Nft/Nft.tsx:135
+msgid "NFT 權益額度通過銷毀 GG（3 倍）或 GOT2（2 倍）獲得，具體規則請查看官方文檔。"
+msgstr "NFT अधिकार कोटा GG (3 गुना) या GOT2 (2 गुना) बर्न करके प्राप्त होता है। विस्तृत नियमों के लिए कृपया आधिकारिक दस्तावेज़ देखें।"
+
+#: src/views/Fundraise/FundraiseRules.tsx:66
+msgid "NFT 生產權益：參與金額的 <0>20%</0>"
+msgstr "NFT उत्पादन अधिकार: भागीदारी राशि का <0>20%</0>"
+
+#: src/views/Assets/Assets.tsx:63
+msgid "NFT 資產"
+msgstr "NFT एसेट"
+
+#: src/views/Assets/Assets.tsx:137
+msgid "NFT 資產（3）"
+msgstr "NFT एसेट (3)"
+
+#: src/views/Assets/Assets.tsx:72
+msgid "NFT 資產（USD）"
+msgstr "NFT एसेट (USD)"
+
+#: src/views/Fundraise/Fundraise.tsx:335
+msgid "USDT 計價基準"
+msgstr "USDT मूल्य आधार"
+
+#: src/views/Fundraise/Fundraise.tsx:243
+msgid "USDT 餘額不足"
+msgstr "USDT बैलेंस अपर्याप्त है"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:70
+msgid "三區總算力要求"
+msgstr "तीन ज़ोन की कुल पावर आवश्यकता"
+
+#: src/views/Fundraise/Fundraise.tsx:305
+msgid "上限 {maxText}"
+msgstr "अधिकतम {maxText}"
+
+#: src/views/Docs/Docs.tsx:71
+msgid "了解協議機制 · 掌握最新動態"
+msgstr "प्रोटोकॉल तंत्र समझें · ताज़ा अपडेट पाएँ"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:28
+msgid "了解等級要求 · 查看專屬權益"
+msgstr "स्तर की आवश्यकताएँ जानें · विशेष अधिकार देखें"
+
+#: src/views/Assets/Assets.tsx:124
+msgid "交易"
+msgstr "ट्रेड करें"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:46
+#: src/views/Liquidity/PoolTable.tsx:15
+msgid "交易對"
+msgstr "ट्रेडिंग पेयर"
+
+#: src/views/Fundraise/Fundraise.tsx:240
+msgid "交易確認中…"
+msgstr "लेनदेन की पुष्टि हो रही है…"
+
+#: src/views/Liquidity/PoolDetail.tsx:86
+msgid "交易量趨勢（USD）"
+msgstr "ट्रेडिंग वॉल्यूम ट्रेंड (USD)"
+
+#: src/views/Assets/Assets.tsx:92
+msgid "代幣"
+msgstr "टोकन"
+
+#: src/views/Assets/Assets.tsx:62
+#: src/views/Assets/Assets.tsx:87
+msgid "代幣資產"
+msgstr "टोकन एसेट"
+
+#: src/views/Assets/Assets.tsx:71
+msgid "代幣資產（USD）"
+msgstr "टोकन एसेट (USD)"
+
+#: src/views/Fundraise/Fundraise.tsx:254
+msgid "以 USDT 認購，每筆認購都記錄在鏈上"
+msgstr "USDT से सब्सक्राइब करें, हर सब्सक्रिप्शन ऑन-चेन दर्ज होता है"
+
+#: src/views/Overview/Overview.tsx:44
+msgid "以黃金為錨 · 以算力為驅動 · 構建可持續的價值生態"
+msgstr "सोने से जुड़ा · पावर से संचालित · एक टिकाऊ मूल्य इकोसिस्टम का निर्माण"
+
+#: src/components/TopBar/TopBar.tsx:25
+msgid "以黃金為錨 · 構建可持續的價值生態"
+msgstr "सोने से जुड़ा · एक टिकाऊ मूल्य इकोसिस्टम का निर्माण"
+
+#: src/views/Assets/Assets.tsx:97
+msgid "估值（USD）"
+msgstr "मूल्यांकन (USD)"
+
+#: src/views/Fundraise/Fundraise.tsx:244
+msgid "低於最低認購金額"
+msgstr "न्यूनतम सब्सक्रिप्शन राशि से कम"
+
+#: src/views/Overview/EcoPoolDetail.tsx:60
+msgid "佔比"
+msgstr "हिस्सा"
+
+#: src/views/Nft/Nft.tsx:124
+msgid "使用權益"
+msgstr "अधिकार उपयोग करें"
+
+#: src/views/Overview/mock.ts:25
+#: src/views/Overview/mock.ts:31
+msgid "使用比例"
+msgstr "उपयोग अनुपात"
+
+#: src/views/Nft/Nft.tsx:117
+msgid "使用說明"
+msgstr "उपयोग निर्देश"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:61
+msgid "個人本位倉算力"
+msgstr "व्यक्तिगत स्टैंडर्ड वॉल्ट पावर"
+
+#: src/views/Overview/AllocationDetail.tsx:43
+#: src/views/Overview/mock.ts:19
+#: src/views/Overview/Overview.tsx:143
+msgid "價格保護合約池"
+msgstr "मूल्य सुरक्षा पूल"
+
+#: src/views/Assets/Assets.tsx:118
+msgid "充幣"
+msgstr "जमा"
+
+#: src/views/Docs/Docs.tsx:101
+msgid "全部文檔"
+msgstr "सभी दस्तावेज़"
+
+#: src/views/Nft/Nft.tsx:59
+msgid "全部狀態"
+msgstr "सभी स्थितियाँ"
+
+#: src/views/Assets/Assets.tsx:61
+msgid "全部資產"
+msgstr "सभी एसेट"
+
+#: src/views/Docs/Docs.tsx:57
+msgid "公告"
+msgstr "घोषणाएँ"
+
+#: src/views/Liquidity/Liquidity.tsx:19
+msgid "共享生態增長"
+msgstr "इकोसिस्टम की वृद्धि साझा करें"
+
+#: src/views/Liquidity/PoolDetail.tsx:59
+msgid "其他"
+msgstr "अन्य"
+
+#: src/views/Fundraise/Fundraise.tsx:304
+msgid "最低 {minText}"
+msgstr "न्यूनतम {minText}"
+
+#: src/views/Fundraise/Fundraise.tsx:337
+msgid "最低認購金額"
+msgstr "न्यूनतम सब्सक्रिप्शन राशि"
+
+#: src/views/Docs/Docs.tsx:31
+msgid "最新公告"
+msgstr "नवीनतम घोषणाएँ"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "分"
+msgstr "मिनट"
+
+#: src/views/Assets/Assets.tsx:49
+msgid "刷新"
+msgstr "रीफ़्रेश"
+
+#: src/views/Nft/Nft.tsx:138
+msgid "前往查看"
+msgstr "देखें"
+
+#: src/views/Fundraise/Fundraise.tsx:319
+msgid "剩餘可認購額度"
+msgstr "शेष सब्सक्रिप्शन सीमा"
+
+#: src/views/Nft/Nft.tsx:42
+msgid "剩餘額度"
+msgstr "शेष कोटा"
+
+#: src/views/Fundraise/FundraiseRules.tsx:34
+msgid "創世募資"
+msgstr "जेनेसिस फंडरेज़"
+
+#: src/views/Docs/Docs.tsx:89
+msgid "加入 Telegram"
+msgstr "Telegram से जुड़ें"
+
+#: src/views/Fundraise/FundraiseRules.tsx:55
+msgid "募滿即止"
+msgstr "बिक जाने तक"
+
+#: src/components/Sidebar/nav.ts:21
+#: src/views/Fundraise/Fundraise.tsx:254
+msgid "募資"
+msgstr "फंडरेज़"
+
+#: src/views/Fundraise/Fundraise.tsx:66
+msgid "募資倒數"
+msgstr "फंडरेज़ काउंटडाउन"
+
+#: src/views/Fundraise/Fundraise.tsx:261
+msgid "募資合約尚未部署到此網路。"
+msgstr "फंडरेज़ कॉन्ट्रैक्ट अभी इस नेटवर्क पर डिप्लॉय नहीं हुआ है।"
+
+#: src/views/Fundraise/Fundraise.tsx:237
+msgid "募資已關閉"
+msgstr "फंडरेज़ बंद है"
+
+#: src/views/Fundraise/FundraiseRules.tsx:50
+msgid "募資時間"
+msgstr "फंडरेज़ अवधि"
+
+#: src/views/Fundraise/FundraiseRules.tsx:35
+#~ msgid "募資總量：<0>{DASH} USDT</0>"
+#~ msgstr "कुल फंडरेज़: <0>{DASH} USDT</0>"
+
+#: src/views/Fundraise/FundraiseRules.tsx:39
+msgid "募資總量：<0>{targetText}</0>"
+msgstr "कुल फंडरेज़: <0>{targetText}</0>"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:50
+msgid "升級至 P4 還需 800,000 DAI"
+msgstr "P4 तक अपग्रेड के लिए 800,000 DAI और चाहिए"
+
+#: src/views/Overview/AllocationDetail.tsx:30
+#: src/views/Overview/mock.ts:18
+#: src/views/Overview/Overview.tsx:126
+#: src/views/Overview/ReserveDetail.tsx:25
+#: src/views/Overview/ReserveDetail.tsx:28
+msgid "協議儲備池"
+msgstr "प्रोटोकॉल रिज़र्व पूल"
+
+#: src/views/Overview/ReserveDetail.tsx:23
+msgid "協議儲備池詳情"
+msgstr "प्रोटोकॉल रिज़र्व पूल विवरण"
+
+#: src/views/Fundraise/Fundraise.tsx:268
+msgid "協議共建進度"
+msgstr "प्रोटोकॉल सह-निर्माण प्रगति"
+
+#: src/views/Docs/Docs.tsx:28
+msgid "協議文檔"
+msgstr "प्रोटोकॉल दस्तावेज़"
+
+#: src/views/Docs/Docs.tsx:43
+msgid "協議規則說明"
+msgstr "प्रोटोकॉल नियम"
+
+#: src/views/Power/Power.tsx:28
+msgid "即將開放"
+msgstr "जल्द आ रहा है"
+
+#: src/views/Overview/EcoPoolDetail.tsx:73
+msgid "去兌換"
+msgstr "स्वैप करें"
+
+#: src/views/Overview/EcoPoolDetail.tsx:70
+msgid "去質押"
+msgstr "स्टेक करें"
+
+#: src/views/Assets/Assets.tsx:96
+msgid "參考價格（USD）"
+msgstr "संदर्भ मूल्य (USD)"
+
+#: src/views/Fundraise/FundraiseRules.tsx:67
+#~ msgid "參與 <0>{DASH} USDT</0>，獲得：<1>{DASH}</1>"
+#~ msgstr "<0>{DASH} USDT</0> से भाग लें, प्राप्त करें: <1>{DASH}</1>"
+
+#: src/views/Fundraise/FundraiseRules.tsx:74
+msgid "參與 <0>1,000 USDT</0>，即可獲得："
+msgstr "<0>1,000 USDT</0> से भाग लें और प्राप्त करें:"
+
+#: src/views/Docs/Docs.tsx:61
+msgid "參與前需了解的風險說明與注意事項。"
+msgstr "भाग लेने से पहले जानने योग्य जोखिम और सावधानियाँ।"
+
+#: src/views/Liquidity/Liquidity.tsx:49
+#: src/views/Liquidity/mock.ts:71
+#: src/views/Liquidity/mock.ts:98
+msgid "參與地址數"
+msgstr "भाग लेने वाले पते"
+
+#: src/views/Fundraise/FundraiseRules.tsx:59
+msgid "參與權益"
+msgstr "भागीदारी अधिकार"
+
+#: src/views/Docs/Docs.tsx:90
+msgid "參與社區交流"
+msgstr "समुदाय की चर्चा में शामिल हों"
+
+#: src/components/NftCard/NftCard.tsx:18
+#: src/views/Assets/Assets.tsx:94
+#: src/views/Nft/Nft.tsx:60
+msgid "可用"
+msgstr "उपलब्ध"
+
+#: src/views/Nft/Nft.tsx:38
+msgid "可用 2 | 已使用 1"
+msgstr "उपलब्ध 2 | उपयोग किए गए 1"
+
+#: src/views/Fundraise/Fundraise.tsx:285
+msgid "可用餘額：{balanceText} USDT"
+msgstr "उपलब्ध बैलेंस: {balanceText} USDT"
+
+#: src/views/Nft/Nft.tsx:104
+msgid "合約地址"
+msgstr "कॉन्ट्रैक्ट पता"
+
+#: src/views/Fundraise/FundraiseRules.tsx:40
+#~ msgid "單個地址最大限額：<0>{DASH} USDT</0>"
+#~ msgstr "प्रति पता अधिकतम सीमा: <0>{DASH} USDT</0>"
+
+#: src/views/Fundraise/FundraiseRules.tsx:44
+msgid "單個地址最大限額：<0>{maxText}</0>"
+msgstr "प्रति पता अधिकतम सीमा: <0>{maxText}</0>"
+
+#: src/views/Fundraise/Fundraise.tsx:338
+msgid "單地址認購上限"
+msgstr "प्रति पता सब्सक्रिप्शन सीमा"
+
+#: src/views/Community/CommunityInvite.tsx:81
+msgid "地址不合法"
+msgstr "अमान्य पता"
+
+#: src/views/Liquidity/Liquidity.tsx:16
+msgid "增強流動性深度"
+msgstr "लिक्विडिटी की गहराई बढ़ाएँ"
+
+#: src/views/Liquidity/mock.ts:54
+msgid "增強流動性深度 · 穩定價格運行"
+msgstr "लिक्विडिटी की गहराई बढ़ाएँ · मूल्य स्थिर रखें"
+
+#: src/views/Community/CommunityStatsPanel.tsx:33
+msgid "多維度數據統計 · 追蹤社區貢獻"
+msgstr "बहुआयामी आँकड़े · समुदाय के योगदान को ट्रैक करें"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "天"
+msgstr "दिन"
+
+#: src/views/Docs/Docs.tsx:38
+msgid "完整了解 GG 黃金協議的願景、機制與經濟模型。"
+msgstr "GG गोल्ड प्रोटोकॉल के विज़न, तंत्र और आर्थिक मॉडल को पूरी तरह समझें।"
+
+#: src/views/Docs/Docs.tsx:55
+msgid "官方公告"
+msgstr "आधिकारिक घोषणाएँ"
+
+#: src/components/Sidebar/nav.ts:27
+#: src/views/Docs/Docs.tsx:70
+msgid "官方文檔"
+msgstr "आधिकारिक दस्तावेज़"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:16
+msgid "專屬 NFT 空投"
+msgstr "विशेष NFT एयरड्रॉप"
+
+#: src/views/Fundraise/Fundraise.tsx:233
+#: src/views/Fundraise/Fundraise.tsx:260
+msgid "尚未上線"
+msgstr "अभी लाइव नहीं"
+
+#: src/views/Fundraise/Fundraise.tsx:238
+msgid "尚未開始"
+msgstr "अभी शुरू नहीं हुआ"
+
+#: src/components/NftCard/NftCard.tsx:18
+#: src/views/Nft/Nft.tsx:61
+#: src/views/Overview/mock.ts:23
+#: src/views/Overview/mock.ts:30
+msgid "已使用"
+msgstr "उपयोग किया गया"
+
+#: src/views/Nft/Nft.tsx:41
+msgid "已使用額度"
+msgstr "उपयोग किया गया कोटा"
+
+#: src/views/Community/CommunityInvite.tsx:79
+msgid "已綁定推薦人"
+msgstr "रेफ़रर बाइंड हो चुका है"
+
+#: src/views/Community/CommunityInvite.tsx:145
+msgid "已複製"
+msgstr "कॉपी हो गया"
+
+#: src/views/Fundraise/Fundraise.tsx:346
+msgid "已認購"
+msgstr "सब्सक्राइब किया गया"
+
+#: src/views/Overview/EmissionDetail.tsx:27
+#: src/views/Overview/EmissionDetail.tsx:33
+#: src/views/Overview/EmissionDetail.tsx:43
+#: src/views/Overview/Overview.tsx:99
+#: src/views/Overview/Overview.tsx:105
+msgid "已釋放"
+msgstr "रिलीज़ हो चुका"
+
+#: src/views/Fundraise/Fundraise.tsx:179
+msgid "已關閉"
+msgstr "बंद"
+
+#: src/views/Docs/Docs.tsx:30
+msgid "常見問題"
+msgstr "सामान्य प्रश्न"
+
+#: src/views/Docs/Docs.tsx:49
+msgid "常見問題（FAQ）"
+msgstr "सामान्य प्रश्न (FAQ)"
+
+#: src/views/Liquidity/PoolTable.tsx:18
+msgid "年化收益 (參考)"
+msgstr "वार्षिक रिटर्न (अनुमानित)"
+
+#: src/views/Liquidity/mock.ts:66
+#: src/views/Liquidity/mock.ts:93
+#: src/views/Liquidity/PoolCard.tsx:43
+#: src/views/Overview/EcoPoolDetail.tsx:41
+#: src/views/Overview/Overview.tsx:168
+msgid "年化收益（參考）"
+msgstr "वार्षिक रिटर्न (अनुमानित)"
+
+#: src/views/Overview/EmissionDetail.tsx:28
+#: src/views/Overview/EmissionDetail.tsx:51
+#: src/views/Overview/mock.ts:24
+#: src/views/Overview/Overview.tsx:100
+msgid "待釋放"
+msgstr "रिलीज़ होना बाकी"
+
+#: src/views/Assets/Assets.tsx:76
+msgid "待領取收益（USD）"
+msgstr "क्लेम होने वाली कमाई (USD)"
+
+#: src/views/Nft/Nft.tsx:50
+msgid "我的 NFT"
+msgstr "मेरे NFT"
+
+#: src/views/Nft/Nft.tsx:33
+msgid "我的 NFT · 查看權益與使用記錄"
+msgstr "मेरे NFT · अधिकार और उपयोग रिकॉर्ड देखें"
+
+#: src/views/Nft/Nft.tsx:36
+msgid "我的 NFT 數量"
+msgstr "मेरे NFT की संख्या"
+
+#: src/views/Nft/Nft.tsx:72
+msgid "我的 NFT（{0}）"
+msgstr "मेरे NFT ({0})"
+
+#: src/components/Sidebar/nav.ts:24
+msgid "我的社區"
+msgstr "मेरा समुदाय"
+
+#: src/views/Fundraise/Fundraise.tsx:343
+msgid "我的認購"
+msgstr "मेरे सब्सक्रिप्शन"
+
+#: src/components/Sidebar/nav.ts:26
+#: src/views/Assets/Assets.tsx:35
+msgid "我的資產"
+msgstr "मेरे एसेट"
+
+#: src/views/Fundraise/Fundraise.tsx:246
+msgid "授權 USDT"
+msgstr "USDT अप्रूव करें"
+
+#: src/views/Overview/EmissionDetail.tsx:78
+msgid "排放曲線圖（10年）"
+msgstr "एमिशन कर्व (10 वर्ष)"
+
+#: src/views/Overview/EmissionDetail.tsx:62
+msgid "排放階段明細"
+msgstr "एमिशन चरणों का विवरण"
+
+#: src/views/Community/CommunityInvite.tsx:123
+msgid "推薦人地址 0x…"
+msgstr "रेफ़रर का पता 0x…"
+
+#: src/views/Community/CommunityInvite.tsx:116
+msgid "推薦關係"
+msgstr "रेफ़रल संबंध"
+
+#: src/views/Liquidity/Liquidity.tsx:18
+msgid "提升資金效率"
+msgstr "पूँजी दक्षता बढ़ाएँ"
+
+#: src/views/Liquidity/mock.ts:81
+msgid "提升資金效率 · 共享生態增長"
+msgstr "पूँजी दक्षता बढ़ाएँ · इकोसिस्टम की वृद्धि साझा करें"
+
+#: src/views/Assets/Assets.tsx:121
+msgid "提幣"
+msgstr "निकासी"
+
+#: src/views/Assets/Assets.tsx:98
+#: src/views/Liquidity/PoolTable.tsx:20
+msgid "操作"
+msgstr "कार्रवाई"
+
+#: src/views/Docs/Docs.tsx:60
+msgid "收益來源、分配邏輯與計算方式。"
+msgstr "कमाई के स्रोत, वितरण तर्क और गणना की विधि।"
+
+#: src/views/Docs/Docs.tsx:60
+msgid "收益機制說明"
+msgstr "कमाई तंत्र"
+
+#: src/views/Assets/Assets.tsx:64
+#: src/views/Assets/Assets.tsx:147
+msgid "收益資產"
+msgstr "कमाई एसेट"
+
+#: src/views/Assets/Assets.tsx:73
+msgid "收益資產（USD）"
+msgstr "कमाई एसेट (USD)"
+
+#: src/components/Sidebar/nav.ts:20
+msgid "數據總覽"
+msgstr "डेटा अवलोकन"
+
+#: src/views/Assets/Assets.tsx:93
+msgid "數量"
+msgstr "मात्रा"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "時"
+msgstr "घंटे"
+
+#: src/views/Fundraise/Fundraise.tsx:63
+msgid "時間未公布"
+msgstr "समय अभी घोषित नहीं"
+
+#: src/views/Assets/Assets.tsx:148
+#: src/views/Nft/Nft.tsx:129
+msgid "暫無記錄"
+msgstr "अभी कोई रिकॉर्ड नहीं"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:19
+msgid "更多權益"
+msgstr "और अधिकार"
+
+#: src/views/Fundraise/Fundraise.tsx:353
+msgid "有效算力"
+msgstr "प्रभावी पावर"
+
+#: src/views/Fundraise/Fundraise.tsx:180
+msgid "未開始"
+msgstr "शुरू नहीं हुआ"
+
+#: src/components/Sidebar/nav.ts:22
+#: src/views/Power/Power.tsx:12
+msgid "本位倉算力"
+msgstr "स्टैंडर्ड वॉल्ट पावर"
+
+#: src/views/Overview/Overview.tsx:33
+msgid "本位倉總算力（DAI）"
+msgstr "स्टैंडर्ड वॉल्ट कुल पावर (DAI)"
+
+#: src/views/Liquidity/PoolDetail.tsx:58
+msgid "本池"
+msgstr "यह पूल"
+
+#: src/views/Assets/Assets.tsx:36
+msgid "查看帳戶資產與收益情況"
+msgstr "खाते के एसेट और कमाई देखें"
+
+#: src/views/Docs/Docs.tsx:131
+msgid "查看文檔"
+msgstr "दस्तावेज़ देखें"
+
+#: src/views/Assets/Assets.tsx:137
+msgid "查看更多"
+msgstr "और देखें"
+
+#: src/views/Liquidity/PoolList.tsx:12
+msgid "查看與管理所有生態流動性池"
+msgstr "सभी इकोसिस्टम लिक्विडिटी पूल देखें और प्रबंधित करें"
+
+#: src/views/Overview/AllocationDetail.tsx:38
+#: src/views/Overview/AllocationDetail.tsx:51
+#: src/views/Overview/Overview.tsx:95
+#: src/views/Overview/Overview.tsx:113
+#: src/views/Overview/Overview.tsx:159
+msgid "查看詳情"
+msgstr "विवरण देखें"
+
+#: src/views/Docs/Docs.tsx:56
+msgid "查看項目最新動態、重要通知與執行進展。"
+msgstr "प्रोजेक्ट के ताज़ा अपडेट, महत्वपूर्ण सूचनाएँ और प्रगति देखें।"
+
+#: src/views/Liquidity/Liquidity.tsx:27
+msgid "構建深度流動性 · 穩定市場運行 · 共享生態增長"
+msgstr "गहरी लिक्विडिटी बनाएँ · बाज़ार स्थिर रखें · इकोसिस्टम की वृद्धि साझा करें"
+
+#: src/views/Nft/Nft.tsx:51
+msgid "權益使用記錄"
+msgstr "अधिकार उपयोग रिकॉर्ड"
+
+#: src/components/NftCard/NftCard.tsx:50
+#: src/views/Nft/Nft.tsx:100
+msgid "權益額度"
+msgstr "अधिकार कोटा"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:71
+msgid "每區 500,000 DAI"
+msgstr "प्रति ज़ोन 500,000 DAI"
+
+#: src/views/Fundraise/Fundraise.tsx:323
+msgid "每筆認購都會記錄在鏈上"
+msgstr "हर सब्सक्रिप्शन ऑन-चेन दर्ज होता है"
+
+#: src/views/Liquidity/PoolTable.tsx:16
+msgid "池子價值 (USD)"
+msgstr "पूल मूल्य (USD)"
+
+#: src/views/Liquidity/mock.ts:70
+#: src/views/Liquidity/mock.ts:97
+msgid "池子創建時間"
+msgstr "पूल बनने का समय"
+
+#: src/views/Liquidity/PoolDetail.tsx:73
+msgid "池子總價值"
+msgstr "पूल का कुल मूल्य"
+
+#: src/views/Liquidity/PoolDetail.tsx:49
+msgid "池子總價值 (USD)"
+msgstr "पूल का कुल मूल्य (USD)"
+
+#: src/views/Liquidity/PoolDetail.tsx:68
+#: src/views/Overview/EcoPoolDetail.tsx:51
+msgid "池子資產構成"
+msgstr "पूल एसेट संरचना"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:18
+msgid "治理投票權"
+msgstr "गवर्नेंस वोटिंग अधिकार"
+
+#: src/views/Liquidity/PoolCard.tsx:51
+#: src/views/Liquidity/PoolDetail.tsx:53
+#: src/views/Liquidity/PoolTable.tsx:19
+#: src/views/Overview/EcoPoolDetail.tsx:37
+msgid "流動性佔比"
+msgstr "लिक्विडिटी हिस्सा"
+
+#: src/views/Liquidity/PoolDetail.tsx:99
+msgid "流動性佔比趨勢"
+msgstr "लिक्विडिटी हिस्सा ट्रेंड"
+
+#: src/views/Overview/ReserveDetail.tsx:17
+msgid "流動性支持"
+msgstr "लिक्विडिटी सहायता"
+
+#: src/views/Liquidity/PoolDetail.tsx:79
+msgid "流動性數據"
+msgstr "लिक्विडिटी डेटा"
+
+#: src/views/Liquidity/Liquidity.tsx:52
+msgid "流動性池"
+msgstr "लिक्विडिटी पूल"
+
+#: src/views/Liquidity/Liquidity.tsx:60
+#: src/views/Liquidity/PoolList.tsx:12
+msgid "流動性池列表"
+msgstr "लिक्विडिटी पूल सूची"
+
+#: src/views/Overview/Overview.tsx:80
+msgid "流通數量"
+msgstr "परिसंचारी आपूर्ति"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:43
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:71
+#: src/views/Liquidity/PoolCard.tsx:57
+msgid "添加流動性"
+msgstr "लिक्विडिटी जोड़ें"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:39
+msgid "添加流動性 / 移除流動性"
+msgstr "लिक्विडिटी जोड़ें / हटाएँ"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:57
+msgid "添加資產"
+msgstr "एसेट जोड़ें"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:67
+msgid "滑點容忍度"
+msgstr "स्लिपेज सहनशीलता"
+
+#: src/views/Fundraise/FundraiseRules.tsx:54
+#~ msgid "為期 <0>{DASH}</0> · 每天限額：<1>{DASH} USDT</1>"
+#~ msgstr "अवधि <0>{DASH}</0> · दैनिक सीमा: <1>{DASH} USDT</1>"
+
+#: src/views/Docs/Docs.tsx:80
+msgid "獲取最新動態"
+msgstr "ताज़ा अपडेट पाएँ"
+
+#: src/components/NftCard/NftCard.tsx:51
+#: src/views/Nft/Nft.tsx:101
+msgid "獲取方式"
+msgstr "प्राप्ति का तरीका"
+
+#: src/components/NftCard/NftCard.tsx:52
+#: src/views/Nft/Nft.tsx:102
+msgid "獲取時間"
+msgstr "प्राप्ति का समय"
+
+#: src/views/Nft/Nft.tsx:52
+msgid "獲取記錄"
+msgstr "प्राप्ति रिकॉर्ड"
+
+#: src/views/Overview/ReserveDetail.tsx:15
+msgid "生態建設"
+msgstr "इकोसिस्टम निर्माण"
+
+#: src/views/Overview/Overview.tsx:159
+msgid "生態池數據"
+msgstr "इकोसिस्टम पूल डेटा"
+
+#: src/views/Overview/EcoPoolDetail.tsx:20
+msgid "生態池數據詳情"
+msgstr "इकोसिस्टम पूल डेटा विवरण"
+
+#: src/views/Liquidity/Liquidity.tsx:43
+msgid "生態池總價值 (USD)"
+msgstr "इकोसिस्टम पूल का कुल मूल्य (USD)"
+
+#: src/views/Overview/Overview.tsx:34
+msgid "生態池總鎖倉（USDT）"
+msgstr "इकोसिस्टम पूल कुल लॉक्ड (USDT)"
+
+#: src/components/Sidebar/nav.ts:23
+#: src/views/Liquidity/Liquidity.tsx:26
+msgid "生態流動性"
+msgstr "इकोसिस्टम लिक्विडिटी"
+
+#: src/views/Overview/ReserveDetail.tsx:18
+msgid "生態激勵"
+msgstr "इकोसिस्टम प्रोत्साहन"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:17
+msgid "生態項目優先權益"
+msgstr "इकोसिस्टम प्रोजेक्ट में प्राथमिकता अधिकार"
+
+#: src/views/Docs/Docs.tsx:44
+msgid "產品機制、參與規則、收益分配等詳細說明。"
+msgstr "उत्पाद तंत्र, भागीदारी नियम, कमाई वितरण आदि का विस्तृत विवरण।"
+
+#: src/views/Overview/AllocationDetail.tsx:48
+#: src/views/Overview/Overview.tsx:155
+msgid "用於價格保護及市場調節"
+msgstr "मूल्य सुरक्षा और बाज़ार संतुलन के लिए"
+
+#: src/views/Overview/AllocationDetail.tsx:35
+#: src/views/Overview/Overview.tsx:138
+#: src/views/Overview/ReserveDetail.tsx:33
+msgid "用於生態建設、算力排放、流動性支持等"
+msgstr "इकोसिस्टम निर्माण, पावर एमिशन, लिक्विडिटी सहायता आदि के लिए"
+
+#: src/views/Fundraise/Fundraise.tsx:275
+msgid "當前共建目標"
+msgstr "वर्तमान सह-निर्माण लक्ष्य"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:44
+msgid "當前等級 {CURRENT}"
+msgstr "वर्तमान स्तर {CURRENT}"
+
+#: src/views/Overview/mock.ts:29
+msgid "當前餘額"
+msgstr "वर्तमान बैलेंस"
+
+#: src/views/Docs/Docs.tsx:39
+msgid "白皮書"
+msgstr "व्हाइटपेपर"
+
+#: src/views/Overview/Overview.tsx:29
+msgid "社區共建共享"
+msgstr "समुदाय मिलकर बनाए, मिलकर बाँटे"
+
+#: src/views/Overview/Overview.tsx:35
+msgid "社區成員總數"
+msgstr "कुल समुदाय सदस्य"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:27
+msgid "社區等級與權益"
+msgstr "समुदाय स्तर और अधिकार"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:15
+msgid "社區算力分潤"
+msgstr "समुदाय पावर राजस्व साझेदारी"
+
+#: src/views/Community/CommunityStatsPanel.tsx:32
+msgid "社區算力統計"
+msgstr "समुदाय पावर आँकड़े"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "秒"
+msgstr "सेकंड"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:75
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:96
+msgid "移除流動性"
+msgstr "लिक्विडिटी हटाएँ"
+
+#: src/views/Liquidity/Liquidity.tsx:17
+msgid "穩定價格運行"
+msgstr "मूल्य स्थिर रखें"
+
+#: src/views/Assets/Assets.tsx:80
+msgid "立即領取"
+msgstr "अभी क्लेम करें"
+
+#: src/views/Overview/mock.ts:10
+msgid "第1階段（1–24月）"
+msgstr "चरण 1 (महीने 1–24)"
+
+#: src/views/Overview/mock.ts:11
+msgid "第2階段（25–48月）"
+msgstr "चरण 2 (महीने 25–48)"
+
+#: src/views/Overview/mock.ts:12
+msgid "第3階段（49–72月）"
+msgstr "चरण 3 (महीने 49–72)"
+
+#: src/views/Overview/mock.ts:13
+msgid "第4階段（73–96月）"
+msgstr "चरण 4 (महीने 73–96)"
+
+#: src/views/Overview/mock.ts:14
+msgid "第5階段（97–120月）"
+msgstr "चरण 5 (महीने 97–120)"
+
+#: src/views/Overview/ReserveDetail.tsx:16
+msgid "算力排放"
+msgstr "पावर एमिशन"
+
+#: src/views/Fundraise/FundraiseRules.tsx:61
+msgid "算力權益：參與金額的 <0>2.5 倍</0>"
+msgstr "पावर अधिकार: भागीदारी राशि का <0>2.5 गुना</0>"
+
+#: src/views/Community/CommunityStatsPanel.tsx:51
+msgid "算力貢獻佔比"
+msgstr "पावर योगदान हिस्सा"
+
+#: src/views/Liquidity/PoolTable.tsx:40
+msgid "管理"
+msgstr "प्रबंधित करें"
+
+#: src/views/Docs/Docs.tsx:50
+msgid "精選社區高頻問題與官方解答，快速了解關鍵內容。"
+msgstr "समुदाय के अक्सर पूछे जाने वाले प्रश्न और आधिकारिक उत्तर, मुख्य बातें जल्दी समझें।"
+
+#: src/views/Nft/Nft.tsx:40
+msgid "累計權益額度"
+msgstr "कुल अधिकार कोटा"
+
+#: src/views/Overview/EmissionDetail.tsx:81
+msgid "累計釋放"
+msgstr "कुल रिलीज़"
+
+#: src/views/Fundraise/FundraiseRules.tsx:54
+msgid "結束時間："
+msgstr "समाप्ति समय:"
+
+#: src/views/Community/CommunityInvite.tsx:129
+msgid "綁定"
+msgstr "बाइंड करें"
+
+#: src/views/Community/CommunityInvite.tsx:83
+msgid "綁定中…"
+msgstr "बाइंड हो रहा है…"
+
+#: src/views/Community/CommunityInvite.tsx:119
+msgid "綁定推薦人"
+msgstr "रेफ़रर बाइंड करें"
+
+#: src/views/Community/CommunityInvite.tsx:72
+msgid "綁定推薦人後才可邀請"
+msgstr "आमंत्रित करने से पहले रेफ़रर बाइंड करें"
+
+#: src/views/Docs/Docs.tsx:59
+msgid "經濟模型簡版"
+msgstr "आर्थिक मॉडल (संक्षिप्त)"
+
+#: src/views/Overview/Overview.tsx:76
+msgid "總市值"
+msgstr "कुल मार्केट कैप"
+
+#: src/views/Liquidity/Liquidity.tsx:46
+msgid "總流動性池數"
+msgstr "कुल लिक्विडिटी पूल"
+
+#: src/views/Community/CommunityStatsPanel.tsx:18
+#: src/views/Community/CommunityStatsPanel.tsx:55
+msgid "總算力 (DAI)"
+msgstr "कुल पावर (DAI)"
+
+#: src/views/Assets/Assets.tsx:42
+msgid "總資產估值（USD）"
+msgstr "कुल एसेट मूल्यांकन (USD)"
+
+#: src/views/Overview/EmissionDetail.tsx:39
+msgid "總量"
+msgstr "कुल आपूर्ति"
+
+#: src/views/Overview/EcoPoolDetail.tsx:45
+msgid "總鎖倉（USDT）"
+msgstr "कुल लॉक्ड (USDT)"
+
+#: src/views/Fundraise/FundraiseRules.tsx:72
+msgid "舉例"
+msgstr "उदाहरण"
+
+#: src/views/Docs/Docs.tsx:62
+msgid "術語詞典"
+msgstr "शब्दावली"
+
+#: src/views/Community/CommunityInvite.tsx:145
+msgid "複製"
+msgstr "कॉपी करें"
+
+#: src/views/Community/CommunityInvite.tsx:95
+msgid "複製失敗：{0}"
+msgstr "कॉपी विफल: {0}"
+
+#: src/views/Docs/Docs.tsx:29
+#: src/views/Docs/Docs.tsx:45
+msgid "規則說明"
+msgstr "नियम"
+
+#: src/views/Fundraise/Fundraise.tsx:332
+msgid "計價與限額"
+msgstr "मूल्य निर्धारण और सीमाएँ"
+
+#: src/views/Fundraise/Fundraise.tsx:247
+#: src/views/Fundraise/Fundraise.tsx:284
+msgid "認購"
+msgstr "सब्सक्राइब करें"
+
+#: src/views/Fundraise/Fundraise.tsx:352
+msgid "認購次數"
+msgstr "सब्सक्रिप्शन की संख्या"
+
+#: src/components/Sidebar/LocaleSwitch.tsx:15
+msgid "語言"
+msgstr "भाषा"
+
+#: src/views/Community/CommunityInvite.tsx:75
+#: src/views/Fundraise/Fundraise.tsx:234
+msgid "請先連接錢包"
+msgstr "कृपया पहले वॉलेट कनेक्ट करें"
+
+#: src/views/Community/CommunityInvite.tsx:82
+#: src/views/Fundraise/Fundraise.tsx:239
+msgid "請在錢包確認"
+msgstr "कृपया वॉलेट में पुष्टि करें"
+
+#: src/views/Community/CommunityInvite.tsx:80
+msgid "請輸入推薦人地址"
+msgstr "कृपया रेफ़रर का पता दर्ज करें"
+
+#: src/views/Fundraise/Fundraise.tsx:241
+msgid "請輸入金額"
+msgstr "कृपया राशि दर्ज करें"
+
+#: src/views/Community/CommunityInvite.tsx:86
+msgid "讀取 Community 失敗：{0}"
+msgstr "Community पढ़ने में विफल: {0}"
+
+#: src/views/Community/CommunityInvite.tsx:77
+#: src/views/Fundraise/Fundraise.tsx:236
+msgid "讀取中"
+msgstr "लोड हो रहा है"
+
+#: src/views/Community/CommunityInvite.tsx:76
+#: src/views/Fundraise/Fundraise.tsx:235
+msgid "讀取失敗"
+msgstr "लोड करने में विफल"
+
+#: src/views/Fundraise/Fundraise.tsx:250
+msgid "讀取失敗：{0}"
+msgstr "लोड करने में विफल: {0}"
+
+#: src/views/Assets/Assets.tsx:53
+msgid "資產記錄"
+msgstr "एसेट रिकॉर्ड"
+
+#: src/views/Overview/ReserveDetail.tsx:37
+msgid "資金使用方向"
+msgstr "फंड का उपयोग"
+
+#: src/views/Overview/AllocationDetail.tsx:17
+#: src/views/Overview/Overview.tsx:113
+msgid "資金分配總覽"
+msgstr "फंड आवंटन अवलोकन"
+
+#: src/views/Fundraise/Fundraise.tsx:245
+msgid "超過單地址上限"
+msgstr "प्रति पता सीमा से अधिक"
+
+#: src/components/PageHeader/PageHeader.tsx:13
+msgid "返回"
+msgstr "वापस"
+
+#: src/components/TopBar/TopBar.tsx:52
+msgid "連接錢包"
+msgstr "वॉलेट कनेक्ट करें"
+
+#: src/views/Community/CommunityInvite.tsx:71
+msgid "連接錢包後生成邀請連結"
+msgstr "आमंत्रण लिंक बनाने के लिए वॉलेट कनेक्ट करें"
+
+#: src/views/Fundraise/Fundraise.tsx:64
+#: src/views/Fundraise/Fundraise.tsx:180
+msgid "進行中"
+msgstr "जारी है"
+
+#: src/components/TopBar/TopBar.tsx:19
+msgid "選單"
+msgstr "मेनू"
+
+#: src/views/Community/CommunityInvite.tsx:116
+msgid "邀請好友加入 · 綁定推薦人"
+msgstr "दोस्तों को आमंत्रित करें · रेफ़रर बाइंड करें"
+
+#: src/views/Community/CommunityInvite.tsx:78
+msgid "邀請未開放"
+msgstr "आमंत्रण अभी उपलब्ध नहीं"
+
+#: src/views/Community/CommunityInvite.tsx:135
+msgid "邀請連結"
+msgstr "आमंत्रण लिंक"
+
+#: src/views/Nft/mock.ts:8
+#: src/views/Nft/mock.ts:10
+msgid "銷毀 GG"
+msgstr "GG बर्न"
+
+#: src/views/Nft/mock.ts:9
+msgid "銷毀 GOT2"
+msgstr "GOT2 बर्न"
+
+#: src/views/Assets/Assets.tsx:95
+msgid "鎖定"
+msgstr "लॉक्ड"
+
+#: src/views/Overview/Overview.tsx:28
+msgid "鏈上透明與安全"
+msgstr "ऑन-चेन पारदर्शिता और सुरक्षा"
+
+#: src/views/Nft/Nft.tsx:64
+msgid "鑄造 / 獲取 NFT"
+msgstr "NFT मिंट करें / प्राप्त करें"
+
+#: src/views/Fundraise/Fundraise.tsx:276
+msgid "開始時間"
+msgstr "प्रारंभ समय"
+
+#: src/views/Fundraise/FundraiseRules.tsx:52
+msgid "開始時間："
+msgstr "प्रारंभ समय:"
+
+#: src/views/Docs/Docs.tsx:79
+msgid "關注 X"
+msgstr "X पर फ़ॉलो करें"
+
+#: src/views/Overview/Overview.tsx:176
+msgid "關鍵指標"
+msgstr "मुख्य संकेतक"
+
+#: src/views/Docs/Docs.tsx:62
+msgid "關鍵詞術語解釋，幫助快速理解協議內容。"
+msgstr "मुख्य शब्दों की व्याख्या, प्रोटोकॉल को जल्दी समझने में मदद के लिए।"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:65
+msgid "預估獲得 LP 代幣"
+msgstr "अनुमानित LP टोकन"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:66
+msgid "預計池子佔比"
+msgstr "अनुमानित पूल हिस्सा"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:85
+msgid "預計獲得"
+msgstr "अनुमानित प्राप्ति"
+
+#: src/views/Fundraise/Fundraise.tsx:307
+msgid "預計獲得算力：{expectedText} USDT"
+msgstr "अनुमानित पावर: {expectedText} USDT"
+
+#: src/views/Nft/Nft.tsx:119
+msgid "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
+msgstr "GG समुदाय डायनेमिक एमिशन रिवॉर्ड क्लेम करते समय, क्लेम के समय GG के रियल-टाइम USDT मूल्य के अनुसार NFT अधिकार कोटा घटाया जाएगा।"
+
+#: src/views/Fundraise/Fundraise.tsx:242
+msgid "額度不足"
+msgstr "कोटा अपर्याप्त"
+
+#: src/views/Docs/Docs.tsx:61
+msgid "風險提示"
+msgstr "जोखिम चेतावनी"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:28
+msgid "餘額"
+msgstr "बैलेंस"
+
+#: src/views/Overview/Overview.tsx:27
+msgid "黃金本位價值體系"
+msgstr "गोल्ड स्टैंडर्ड मूल्य प्रणाली"
+
+#: src/components/NftCard/NftCard.tsx:34
+#: src/views/Nft/Nft.tsx:88
+msgid "黃金聖甲蟲"
+msgstr "गोल्डन स्कारब"
+
+#: src/views/Nft/mock.ts:8
+msgid "黃金聖甲蟲 #001"
+msgstr "गोल्डन स्कारब #001"
+
+#: src/views/Nft/mock.ts:9
+msgid "黃金聖甲蟲 #002"
+msgstr "गोल्डन स्कारब #002"
+
+#: src/views/Nft/mock.ts:10
+msgid "黃金聖甲蟲 #003"
+msgstr "गोल्डन स्कारब #003"

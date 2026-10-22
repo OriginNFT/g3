@@ -12,6 +12,7 @@ interface IGold3Fundraise {
     event ClosedUpdated(bool closed);
     event Withdrawn(address indexed to, uint256 amount);
     event ParamsUpdated(uint256 target, uint256 minContribution, uint256 maxPerAddress);
+    event StartTimeUpdated(uint256 startTime);
 
     // ============ Subscribe ============
 
@@ -33,6 +34,9 @@ interface IGold3Fundraise {
     function minContribution() external view returns (uint256);
 
     function maxPerAddress() external view returns (uint256);
+
+    /// @notice subscribe() reverts before this unix time; 0 = no start time.
+    function startTime() external view returns (uint256);
 
     function recordCount() external view returns (uint256);
 
@@ -75,6 +79,9 @@ interface IGold3Fundraise {
     function setParams(uint256 target_, uint256 minContribution_, uint256 maxPerAddress_) external;
 
     function setClosed(bool closed_) external;
+
+    /// @notice Unix time before which subscribe() reverts; 0 lifts it.
+    function setStartTime(uint256 startTime_) external;
 
     function withdraw(address to, uint256 amount) external;
 }

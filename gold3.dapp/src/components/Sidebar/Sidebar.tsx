@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 import Icon from "src/components/Icon/Icon";
+import LocaleSwitch from "./LocaleSwitch";
 import { isNavActive, NAV } from "./nav";
 
 // The glass column of the boards: the brand lockup on top, the seven
@@ -47,6 +48,7 @@ function Sidebar() {
         <aside className="gp-sidebar">
             <BrandLockup />
             <NavList />
+            <LocaleSwitch />
         </aside>
     );
 }

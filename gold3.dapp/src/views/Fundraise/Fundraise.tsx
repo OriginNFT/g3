@@ -31,19 +31,43 @@ function fmt(value: bigint): string {
     });
 }
 
+// startTime as "2026-10-23 00:00 SGT".
+function fmtStart(startTime: bigint): string {
+    const text = new Date(Number(startTime) * 1000).toLocaleString("sv-SE", {
+        timeZone: "Asia/Singapore",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+    });
+    return `${text} SGT`;
+}
+
 function errorMessage(err: unknown): string {
     return err instanceof BaseError ? err.shortMessage : (err as Error).message;
 }
 
-// The raise window is not given yet: the countdown stays disabled.
-function Countdown() {
+// Counts down to startTime on the page's one-second tick; from startTime on
+// every tile reads 00. Before startTime is read, or with no start time (0),
+// the tiles stay disabled.
+function Countdown({ startTime, now, startText }: { startTime: bigint | undefined; now: number; startText: string }) {
     const units = [t`天`, t`時`, t`分`, t`秒`];
+    const known = startTime !== undefined && startTime > 0n;
+    const left = known ? Math.max(Number(startTime) - now, 0) : 0;
+    const figures = known
+        ? [Math.floor(left / 86400), Math.floor((left % 86400) / 3600), Math.floor((left % 3600) / 60), left % 60].map(n =>
+              String(n).padStart(2, "0"),
+          )
+        : units.map(() => DASH);
+    let chip = t`時間未公布`;
+    if (known) chip = left > 0 ? startText : t`進行中`;
     return (
-        <Card icon="clock" title={t`募資倒數`} right={<span className="gp-chip">{t`時間未公布`}</span>}>
-            <div className="gp-countdown is-disabled">
-                {units.map(unit => (
+        <Card icon="clock" title={t`募資倒數`} right={<span className="gp-chip">{chip}</span>}>
+            <div className={`gp-countdown ${known ? "" : "is-disabled"}`}>
+                {units.map((unit, i) => (
                     <div className="gp-tile gp-countdown-tile" key={unit}>
-                        <span className="gp-fundraise-figure">{DASH}</span>
+                        <span className="gp-fundraise-figure">{figures[i]}</span>
                         <span className="gp-muted gp-small">{unit}</span>
                     </div>
                 ))}
@@ -65,6 +89,13 @@ function Fundraise() {
         chainId: ANUBIS_CHAIN_ID,
         query: { enabled: DEPLOYED },
     });
+    const start = useReadContract({
+        address: FUNDRAISE_ADDRESS,
+        abi: GOLD3_FUNDRAISE_ABI,
+        functionName: "startTime",
+        chainId: ANUBIS_CHAIN_ID,
+        query: { enabled: DEPLOYED },
+    });
     const mine = useReadContracts({
         allowFailure: false,
         contracts: [
@@ -83,6 +114,21 @@ function Fundraise() {
     useEffect(() => {
         if (stats.error) console.error("fundraise: stats read failed:", stats.error.message, stats.error);
     }, [stats.error]);
+
+    useEffect(() => {
+        if (start.error) console.error("fundraise: startTime read failed:", start.error.message, start.error);
+    }, [start.error]);
+
+    // Re-checked every second until startTime has passed, so the page opens
+    // without a reload.
+    const startTime = start.data;
+    const [now, setNow] = useState(() => Math.floor(Date.now() / 1000));
+    const started = startTime !== undefined && BigInt(now) >= startTime;
+    useEffect(() => {
+        if (started) return;
+        const id = setInterval(() => setNow(Math.floor(Date.now() / 1000)), 1000);
+        return () => clearInterval(id);
+    }, [started]);
 
     useEffect(() => {
         if (mine.error) console.error("fundraise: account reads failed:", mine.error.message, mine.error);
@@ -127,8 +173,12 @@ function Fundraise() {
     const maxText = hasMax ? `${fmt(maxPerAddress)} USDT` : `${DASH} USDT`;
     const progress = raised !== undefined && hasTarget ? Number((raised * 10_000n) / target) / 100 : 0;
     const progressText = raised !== undefined && hasTarget ? `${progress.toFixed(1)}%` : `${DASH}%`;
+    const startText = startTime !== undefined && startTime > 0n ? fmtStart(startTime) : DASH;
     let statusText = DASH;
-    if (closed !== undefined) statusText = closed ? t`已關閉` : t`進行中`;
+    if (closed !== undefined && startTime !== undefined) {
+        if (closed) statusText = t`已關閉`;
+        else statusText = started ? t`進行中` : t`未開始`;
+    }
 
     const parsed = amount ? parseUnits(amount, USDT_DECIMALS) : 0n;
     const insufficient = balance !== undefined && parsed > balance;
@@ -182,9 +232,10 @@ function Fundraise() {
     let cta: { label: string; action?: () => void };
     if (!DEPLOYED) cta = { label: t`尚未上線` };
     else if (!isConnected) cta = { label: t`請先連接錢包` };
-    else if (stats.isError || mine.isError) cta = { label: t`讀取失敗` };
-    else if (s === undefined || m === undefined) cta = { label: t`讀取中` };
+    else if (stats.isError || start.isError || mine.isError) cta = { label: t`讀取失敗` };
+    else if (s === undefined || startTime === undefined || m === undefined) cta = { label: t`讀取中` };
     else if (closed) cta = { label: t`募資已關閉` };
+    else if (!started) cta = { label: t`尚未開始` };
     else if (isSigning) cta = { label: t`請在錢包確認` };
     else if (receipt.isLoading) cta = { label: t`交易確認中…` };
     else if (parsed === 0n) cta = { label: t`請輸入金額` };
@@ -195,7 +246,7 @@ function Fundraise() {
     else if (needsApproval) cta = { label: t`授權 USDT`, action: approve };
     else cta = { label: t`認購`, action: subscribe };
 
-    const readError = stats.error ?? mine.error;
+    const readError = stats.error ?? start.error ?? mine.error;
     const message = error || (readError ? t`讀取失敗：${errorMessage(readError)}` : "");
 
     return (
@@ -212,13 +263,19 @@ function Fundraise() {
                 </div>
             )}
 
-            <Countdown />
+            <Countdown startTime={startTime} now={now} startText={startText} />
 
             <Card icon="chart" title={t`協議共建進度`} right={<span className="gp-chip">{statusText}</span>}>
                 <div className="gp-fundraise-body">
                     <div className="gp-fundraise-figure">{progressText}</div>
                     <Progress value={progress} tone="gold" />
-                    <KvList compact rows={[[t`當前共建目標`, targetText]]} />
+                    <KvList
+                        compact
+                        rows={[
+                            [t`當前共建目標`, targetText],
+                            [t`開始時間`, startText],
+                        ]}
+                    />
                 </div>
             </Card>
 
@@ -270,7 +327,7 @@ function Fundraise() {
                 </div>
             </Card>
 
-            <FundraiseRules />
+            <FundraiseRules targetText={targetText} maxText={maxText} startText={startText} />
 
             <Card icon="scale" title={t`計價與限額`}>
                 <KvList

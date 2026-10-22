@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { HashRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
-import { lightTheme, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { lightTheme, Locale, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { ThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { i18n } from "@lingui/core";
@@ -22,21 +22,28 @@ const rainbowTheme = lightTheme({
     borderRadius: "medium",
 });
 
-const Root: FC = () => (
-    <WagmiProvider config={config}>
-        <QueryClientProvider client={queryClient}>
-            <RainbowKitProvider theme={rainbowTheme} locale="zh-TW">
-                <I18nProvider i18n={i18n}>
-                    <ThemeProvider theme={muiTheme}>
-                        <CssBaseline />
-                        <HashRouter>
-                            <App />
-                        </HashRouter>
-                    </ThemeProvider>
-                </I18nProvider>
-            </RainbowKitProvider>
-        </QueryClientProvider>
-    </WagmiProvider>
-);
+const Root: FC = () => {
+    // `t` reads the global i18n and does not re-render on a locale switch, so
+    // App remounts under the new locale; RainbowKit's modal follows it too.
+    const [locale, setLocale] = useState(i18n.locale);
+    useEffect(() => i18n.on("change", () => setLocale(i18n.locale)), []);
+
+    return (
+        <WagmiProvider config={config}>
+            <QueryClientProvider client={queryClient}>
+                <RainbowKitProvider theme={rainbowTheme} locale={locale as Locale}>
+                    <I18nProvider i18n={i18n}>
+                        <ThemeProvider theme={muiTheme}>
+                            <CssBaseline />
+                            <HashRouter>
+                                <App key={locale} />
+                            </HashRouter>
+                        </ThemeProvider>
+                    </I18nProvider>
+                </RainbowKitProvider>
+            </QueryClientProvider>
+        </WagmiProvider>
+    );
+};
 
 export default Root;

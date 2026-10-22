@@ -1,18 +1,24 @@
 import { i18n } from "@lingui/core";
-import { zh } from "make-plural/plurals";
+import { en, hi, ja, ko, zh } from "make-plural/plurals";
 
-// zh-TW is the lingui source locale and the only one for now (lingui.config.ts).
-// Adding a locale is an entry here plus lingui.config.ts plus its catalog.
+// zh-TW is the lingui source locale (lingui.config.ts). Adding a locale is an
+// entry here plus lingui.config.ts plus its catalog. The keys double as
+// RainbowKit locales, which accept all five as they are.
 interface ILocale {
     label: string;
     plurals: (n: number | string, ord?: boolean) => "zero" | "one" | "two" | "few" | "many" | "other";
 }
 
 export const locales: { [locale: string]: ILocale } = {
+    en: { label: "English", plurals: en },
     "zh-TW": { label: "繁體中文", plurals: zh },
+    ja: { label: "日本語", plurals: ja },
+    ko: { label: "한국어", plurals: ko },
+    hi: { label: "हिन्दी", plurals: hi },
 };
 
-export const DEFAULT_LOCALE = "zh-TW";
+// When neither a stored choice nor the browser's languages match a locale.
+export const DEFAULT_LOCALE = "en";
 
 for (const [key, locale] of Object.entries(locales)) {
     i18n.loadLocaleData(key, { plurals: locale.plurals });
@@ -52,6 +58,17 @@ export function selectLocale(locale: string) {
     loadLocale(locale);
 }
 
+// The browser's preferred languages in order, matched on the language part only
+// (zh-CN and zh-HK read as zh-TW); none of them -> DEFAULT_LOCALE.
+function browserLocale(): string {
+    const language = (tag: string) => tag.toLowerCase().split("-")[0];
+    for (const tag of navigator.languages ?? [navigator.language]) {
+        const match = Object.keys(locales).find(key => language(key) === language(tag));
+        if (match) return match;
+    }
+    return DEFAULT_LOCALE;
+}
+
 export function initLocale() {
     let locale: string | null = null;
     try {
@@ -59,5 +76,5 @@ export function initLocale() {
     } catch (e: any) {
         console.error("locales: reading the stored locale failed:", e?.message || e, e);
     }
-    loadLocale(locale && locale in locales ? locale : DEFAULT_LOCALE);
+    loadLocale(locale && locale in locales ? locale : browserLocale());
 }

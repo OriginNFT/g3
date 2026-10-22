@@ -1,0 +1,1257 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-10-22 10:22+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ko\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:76
+msgid "{CURRENT} 專屬權益"
+msgstr "{CURRENT} 전용 권익"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:54
+msgid "{CURRENT} 等級要求"
+msgstr "{CURRENT} 등급 요건"
+
+#: src/views/Overview/EmissionDetail.tsx:80
+msgid "{year}年"
+msgstr "{year}년차"
+
+#: src/views/Fundraise/FundraiseRules.tsx:79
+msgid "<0>2,500 USDT</0> 金本位算力權益"
+msgstr "<0>2,500 USDT</0> 상당의 금본위 파워 권익"
+
+#: src/views/Fundraise/FundraiseRules.tsx:84
+msgid "<0>200 USDT</0> 等值 NFT 生產權益"
+msgstr "<0>200 USDT</0> 상당의 NFT 생산 권익"
+
+#: src/views/Liquidity/PoolCard.tsx:47
+#: src/views/Overview/Overview.tsx:77
+msgid "24h 交易量"
+msgstr "24h 거래량"
+
+#: src/views/Liquidity/Liquidity.tsx:44
+#: src/views/Liquidity/mock.ts:67
+#: src/views/Liquidity/mock.ts:94
+#: src/views/Liquidity/PoolDetail.tsx:50
+#: src/views/Liquidity/PoolTable.tsx:17
+msgid "24h 交易量 (USD)"
+msgstr "24h 거래량 (USD)"
+
+#: src/views/Liquidity/mock.ts:69
+#: src/views/Liquidity/mock.ts:96
+msgid "30日交易量 (USD)"
+msgstr "30일 거래량 (USD)"
+
+#: src/views/Liquidity/mock.ts:68
+#: src/views/Liquidity/mock.ts:95
+msgid "7日交易量 (USD)"
+msgstr "7일 거래량 (USD)"
+
+#: src/views/Liquidity/mock.ts:26
+#: src/views/Liquidity/mock.ts:80
+#: src/views/Overview/mock.ts:53
+msgid "AUG / GG 池"
+msgstr "AUG / GG 풀"
+
+#: src/views/Community/CommunityStatsPanel.tsx:19
+msgid "DAI 參與算力"
+msgstr "DAI 참여 파워"
+
+#: src/views/Docs/Docs.tsx:59
+msgid "GG 三幣模型與核心機制概覽。"
+msgstr "GG 3토큰 모델과 핵심 메커니즘 개요입니다."
+
+#: src/views/Overview/Overview.tsx:65
+msgid "GG 實時價格"
+msgstr "GG 실시간 가격"
+
+#: src/views/Fundraise/Fundraise.tsx:336
+msgid "GG 市場價格"
+msgstr "GG 시장 가격"
+
+#: src/views/Overview/EmissionDetail.tsx:20
+msgid "GG 排放進度"
+msgstr "GG 에미션 진행률"
+
+#: src/views/Overview/Overview.tsx:95
+msgid "GG 排放進度（10年計劃）"
+msgstr "GG 에미션 진행률 (10년 계획)"
+
+#: src/views/Overview/AllocationDetail.tsx:23
+#: src/views/Overview/Overview.tsx:117
+msgid "GG 總量"
+msgstr "GG 총량"
+
+#: src/views/Overview/Overview.tsx:56
+msgid "GG 聖甲蟲"
+msgstr "GG 스카라브"
+
+#: src/views/Community/CommunityStatsPanel.tsx:21
+msgid "GG 貢獻算力"
+msgstr "GG 기여 파워"
+
+#: src/views/Docs/Docs.tsx:37
+msgid "GG 黃金協議白皮書"
+msgstr "GG 골드 프로토콜 백서"
+
+#: src/views/Overview/Overview.tsx:43
+msgid "GG 黃金本位倉"
+msgstr "GG 골드 본위 볼트"
+
+#: src/views/Liquidity/mock.ts:12
+#: src/views/Liquidity/mock.ts:53
+#: src/views/Overview/mock.ts:39
+msgid "GOT2 / GG 池"
+msgstr "GOT2 / GG 풀"
+
+#: src/views/Community/CommunityStatsPanel.tsx:20
+msgid "GOT2 貢獻算力"
+msgstr "GOT2 기여 파워"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:76
+msgid "LP 代幣數量"
+msgstr "LP 토큰 수량"
+
+#: src/views/Overview/Overview.tsx:36
+msgid "NFT 已發放數量"
+msgstr "NFT 발행 수량"
+
+#: src/components/Sidebar/nav.ts:25
+#: src/views/Nft/Nft.tsx:33
+msgid "NFT 權益"
+msgstr "NFT 권익"
+
+#: src/views/Nft/Nft.tsx:135
+msgid "NFT 權益額度通過銷毀 GG（3 倍）或 GOT2（2 倍）獲得，具體規則請查看官方文檔。"
+msgstr "NFT 권익 한도는 GG(3배) 또는 GOT2(2배)를 소각하여 획득합니다. 자세한 규칙은 공식 문서를 확인하세요."
+
+#: src/views/Fundraise/FundraiseRules.tsx:66
+msgid "NFT 生產權益：參與金額的 <0>20%</0>"
+msgstr "NFT 생산 권익: 참여 금액의 <0>20%</0>"
+
+#: src/views/Assets/Assets.tsx:63
+msgid "NFT 資產"
+msgstr "NFT 자산"
+
+#: src/views/Assets/Assets.tsx:137
+msgid "NFT 資產（3）"
+msgstr "NFT 자산 (3)"
+
+#: src/views/Assets/Assets.tsx:72
+msgid "NFT 資產（USD）"
+msgstr "NFT 자산 (USD)"
+
+#: src/views/Fundraise/Fundraise.tsx:335
+msgid "USDT 計價基準"
+msgstr "USDT 가격 기준"
+
+#: src/views/Fundraise/Fundraise.tsx:243
+msgid "USDT 餘額不足"
+msgstr "USDT 잔액 부족"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:70
+msgid "三區總算力要求"
+msgstr "3개 구역 총 파워 요건"
+
+#: src/views/Fundraise/Fundraise.tsx:305
+msgid "上限 {maxText}"
+msgstr "최대 {maxText}"
+
+#: src/views/Docs/Docs.tsx:71
+msgid "了解協議機制 · 掌握最新動態"
+msgstr "프로토콜 메커니즘 이해 · 최신 소식 확인"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:28
+msgid "了解等級要求 · 查看專屬權益"
+msgstr "등급 요건 확인 · 전용 권익 보기"
+
+#: src/views/Assets/Assets.tsx:124
+msgid "交易"
+msgstr "거래"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:46
+#: src/views/Liquidity/PoolTable.tsx:15
+msgid "交易對"
+msgstr "거래쌍"
+
+#: src/views/Fundraise/Fundraise.tsx:240
+msgid "交易確認中…"
+msgstr "거래 확인 중…"
+
+#: src/views/Liquidity/PoolDetail.tsx:86
+msgid "交易量趨勢（USD）"
+msgstr "거래량 추이 (USD)"
+
+#: src/views/Assets/Assets.tsx:92
+msgid "代幣"
+msgstr "토큰"
+
+#: src/views/Assets/Assets.tsx:62
+#: src/views/Assets/Assets.tsx:87
+msgid "代幣資產"
+msgstr "토큰 자산"
+
+#: src/views/Assets/Assets.tsx:71
+msgid "代幣資產（USD）"
+msgstr "토큰 자산 (USD)"
+
+#: src/views/Fundraise/Fundraise.tsx:254
+msgid "以 USDT 認購，每筆認購都記錄在鏈上"
+msgstr "USDT로 청약하며, 모든 청약은 온체인에 기록됩니다"
+
+#: src/views/Overview/Overview.tsx:44
+msgid "以黃金為錨 · 以算力為驅動 · 構建可持續的價值生態"
+msgstr "금을 앵커로 · 파워를 동력으로 · 지속 가능한 가치 생태계 구축"
+
+#: src/components/TopBar/TopBar.tsx:25
+msgid "以黃金為錨 · 構建可持續的價值生態"
+msgstr "금을 앵커로 · 지속 가능한 가치 생태계 구축"
+
+#: src/views/Assets/Assets.tsx:97
+msgid "估值（USD）"
+msgstr "평가액 (USD)"
+
+#: src/views/Fundraise/Fundraise.tsx:244
+msgid "低於最低認購金額"
+msgstr "최소 청약 금액 미만"
+
+#: src/views/Overview/EcoPoolDetail.tsx:60
+msgid "佔比"
+msgstr "비중"
+
+#: src/views/Nft/Nft.tsx:124
+msgid "使用權益"
+msgstr "권익 사용"
+
+#: src/views/Overview/mock.ts:25
+#: src/views/Overview/mock.ts:31
+msgid "使用比例"
+msgstr "사용 비율"
+
+#: src/views/Nft/Nft.tsx:117
+msgid "使用說明"
+msgstr "사용 안내"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:61
+msgid "個人本位倉算力"
+msgstr "개인 본위 볼트 파워"
+
+#: src/views/Overview/AllocationDetail.tsx:43
+#: src/views/Overview/mock.ts:19
+#: src/views/Overview/Overview.tsx:143
+msgid "價格保護合約池"
+msgstr "가격 보호 풀"
+
+#: src/views/Assets/Assets.tsx:118
+msgid "充幣"
+msgstr "입금"
+
+#: src/views/Docs/Docs.tsx:101
+msgid "全部文檔"
+msgstr "전체 문서"
+
+#: src/views/Nft/Nft.tsx:59
+msgid "全部狀態"
+msgstr "전체 상태"
+
+#: src/views/Assets/Assets.tsx:61
+msgid "全部資產"
+msgstr "전체 자산"
+
+#: src/views/Docs/Docs.tsx:57
+msgid "公告"
+msgstr "공지"
+
+#: src/views/Liquidity/Liquidity.tsx:19
+msgid "共享生態增長"
+msgstr "생태계 성장 공유"
+
+#: src/views/Liquidity/PoolDetail.tsx:59
+msgid "其他"
+msgstr "기타"
+
+#: src/views/Fundraise/Fundraise.tsx:304
+msgid "最低 {minText}"
+msgstr "최소 {minText}"
+
+#: src/views/Fundraise/Fundraise.tsx:337
+msgid "最低認購金額"
+msgstr "최소 청약 금액"
+
+#: src/views/Docs/Docs.tsx:31
+msgid "最新公告"
+msgstr "최신 공지"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "分"
+msgstr "분"
+
+#: src/views/Assets/Assets.tsx:49
+msgid "刷新"
+msgstr "새로고침"
+
+#: src/views/Nft/Nft.tsx:138
+msgid "前往查看"
+msgstr "바로 가기"
+
+#: src/views/Fundraise/Fundraise.tsx:319
+msgid "剩餘可認購額度"
+msgstr "남은 청약 가능 한도"
+
+#: src/views/Nft/Nft.tsx:42
+msgid "剩餘額度"
+msgstr "남은 한도"
+
+#: src/views/Fundraise/FundraiseRules.tsx:34
+msgid "創世募資"
+msgstr "제네시스 펀드레이징"
+
+#: src/views/Docs/Docs.tsx:89
+msgid "加入 Telegram"
+msgstr "Telegram 참여"
+
+#: src/views/Fundraise/FundraiseRules.tsx:55
+msgid "募滿即止"
+msgstr "매진 시 종료"
+
+#: src/components/Sidebar/nav.ts:21
+#: src/views/Fundraise/Fundraise.tsx:254
+msgid "募資"
+msgstr "펀드레이징"
+
+#: src/views/Fundraise/Fundraise.tsx:66
+msgid "募資倒數"
+msgstr "펀드레이징 카운트다운"
+
+#: src/views/Fundraise/Fundraise.tsx:261
+msgid "募資合約尚未部署到此網路。"
+msgstr "펀드레이징 컨트랙트가 아직 이 네트워크에 배포되지 않았습니다."
+
+#: src/views/Fundraise/Fundraise.tsx:237
+msgid "募資已關閉"
+msgstr "펀드레이징 종료"
+
+#: src/views/Fundraise/FundraiseRules.tsx:50
+msgid "募資時間"
+msgstr "펀드레이징 기간"
+
+#: src/views/Fundraise/FundraiseRules.tsx:35
+#~ msgid "募資總量：<0>{DASH} USDT</0>"
+#~ msgstr "펀드레이징 총액: <0>{DASH} USDT</0>"
+
+#: src/views/Fundraise/FundraiseRules.tsx:39
+msgid "募資總量：<0>{targetText}</0>"
+msgstr "펀드레이징 총액: <0>{targetText}</0>"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:50
+msgid "升級至 P4 還需 800,000 DAI"
+msgstr "P4 승급까지 800,000 DAI 필요"
+
+#: src/views/Overview/AllocationDetail.tsx:30
+#: src/views/Overview/mock.ts:18
+#: src/views/Overview/Overview.tsx:126
+#: src/views/Overview/ReserveDetail.tsx:25
+#: src/views/Overview/ReserveDetail.tsx:28
+msgid "協議儲備池"
+msgstr "프로토콜 준비금 풀"
+
+#: src/views/Overview/ReserveDetail.tsx:23
+msgid "協議儲備池詳情"
+msgstr "프로토콜 준비금 풀 상세"
+
+#: src/views/Fundraise/Fundraise.tsx:268
+msgid "協議共建進度"
+msgstr "프로토콜 공동 구축 진행률"
+
+#: src/views/Docs/Docs.tsx:28
+msgid "協議文檔"
+msgstr "프로토콜 문서"
+
+#: src/views/Docs/Docs.tsx:43
+msgid "協議規則說明"
+msgstr "프로토콜 규칙 안내"
+
+#: src/views/Power/Power.tsx:28
+msgid "即將開放"
+msgstr "곧 오픈"
+
+#: src/views/Overview/EcoPoolDetail.tsx:73
+msgid "去兌換"
+msgstr "교환하기"
+
+#: src/views/Overview/EcoPoolDetail.tsx:70
+msgid "去質押"
+msgstr "스테이킹하기"
+
+#: src/views/Assets/Assets.tsx:96
+msgid "參考價格（USD）"
+msgstr "참고 가격 (USD)"
+
+#: src/views/Fundraise/FundraiseRules.tsx:67
+#~ msgid "參與 <0>{DASH} USDT</0>，獲得：<1>{DASH}</1>"
+#~ msgstr "<0>{DASH} USDT</0> 참여 시 획득: <1>{DASH}</1>"
+
+#: src/views/Fundraise/FundraiseRules.tsx:74
+msgid "參與 <0>1,000 USDT</0>，即可獲得："
+msgstr "<0>1,000 USDT</0> 참여 시 획득:"
+
+#: src/views/Docs/Docs.tsx:61
+msgid "參與前需了解的風險說明與注意事項。"
+msgstr "참여 전 알아야 할 위험 고지와 유의 사항입니다."
+
+#: src/views/Liquidity/Liquidity.tsx:49
+#: src/views/Liquidity/mock.ts:71
+#: src/views/Liquidity/mock.ts:98
+msgid "參與地址數"
+msgstr "참여 주소 수"
+
+#: src/views/Fundraise/FundraiseRules.tsx:59
+msgid "參與權益"
+msgstr "참여 권익"
+
+#: src/views/Docs/Docs.tsx:90
+msgid "參與社區交流"
+msgstr "커뮤니티 소통 참여"
+
+#: src/components/NftCard/NftCard.tsx:18
+#: src/views/Assets/Assets.tsx:94
+#: src/views/Nft/Nft.tsx:60
+msgid "可用"
+msgstr "사용 가능"
+
+#: src/views/Nft/Nft.tsx:38
+msgid "可用 2 | 已使用 1"
+msgstr "사용 가능 2 | 사용됨 1"
+
+#: src/views/Fundraise/Fundraise.tsx:285
+msgid "可用餘額：{balanceText} USDT"
+msgstr "사용 가능 잔액: {balanceText} USDT"
+
+#: src/views/Nft/Nft.tsx:104
+msgid "合約地址"
+msgstr "컨트랙트 주소"
+
+#: src/views/Fundraise/FundraiseRules.tsx:40
+#~ msgid "單個地址最大限額：<0>{DASH} USDT</0>"
+#~ msgstr "주소당 최대 한도: <0>{DASH} USDT</0>"
+
+#: src/views/Fundraise/FundraiseRules.tsx:44
+msgid "單個地址最大限額：<0>{maxText}</0>"
+msgstr "주소당 최대 한도: <0>{maxText}</0>"
+
+#: src/views/Fundraise/Fundraise.tsx:338
+msgid "單地址認購上限"
+msgstr "주소당 청약 한도"
+
+#: src/views/Community/CommunityInvite.tsx:81
+msgid "地址不合法"
+msgstr "유효하지 않은 주소"
+
+#: src/views/Liquidity/Liquidity.tsx:16
+msgid "增強流動性深度"
+msgstr "유동성 깊이 강화"
+
+#: src/views/Liquidity/mock.ts:54
+msgid "增強流動性深度 · 穩定價格運行"
+msgstr "유동성 깊이 강화 · 가격 안정 운영"
+
+#: src/views/Community/CommunityStatsPanel.tsx:33
+msgid "多維度數據統計 · 追蹤社區貢獻"
+msgstr "다차원 데이터 통계 · 커뮤니티 기여 추적"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "天"
+msgstr "일"
+
+#: src/views/Docs/Docs.tsx:38
+msgid "完整了解 GG 黃金協議的願景、機制與經濟模型。"
+msgstr "GG 골드 프로토콜의 비전, 메커니즘, 경제 모델을 자세히 알아보세요."
+
+#: src/views/Docs/Docs.tsx:55
+msgid "官方公告"
+msgstr "공식 공지"
+
+#: src/components/Sidebar/nav.ts:27
+#: src/views/Docs/Docs.tsx:70
+msgid "官方文檔"
+msgstr "공식 문서"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:16
+msgid "專屬 NFT 空投"
+msgstr "전용 NFT 에어드롭"
+
+#: src/views/Fundraise/Fundraise.tsx:233
+#: src/views/Fundraise/Fundraise.tsx:260
+msgid "尚未上線"
+msgstr "아직 출시되지 않음"
+
+#: src/views/Fundraise/Fundraise.tsx:238
+msgid "尚未開始"
+msgstr "아직 시작되지 않음"
+
+#: src/components/NftCard/NftCard.tsx:18
+#: src/views/Nft/Nft.tsx:61
+#: src/views/Overview/mock.ts:23
+#: src/views/Overview/mock.ts:30
+msgid "已使用"
+msgstr "사용됨"
+
+#: src/views/Nft/Nft.tsx:41
+msgid "已使用額度"
+msgstr "사용한 한도"
+
+#: src/views/Community/CommunityInvite.tsx:79
+msgid "已綁定推薦人"
+msgstr "추천인 연결됨"
+
+#: src/views/Community/CommunityInvite.tsx:145
+msgid "已複製"
+msgstr "복사됨"
+
+#: src/views/Fundraise/Fundraise.tsx:346
+msgid "已認購"
+msgstr "누적 청약"
+
+#: src/views/Overview/EmissionDetail.tsx:27
+#: src/views/Overview/EmissionDetail.tsx:33
+#: src/views/Overview/EmissionDetail.tsx:43
+#: src/views/Overview/Overview.tsx:99
+#: src/views/Overview/Overview.tsx:105
+msgid "已釋放"
+msgstr "해제됨"
+
+#: src/views/Fundraise/Fundraise.tsx:179
+msgid "已關閉"
+msgstr "종료됨"
+
+#: src/views/Docs/Docs.tsx:30
+msgid "常見問題"
+msgstr "자주 묻는 질문"
+
+#: src/views/Docs/Docs.tsx:49
+msgid "常見問題（FAQ）"
+msgstr "자주 묻는 질문 (FAQ)"
+
+#: src/views/Liquidity/PoolTable.tsx:18
+msgid "年化收益 (參考)"
+msgstr "연 수익률 (참고)"
+
+#: src/views/Liquidity/mock.ts:66
+#: src/views/Liquidity/mock.ts:93
+#: src/views/Liquidity/PoolCard.tsx:43
+#: src/views/Overview/EcoPoolDetail.tsx:41
+#: src/views/Overview/Overview.tsx:168
+msgid "年化收益（參考）"
+msgstr "연 수익률(참고)"
+
+#: src/views/Overview/EmissionDetail.tsx:28
+#: src/views/Overview/EmissionDetail.tsx:51
+#: src/views/Overview/mock.ts:24
+#: src/views/Overview/Overview.tsx:100
+msgid "待釋放"
+msgstr "해제 대기"
+
+#: src/views/Assets/Assets.tsx:76
+msgid "待領取收益（USD）"
+msgstr "미수령 수익 (USD)"
+
+#: src/views/Nft/Nft.tsx:50
+msgid "我的 NFT"
+msgstr "내 NFT"
+
+#: src/views/Nft/Nft.tsx:33
+msgid "我的 NFT · 查看權益與使用記錄"
+msgstr "내 NFT · 권익 및 사용 내역 보기"
+
+#: src/views/Nft/Nft.tsx:36
+msgid "我的 NFT 數量"
+msgstr "내 NFT 수량"
+
+#: src/views/Nft/Nft.tsx:72
+msgid "我的 NFT（{0}）"
+msgstr "내 NFT ({0})"
+
+#: src/components/Sidebar/nav.ts:24
+msgid "我的社區"
+msgstr "내 커뮤니티"
+
+#: src/views/Fundraise/Fundraise.tsx:343
+msgid "我的認購"
+msgstr "내 청약"
+
+#: src/components/Sidebar/nav.ts:26
+#: src/views/Assets/Assets.tsx:35
+msgid "我的資產"
+msgstr "내 자산"
+
+#: src/views/Fundraise/Fundraise.tsx:246
+msgid "授權 USDT"
+msgstr "USDT 승인"
+
+#: src/views/Overview/EmissionDetail.tsx:78
+msgid "排放曲線圖（10年）"
+msgstr "에미션 곡선 (10년)"
+
+#: src/views/Overview/EmissionDetail.tsx:62
+msgid "排放階段明細"
+msgstr "에미션 단계 상세"
+
+#: src/views/Community/CommunityInvite.tsx:123
+msgid "推薦人地址 0x…"
+msgstr "추천인 주소 0x…"
+
+#: src/views/Community/CommunityInvite.tsx:116
+msgid "推薦關係"
+msgstr "추천 관계"
+
+#: src/views/Liquidity/Liquidity.tsx:18
+msgid "提升資金效率"
+msgstr "자금 효율 향상"
+
+#: src/views/Liquidity/mock.ts:81
+msgid "提升資金效率 · 共享生態增長"
+msgstr "자금 효율 향상 · 생태계 성장 공유"
+
+#: src/views/Assets/Assets.tsx:121
+msgid "提幣"
+msgstr "출금"
+
+#: src/views/Assets/Assets.tsx:98
+#: src/views/Liquidity/PoolTable.tsx:20
+msgid "操作"
+msgstr "작업"
+
+#: src/views/Docs/Docs.tsx:60
+msgid "收益來源、分配邏輯與計算方式。"
+msgstr "수익 출처, 분배 로직 및 계산 방식입니다."
+
+#: src/views/Docs/Docs.tsx:60
+msgid "收益機制說明"
+msgstr "수익 메커니즘 안내"
+
+#: src/views/Assets/Assets.tsx:64
+#: src/views/Assets/Assets.tsx:147
+msgid "收益資產"
+msgstr "수익 자산"
+
+#: src/views/Assets/Assets.tsx:73
+msgid "收益資產（USD）"
+msgstr "수익 자산 (USD)"
+
+#: src/components/Sidebar/nav.ts:20
+msgid "數據總覽"
+msgstr "데이터 개요"
+
+#: src/views/Assets/Assets.tsx:93
+msgid "數量"
+msgstr "수량"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "時"
+msgstr "시간"
+
+#: src/views/Fundraise/Fundraise.tsx:63
+msgid "時間未公布"
+msgstr "일정 미정"
+
+#: src/views/Assets/Assets.tsx:148
+#: src/views/Nft/Nft.tsx:129
+msgid "暫無記錄"
+msgstr "기록 없음"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:19
+msgid "更多權益"
+msgstr "더 많은 권익"
+
+#: src/views/Fundraise/Fundraise.tsx:353
+msgid "有效算力"
+msgstr "유효 파워"
+
+#: src/views/Fundraise/Fundraise.tsx:180
+msgid "未開始"
+msgstr "시작 전"
+
+#: src/components/Sidebar/nav.ts:22
+#: src/views/Power/Power.tsx:12
+msgid "本位倉算力"
+msgstr "본위 볼트 파워"
+
+#: src/views/Overview/Overview.tsx:33
+msgid "本位倉總算力（DAI）"
+msgstr "본위 볼트 총 파워 (DAI)"
+
+#: src/views/Liquidity/PoolDetail.tsx:58
+msgid "本池"
+msgstr "이 풀"
+
+#: src/views/Assets/Assets.tsx:36
+msgid "查看帳戶資產與收益情況"
+msgstr "계정 자산과 수익 현황 보기"
+
+#: src/views/Docs/Docs.tsx:131
+msgid "查看文檔"
+msgstr "문서 보기"
+
+#: src/views/Assets/Assets.tsx:137
+msgid "查看更多"
+msgstr "더 보기"
+
+#: src/views/Liquidity/PoolList.tsx:12
+msgid "查看與管理所有生態流動性池"
+msgstr "모든 생태계 유동성 풀 보기 및 관리"
+
+#: src/views/Overview/AllocationDetail.tsx:38
+#: src/views/Overview/AllocationDetail.tsx:51
+#: src/views/Overview/Overview.tsx:95
+#: src/views/Overview/Overview.tsx:113
+#: src/views/Overview/Overview.tsx:159
+msgid "查看詳情"
+msgstr "상세 보기"
+
+#: src/views/Docs/Docs.tsx:56
+msgid "查看項目最新動態、重要通知與執行進展。"
+msgstr "프로젝트 최신 소식, 주요 공지 및 진행 상황을 확인하세요."
+
+#: src/views/Liquidity/Liquidity.tsx:27
+msgid "構建深度流動性 · 穩定市場運行 · 共享生態增長"
+msgstr "깊은 유동성 구축 · 시장 안정 운영 · 생태계 성장 공유"
+
+#: src/views/Nft/Nft.tsx:51
+msgid "權益使用記錄"
+msgstr "권익 사용 내역"
+
+#: src/components/NftCard/NftCard.tsx:50
+#: src/views/Nft/Nft.tsx:100
+msgid "權益額度"
+msgstr "권익 한도"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:71
+msgid "每區 500,000 DAI"
+msgstr "구역당 500,000 DAI"
+
+#: src/views/Fundraise/Fundraise.tsx:323
+msgid "每筆認購都會記錄在鏈上"
+msgstr "모든 청약은 온체인에 기록됩니다"
+
+#: src/views/Liquidity/PoolTable.tsx:16
+msgid "池子價值 (USD)"
+msgstr "풀 가치 (USD)"
+
+#: src/views/Liquidity/mock.ts:70
+#: src/views/Liquidity/mock.ts:97
+msgid "池子創建時間"
+msgstr "풀 생성 시간"
+
+#: src/views/Liquidity/PoolDetail.tsx:73
+msgid "池子總價值"
+msgstr "풀 총 가치"
+
+#: src/views/Liquidity/PoolDetail.tsx:49
+msgid "池子總價值 (USD)"
+msgstr "풀 총 가치 (USD)"
+
+#: src/views/Liquidity/PoolDetail.tsx:68
+#: src/views/Overview/EcoPoolDetail.tsx:51
+msgid "池子資產構成"
+msgstr "풀 자산 구성"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:18
+msgid "治理投票權"
+msgstr "거버넌스 투표권"
+
+#: src/views/Liquidity/PoolCard.tsx:51
+#: src/views/Liquidity/PoolDetail.tsx:53
+#: src/views/Liquidity/PoolTable.tsx:19
+#: src/views/Overview/EcoPoolDetail.tsx:37
+msgid "流動性佔比"
+msgstr "유동성 비중"
+
+#: src/views/Liquidity/PoolDetail.tsx:99
+msgid "流動性佔比趨勢"
+msgstr "유동성 비중 추이"
+
+#: src/views/Overview/ReserveDetail.tsx:17
+msgid "流動性支持"
+msgstr "유동성 지원"
+
+#: src/views/Liquidity/PoolDetail.tsx:79
+msgid "流動性數據"
+msgstr "유동성 데이터"
+
+#: src/views/Liquidity/Liquidity.tsx:52
+msgid "流動性池"
+msgstr "유동성 풀"
+
+#: src/views/Liquidity/Liquidity.tsx:60
+#: src/views/Liquidity/PoolList.tsx:12
+msgid "流動性池列表"
+msgstr "유동성 풀 목록"
+
+#: src/views/Overview/Overview.tsx:80
+msgid "流通數量"
+msgstr "유통량"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:43
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:71
+#: src/views/Liquidity/PoolCard.tsx:57
+msgid "添加流動性"
+msgstr "유동성 추가"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:39
+msgid "添加流動性 / 移除流動性"
+msgstr "유동성 추가 / 유동성 제거"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:57
+msgid "添加資產"
+msgstr "자산 추가"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:67
+msgid "滑點容忍度"
+msgstr "슬리피지 허용치"
+
+#: src/views/Fundraise/FundraiseRules.tsx:54
+#~ msgid "為期 <0>{DASH}</0> · 每天限額：<1>{DASH} USDT</1>"
+#~ msgstr "기간 <0>{DASH}</0> · 일일 한도: <1>{DASH} USDT</1>"
+
+#: src/views/Docs/Docs.tsx:80
+msgid "獲取最新動態"
+msgstr "최신 소식 받기"
+
+#: src/components/NftCard/NftCard.tsx:51
+#: src/views/Nft/Nft.tsx:101
+msgid "獲取方式"
+msgstr "획득 방법"
+
+#: src/components/NftCard/NftCard.tsx:52
+#: src/views/Nft/Nft.tsx:102
+msgid "獲取時間"
+msgstr "획득 시간"
+
+#: src/views/Nft/Nft.tsx:52
+msgid "獲取記錄"
+msgstr "획득 내역"
+
+#: src/views/Overview/ReserveDetail.tsx:15
+msgid "生態建設"
+msgstr "생태계 구축"
+
+#: src/views/Overview/Overview.tsx:159
+msgid "生態池數據"
+msgstr "생태계 풀 데이터"
+
+#: src/views/Overview/EcoPoolDetail.tsx:20
+msgid "生態池數據詳情"
+msgstr "생태계 풀 데이터 상세"
+
+#: src/views/Liquidity/Liquidity.tsx:43
+msgid "生態池總價值 (USD)"
+msgstr "생태계 풀 총 가치 (USD)"
+
+#: src/views/Overview/Overview.tsx:34
+msgid "生態池總鎖倉（USDT）"
+msgstr "생태계 풀 총 예치액 (USDT)"
+
+#: src/components/Sidebar/nav.ts:23
+#: src/views/Liquidity/Liquidity.tsx:26
+msgid "生態流動性"
+msgstr "생태계 유동성"
+
+#: src/views/Overview/ReserveDetail.tsx:18
+msgid "生態激勵"
+msgstr "생태계 인센티브"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:17
+msgid "生態項目優先權益"
+msgstr "생태계 프로젝트 우선 권익"
+
+#: src/views/Docs/Docs.tsx:44
+msgid "產品機制、參與規則、收益分配等詳細說明。"
+msgstr "제품 메커니즘, 참여 규칙, 수익 분배 등에 대한 상세 안내입니다."
+
+#: src/views/Overview/AllocationDetail.tsx:48
+#: src/views/Overview/Overview.tsx:155
+msgid "用於價格保護及市場調節"
+msgstr "가격 보호 및 시장 조절에 사용"
+
+#: src/views/Overview/AllocationDetail.tsx:35
+#: src/views/Overview/Overview.tsx:138
+#: src/views/Overview/ReserveDetail.tsx:33
+msgid "用於生態建設、算力排放、流動性支持等"
+msgstr "생태계 구축, 파워 에미션, 유동성 지원 등에 사용"
+
+#: src/views/Fundraise/Fundraise.tsx:275
+msgid "當前共建目標"
+msgstr "현재 공동 구축 목표"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:44
+msgid "當前等級 {CURRENT}"
+msgstr "현재 등급 {CURRENT}"
+
+#: src/views/Overview/mock.ts:29
+msgid "當前餘額"
+msgstr "현재 잔액"
+
+#: src/views/Docs/Docs.tsx:39
+msgid "白皮書"
+msgstr "백서"
+
+#: src/views/Overview/Overview.tsx:29
+msgid "社區共建共享"
+msgstr "커뮤니티 공동 구축 · 공유"
+
+#: src/views/Overview/Overview.tsx:35
+msgid "社區成員總數"
+msgstr "커뮤니티 총 회원 수"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:27
+msgid "社區等級與權益"
+msgstr "커뮤니티 등급과 권익"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:15
+msgid "社區算力分潤"
+msgstr "커뮤니티 파워 수익 분배"
+
+#: src/views/Community/CommunityStatsPanel.tsx:32
+msgid "社區算力統計"
+msgstr "커뮤니티 파워 통계"
+
+#: src/views/Fundraise/Fundraise.tsx:55
+msgid "秒"
+msgstr "초"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:75
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:96
+msgid "移除流動性"
+msgstr "유동성 제거"
+
+#: src/views/Liquidity/Liquidity.tsx:17
+msgid "穩定價格運行"
+msgstr "가격 안정 운영"
+
+#: src/views/Assets/Assets.tsx:80
+msgid "立即領取"
+msgstr "지금 수령"
+
+#: src/views/Overview/mock.ts:10
+msgid "第1階段（1–24月）"
+msgstr "1단계 (1–24개월)"
+
+#: src/views/Overview/mock.ts:11
+msgid "第2階段（25–48月）"
+msgstr "2단계 (25–48개월)"
+
+#: src/views/Overview/mock.ts:12
+msgid "第3階段（49–72月）"
+msgstr "3단계 (49–72개월)"
+
+#: src/views/Overview/mock.ts:13
+msgid "第4階段（73–96月）"
+msgstr "4단계 (73–96개월)"
+
+#: src/views/Overview/mock.ts:14
+msgid "第5階段（97–120月）"
+msgstr "5단계 (97–120개월)"
+
+#: src/views/Overview/ReserveDetail.tsx:16
+msgid "算力排放"
+msgstr "파워 에미션"
+
+#: src/views/Fundraise/FundraiseRules.tsx:61
+msgid "算力權益：參與金額的 <0>2.5 倍</0>"
+msgstr "파워 권익: 참여 금액의 <0>2.5배</0>"
+
+#: src/views/Community/CommunityStatsPanel.tsx:51
+msgid "算力貢獻佔比"
+msgstr "파워 기여 비중"
+
+#: src/views/Liquidity/PoolTable.tsx:40
+msgid "管理"
+msgstr "관리"
+
+#: src/views/Docs/Docs.tsx:50
+msgid "精選社區高頻問題與官方解答，快速了解關鍵內容。"
+msgstr "커뮤니티에서 자주 묻는 질문과 공식 답변을 모아 핵심 내용을 빠르게 이해할 수 있습니다."
+
+#: src/views/Nft/Nft.tsx:40
+msgid "累計權益額度"
+msgstr "누적 권익 한도"
+
+#: src/views/Overview/EmissionDetail.tsx:81
+msgid "累計釋放"
+msgstr "누적 해제"
+
+#: src/views/Fundraise/FundraiseRules.tsx:54
+msgid "結束時間："
+msgstr "종료 시간:"
+
+#: src/views/Community/CommunityInvite.tsx:129
+msgid "綁定"
+msgstr "연결"
+
+#: src/views/Community/CommunityInvite.tsx:83
+msgid "綁定中…"
+msgstr "연결 중…"
+
+#: src/views/Community/CommunityInvite.tsx:119
+msgid "綁定推薦人"
+msgstr "추천인 연결"
+
+#: src/views/Community/CommunityInvite.tsx:72
+msgid "綁定推薦人後才可邀請"
+msgstr "추천인을 연결한 후 초대할 수 있습니다"
+
+#: src/views/Docs/Docs.tsx:59
+msgid "經濟模型簡版"
+msgstr "경제 모델 요약"
+
+#: src/views/Overview/Overview.tsx:76
+msgid "總市值"
+msgstr "총 시가총액"
+
+#: src/views/Liquidity/Liquidity.tsx:46
+msgid "總流動性池數"
+msgstr "총 유동성 풀 수"
+
+#: src/views/Community/CommunityStatsPanel.tsx:18
+#: src/views/Community/CommunityStatsPanel.tsx:55
+msgid "總算力 (DAI)"
+msgstr "총 파워 (DAI)"
+
+#: src/views/Assets/Assets.tsx:42
+msgid "總資產估值（USD）"
+msgstr "총 자산 평가액 (USD)"
+
+#: src/views/Overview/EmissionDetail.tsx:39
+msgid "總量"
+msgstr "총량"
+
+#: src/views/Overview/EcoPoolDetail.tsx:45
+msgid "總鎖倉（USDT）"
+msgstr "총 예치액 (USDT)"
+
+#: src/views/Fundraise/FundraiseRules.tsx:72
+msgid "舉例"
+msgstr "예시"
+
+#: src/views/Docs/Docs.tsx:62
+msgid "術語詞典"
+msgstr "용어 사전"
+
+#: src/views/Community/CommunityInvite.tsx:145
+msgid "複製"
+msgstr "복사"
+
+#: src/views/Community/CommunityInvite.tsx:95
+msgid "複製失敗：{0}"
+msgstr "복사 실패: {0}"
+
+#: src/views/Docs/Docs.tsx:29
+#: src/views/Docs/Docs.tsx:45
+msgid "規則說明"
+msgstr "규칙 안내"
+
+#: src/views/Fundraise/Fundraise.tsx:332
+msgid "計價與限額"
+msgstr "가격 기준 및 한도"
+
+#: src/views/Fundraise/Fundraise.tsx:247
+#: src/views/Fundraise/Fundraise.tsx:284
+msgid "認購"
+msgstr "청약하기"
+
+#: src/views/Fundraise/Fundraise.tsx:352
+msgid "認購次數"
+msgstr "청약 횟수"
+
+#: src/components/Sidebar/LocaleSwitch.tsx:15
+msgid "語言"
+msgstr "언어"
+
+#: src/views/Community/CommunityInvite.tsx:75
+#: src/views/Fundraise/Fundraise.tsx:234
+msgid "請先連接錢包"
+msgstr "먼저 지갑을 연결하세요"
+
+#: src/views/Community/CommunityInvite.tsx:82
+#: src/views/Fundraise/Fundraise.tsx:239
+msgid "請在錢包確認"
+msgstr "지갑에서 확인하세요"
+
+#: src/views/Community/CommunityInvite.tsx:80
+msgid "請輸入推薦人地址"
+msgstr "추천인 주소를 입력하세요"
+
+#: src/views/Fundraise/Fundraise.tsx:241
+msgid "請輸入金額"
+msgstr "금액을 입력하세요"
+
+#: src/views/Community/CommunityInvite.tsx:86
+msgid "讀取 Community 失敗：{0}"
+msgstr "Community 읽기 실패: {0}"
+
+#: src/views/Community/CommunityInvite.tsx:77
+#: src/views/Fundraise/Fundraise.tsx:236
+msgid "讀取中"
+msgstr "불러오는 중"
+
+#: src/views/Community/CommunityInvite.tsx:76
+#: src/views/Fundraise/Fundraise.tsx:235
+msgid "讀取失敗"
+msgstr "불러오기 실패"
+
+#: src/views/Fundraise/Fundraise.tsx:250
+msgid "讀取失敗：{0}"
+msgstr "불러오기 실패: {0}"
+
+#: src/views/Assets/Assets.tsx:53
+msgid "資產記錄"
+msgstr "자산 내역"
+
+#: src/views/Overview/ReserveDetail.tsx:37
+msgid "資金使用方向"
+msgstr "자금 사용처"
+
+#: src/views/Overview/AllocationDetail.tsx:17
+#: src/views/Overview/Overview.tsx:113
+msgid "資金分配總覽"
+msgstr "자금 배분 개요"
+
+#: src/views/Fundraise/Fundraise.tsx:245
+msgid "超過單地址上限"
+msgstr "주소당 한도 초과"
+
+#: src/components/PageHeader/PageHeader.tsx:13
+msgid "返回"
+msgstr "뒤로"
+
+#: src/components/TopBar/TopBar.tsx:52
+msgid "連接錢包"
+msgstr "지갑 연결"
+
+#: src/views/Community/CommunityInvite.tsx:71
+msgid "連接錢包後生成邀請連結"
+msgstr "지갑을 연결하면 초대 링크가 생성됩니다"
+
+#: src/views/Fundraise/Fundraise.tsx:64
+#: src/views/Fundraise/Fundraise.tsx:180
+msgid "進行中"
+msgstr "진행 중"
+
+#: src/components/TopBar/TopBar.tsx:19
+msgid "選單"
+msgstr "메뉴"
+
+#: src/views/Community/CommunityInvite.tsx:116
+msgid "邀請好友加入 · 綁定推薦人"
+msgstr "친구 초대 · 추천인 연결"
+
+#: src/views/Community/CommunityInvite.tsx:78
+msgid "邀請未開放"
+msgstr "초대 미개방"
+
+#: src/views/Community/CommunityInvite.tsx:135
+msgid "邀請連結"
+msgstr "초대 링크"
+
+#: src/views/Nft/mock.ts:8
+#: src/views/Nft/mock.ts:10
+msgid "銷毀 GG"
+msgstr "GG 소각"
+
+#: src/views/Nft/mock.ts:9
+msgid "銷毀 GOT2"
+msgstr "GOT2 소각"
+
+#: src/views/Assets/Assets.tsx:95
+msgid "鎖定"
+msgstr "잠금"
+
+#: src/views/Overview/Overview.tsx:28
+msgid "鏈上透明與安全"
+msgstr "온체인 투명성과 보안"
+
+#: src/views/Nft/Nft.tsx:64
+msgid "鑄造 / 獲取 NFT"
+msgstr "NFT 민팅 / 획득"
+
+#: src/views/Fundraise/Fundraise.tsx:276
+msgid "開始時間"
+msgstr "시작 시간"
+
+#: src/views/Fundraise/FundraiseRules.tsx:52
+msgid "開始時間："
+msgstr "시작 시간:"
+
+#: src/views/Docs/Docs.tsx:79
+msgid "關注 X"
+msgstr "X 팔로우"
+
+#: src/views/Overview/Overview.tsx:176
+msgid "關鍵指標"
+msgstr "핵심 지표"
+
+#: src/views/Docs/Docs.tsx:62
+msgid "關鍵詞術語解釋，幫助快速理解協議內容。"
+msgstr "주요 용어를 설명하여 프로토콜 내용을 빠르게 이해할 수 있도록 돕습니다."
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:65
+msgid "預估獲得 LP 代幣"
+msgstr "예상 LP 토큰"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:66
+msgid "預計池子佔比"
+msgstr "예상 풀 비중"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:85
+msgid "預計獲得"
+msgstr "예상 획득량"
+
+#: src/views/Fundraise/Fundraise.tsx:307
+msgid "預計獲得算力：{expectedText} USDT"
+msgstr "예상 획득 파워: {expectedText} USDT"
+
+#: src/views/Nft/Nft.tsx:119
+msgid "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
+msgstr "GG 커뮤니티 동적 에미션 보상을 수령할 때, 수령 시점의 GG 실시간 USDT 가치만큼 NFT 권익 한도가 차감됩니다."
+
+#: src/views/Fundraise/Fundraise.tsx:242
+msgid "額度不足"
+msgstr "한도 부족"
+
+#: src/views/Docs/Docs.tsx:61
+msgid "風險提示"
+msgstr "위험 고지"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:28
+msgid "餘額"
+msgstr "잔액"
+
+#: src/views/Overview/Overview.tsx:27
+msgid "黃金本位價值體系"
+msgstr "골드 본위 가치 체계"
+
+#: src/components/NftCard/NftCard.tsx:34
+#: src/views/Nft/Nft.tsx:88
+msgid "黃金聖甲蟲"
+msgstr "골든 스카라브"
+
+#: src/views/Nft/mock.ts:8
+msgid "黃金聖甲蟲 #001"
+msgstr "골든 스카라브 #001"
+
+#: src/views/Nft/mock.ts:9
+msgid "黃金聖甲蟲 #002"
+msgstr "골든 스카라브 #002"
+
+#: src/views/Nft/mock.ts:10
+msgid "黃金聖甲蟲 #003"
+msgstr "골든 스카라브 #003"

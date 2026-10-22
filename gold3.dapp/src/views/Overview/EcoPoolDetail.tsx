@@ -17,7 +17,7 @@ function EcoPoolDetail() {
 
     return (
         <div className="gp-stack">
-            <PageHeader title={t`生態池數據詳情`} back="/" />
+            <PageHeader title={t`生態池數據詳情`} back="/overview" />
 
             <Tabs tabs={pools.map(p => ({ key: p.key, label: p.name }))} value={tab} onChange={setTab} />
 

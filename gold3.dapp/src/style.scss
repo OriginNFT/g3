@@ -74,6 +74,8 @@ p {
   top: 16px;
   bottom: 16px;
   left: 16px;
+  display: flex;
+  flex-direction: column;
   width: var(--gp-sidebar-width);
   padding: 20px 12px;
   overflow-y: auto;
@@ -116,16 +118,31 @@ p {
     pointer-events: none;
   }
 
-  // The menu sits on a blue glass panel, so its contrast never depends on
-  // the artwork behind it.
-  .gp-nav {
-    padding: 8px;
+  // The menu and the language picker sit on blue glass panels, so their
+  // contrast never depends on the artwork behind them.
+  .gp-nav,
+  .gp-locale {
     background: rgba(198, 220, 246, 0.88);
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 16px;
     box-shadow: var(--gp-shadow);
     backdrop-filter: blur(14px);
   }
+
+  .gp-nav {
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+
+}
+
+// The language picker: at the foot of the sidebar, under the brand in the drawer.
+.gp-sidebar .gp-locale {
+  margin-top: auto;
+}
+
+.gp-drawer .gp-locale {
+  margin-bottom: 16px;
 }
 
 .gp-main {
@@ -194,6 +211,37 @@ p {
 
   &.is-disabled {
     opacity: 0.4;
+  }
+}
+
+// The select spans the row after the globe; the chevron lies over its right
+// end and lets clicks through to it.
+.gp-locale {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: var(--gp-navy);
+
+  select {
+    flex: 1;
+    min-width: 0;
+    padding: 0 22px 0 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    color: inherit;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  > svg:last-child {
+    position: absolute;
+    right: 14px;
+    pointer-events: none;
   }
 }
 
