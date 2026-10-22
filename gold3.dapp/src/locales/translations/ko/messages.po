@@ -74,7 +74,7 @@ msgstr "GG 3토큰 모델과 핵심 메커니즘 개요입니다."
 msgid "GG 實時價格"
 msgstr "GG 실시간 가격"
 
-#: src/views/Fundraise/Fundraise.tsx:336
+#: src/views/Fundraise/Fundraise.tsx:345
 msgid "GG 市場價格"
 msgstr "GG 시장 가격"
 
@@ -150,11 +150,11 @@ msgstr "NFT 자산 (3)"
 msgid "NFT 資產（USD）"
 msgstr "NFT 자산 (USD)"
 
-#: src/views/Fundraise/Fundraise.tsx:335
+#: src/views/Fundraise/Fundraise.tsx:344
 msgid "USDT 計價基準"
 msgstr "USDT 가격 기준"
 
-#: src/views/Fundraise/Fundraise.tsx:243
+#: src/views/Fundraise/Fundraise.tsx:249
 msgid "USDT 餘額不足"
 msgstr "USDT 잔액 부족"
 
@@ -162,7 +162,7 @@ msgstr "USDT 잔액 부족"
 msgid "三區總算力要求"
 msgstr "3개 구역 총 파워 요건"
 
-#: src/views/Fundraise/Fundraise.tsx:305
+#: src/views/Fundraise/Fundraise.tsx:311
 msgid "上限 {maxText}"
 msgstr "최대 {maxText}"
 
@@ -183,7 +183,7 @@ msgstr "거래"
 msgid "交易對"
 msgstr "거래쌍"
 
-#: src/views/Fundraise/Fundraise.tsx:240
+#: src/views/Fundraise/Fundraise.tsx:246
 msgid "交易確認中…"
 msgstr "거래 확인 중…"
 
@@ -204,7 +204,7 @@ msgstr "토큰 자산"
 msgid "代幣資產（USD）"
 msgstr "토큰 자산 (USD)"
 
-#: src/views/Fundraise/Fundraise.tsx:254
+#: src/views/Fundraise/Fundraise.tsx:260
 msgid "以 USDT 認購，每筆認購都記錄在鏈上"
 msgstr "USDT로 청약하며, 모든 청약은 온체인에 기록됩니다"
 
@@ -220,7 +220,7 @@ msgstr "금을 앵커로 · 지속 가능한 가치 생태계 구축"
 msgid "估值（USD）"
 msgstr "평가액 (USD)"
 
-#: src/views/Fundraise/Fundraise.tsx:244
+#: src/views/Fundraise/Fundraise.tsx:250
 msgid "低於最低認購金額"
 msgstr "최소 청약 금액 미만"
 
@@ -279,11 +279,11 @@ msgstr "생태계 성장 공유"
 msgid "其他"
 msgstr "기타"
 
-#: src/views/Fundraise/Fundraise.tsx:304
+#: src/views/Fundraise/Fundraise.tsx:310
 msgid "最低 {minText}"
 msgstr "최소 {minText}"
 
-#: src/views/Fundraise/Fundraise.tsx:337
+#: src/views/Fundraise/Fundraise.tsx:346
 msgid "最低認購金額"
 msgstr "최소 청약 금액"
 
@@ -291,7 +291,7 @@ msgstr "최소 청약 금액"
 msgid "最新公告"
 msgstr "최신 공지"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "分"
 msgstr "분"
 
@@ -303,7 +303,7 @@ msgstr "새로고침"
 msgid "前往查看"
 msgstr "바로 가기"
 
-#: src/views/Fundraise/Fundraise.tsx:319
+#: src/views/Fundraise/Fundraise.tsx:328
 msgid "剩餘可認購額度"
 msgstr "남은 청약 가능 한도"
 
@@ -324,19 +324,19 @@ msgid "募滿即止"
 msgstr "매진 시 종료"
 
 #: src/components/Sidebar/nav.ts:21
-#: src/views/Fundraise/Fundraise.tsx:254
+#: src/views/Fundraise/Fundraise.tsx:260
 msgid "募資"
 msgstr "펀드레이징"
 
-#: src/views/Fundraise/Fundraise.tsx:66
+#: src/views/Fundraise/Fundraise.tsx:69
 msgid "募資倒數"
 msgstr "펀드레이징 카운트다운"
 
-#: src/views/Fundraise/Fundraise.tsx:261
+#: src/views/Fundraise/Fundraise.tsx:267
 msgid "募資合約尚未部署到此網路。"
 msgstr "펀드레이징 컨트랙트가 아직 이 네트워크에 배포되지 않았습니다."
 
-#: src/views/Fundraise/Fundraise.tsx:237
+#: src/views/Fundraise/Fundraise.tsx:243
 msgid "募資已關閉"
 msgstr "펀드레이징 종료"
 
@@ -368,7 +368,7 @@ msgstr "프로토콜 준비금 풀"
 msgid "協議儲備池詳情"
 msgstr "프로토콜 준비금 풀 상세"
 
-#: src/views/Fundraise/Fundraise.tsx:268
+#: src/views/Fundraise/Fundraise.tsx:274
 msgid "協議共建進度"
 msgstr "프로토콜 공동 구축 진행률"
 
@@ -432,7 +432,7 @@ msgstr "사용 가능"
 msgid "可用 2 | 已使用 1"
 msgstr "사용 가능 2 | 사용됨 1"
 
-#: src/views/Fundraise/Fundraise.tsx:285
+#: src/views/Fundraise/Fundraise.tsx:291
 msgid "可用餘額：{balanceText} USDT"
 msgstr "사용 가능 잔액: {balanceText} USDT"
 
@@ -448,7 +448,7 @@ msgstr "컨트랙트 주소"
 msgid "單個地址最大限額：<0>{maxText}</0>"
 msgstr "주소당 최대 한도: <0>{maxText}</0>"
 
-#: src/views/Fundraise/Fundraise.tsx:338
+#: src/views/Fundraise/Fundraise.tsx:347
 msgid "單地址認購上限"
 msgstr "주소당 청약 한도"
 
@@ -468,7 +468,7 @@ msgstr "유동성 깊이 강화 · 가격 안정 운영"
 msgid "多維度數據統計 · 追蹤社區貢獻"
 msgstr "다차원 데이터 통계 · 커뮤니티 기여 추적"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "天"
 msgstr "일"
 
@@ -485,16 +485,20 @@ msgstr "공식 공지"
 msgid "官方文檔"
 msgstr "공식 문서"
 
+#: src/views/Fundraise/Fundraise.tsx:315
+msgid "實際認購：{effectiveText} USDT（以 100 USDT 為單位）"
+msgstr ""
+
 #: src/views/Community/CommunityLevelsPanel.tsx:16
 msgid "專屬 NFT 空投"
 msgstr "전용 NFT 에어드롭"
 
-#: src/views/Fundraise/Fundraise.tsx:233
-#: src/views/Fundraise/Fundraise.tsx:260
+#: src/views/Fundraise/Fundraise.tsx:239
+#: src/views/Fundraise/Fundraise.tsx:266
 msgid "尚未上線"
 msgstr "아직 출시되지 않음"
 
-#: src/views/Fundraise/Fundraise.tsx:238
+#: src/views/Fundraise/Fundraise.tsx:244
 msgid "尚未開始"
 msgstr "아직 시작되지 않음"
 
@@ -517,7 +521,7 @@ msgstr "추천인 연결됨"
 msgid "已複製"
 msgstr "복사됨"
 
-#: src/views/Fundraise/Fundraise.tsx:346
+#: src/views/Fundraise/Fundraise.tsx:355
 msgid "已認購"
 msgstr "누적 청약"
 
@@ -529,7 +533,7 @@ msgstr "누적 청약"
 msgid "已釋放"
 msgstr "해제됨"
 
-#: src/views/Fundraise/Fundraise.tsx:179
+#: src/views/Fundraise/Fundraise.tsx:182
 msgid "已關閉"
 msgstr "종료됨"
 
@@ -584,7 +588,7 @@ msgstr "내 NFT ({0})"
 msgid "我的社區"
 msgstr "내 커뮤니티"
 
-#: src/views/Fundraise/Fundraise.tsx:343
+#: src/views/Fundraise/Fundraise.tsx:352
 msgid "我的認購"
 msgstr "내 청약"
 
@@ -593,7 +597,7 @@ msgstr "내 청약"
 msgid "我的資產"
 msgstr "내 자산"
 
-#: src/views/Fundraise/Fundraise.tsx:246
+#: src/views/Fundraise/Fundraise.tsx:252
 msgid "授權 USDT"
 msgstr "USDT 승인"
 
@@ -655,11 +659,11 @@ msgstr "데이터 개요"
 msgid "數量"
 msgstr "수량"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "時"
 msgstr "시간"
 
-#: src/views/Fundraise/Fundraise.tsx:63
+#: src/views/Fundraise/Fundraise.tsx:66
 msgid "時間未公布"
 msgstr "일정 미정"
 
@@ -672,11 +676,11 @@ msgstr "기록 없음"
 msgid "更多權益"
 msgstr "더 많은 권익"
 
-#: src/views/Fundraise/Fundraise.tsx:353
+#: src/views/Fundraise/Fundraise.tsx:362
 msgid "有效算力"
 msgstr "유효 파워"
 
-#: src/views/Fundraise/Fundraise.tsx:180
+#: src/views/Fundraise/Fundraise.tsx:183
 msgid "未開始"
 msgstr "시작 전"
 
@@ -738,7 +742,7 @@ msgstr "권익 한도"
 msgid "每區 500,000 DAI"
 msgstr "구역당 500,000 DAI"
 
-#: src/views/Fundraise/Fundraise.tsx:323
+#: src/views/Fundraise/Fundraise.tsx:332
 msgid "每筆認購都會記錄在鏈上"
 msgstr "모든 청약은 온체인에 기록됩니다"
 
@@ -888,7 +892,7 @@ msgstr "가격 보호 및 시장 조절에 사용"
 msgid "用於生態建設、算力排放、流動性支持等"
 msgstr "생태계 구축, 파워 에미션, 유동성 지원 등에 사용"
 
-#: src/views/Fundraise/Fundraise.tsx:275
+#: src/views/Fundraise/Fundraise.tsx:281
 msgid "當前共建目標"
 msgstr "현재 공동 구축 목표"
 
@@ -924,7 +928,7 @@ msgstr "커뮤니티 파워 수익 분배"
 msgid "社區算力統計"
 msgstr "커뮤니티 파워 통계"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "秒"
 msgstr "초"
 
@@ -1059,16 +1063,16 @@ msgstr "복사 실패: {0}"
 msgid "規則說明"
 msgstr "규칙 안내"
 
-#: src/views/Fundraise/Fundraise.tsx:332
+#: src/views/Fundraise/Fundraise.tsx:341
 msgid "計價與限額"
 msgstr "가격 기준 및 한도"
 
-#: src/views/Fundraise/Fundraise.tsx:247
-#: src/views/Fundraise/Fundraise.tsx:284
+#: src/views/Fundraise/Fundraise.tsx:253
+#: src/views/Fundraise/Fundraise.tsx:290
 msgid "認購"
 msgstr "청약하기"
 
-#: src/views/Fundraise/Fundraise.tsx:352
+#: src/views/Fundraise/Fundraise.tsx:361
 msgid "認購次數"
 msgstr "청약 횟수"
 
@@ -1077,12 +1081,12 @@ msgid "語言"
 msgstr "언어"
 
 #: src/views/Community/CommunityInvite.tsx:75
-#: src/views/Fundraise/Fundraise.tsx:234
+#: src/views/Fundraise/Fundraise.tsx:240
 msgid "請先連接錢包"
 msgstr "먼저 지갑을 연결하세요"
 
 #: src/views/Community/CommunityInvite.tsx:82
-#: src/views/Fundraise/Fundraise.tsx:239
+#: src/views/Fundraise/Fundraise.tsx:245
 msgid "請在錢包確認"
 msgstr "지갑에서 확인하세요"
 
@@ -1090,7 +1094,7 @@ msgstr "지갑에서 확인하세요"
 msgid "請輸入推薦人地址"
 msgstr "추천인 주소를 입력하세요"
 
-#: src/views/Fundraise/Fundraise.tsx:241
+#: src/views/Fundraise/Fundraise.tsx:247
 msgid "請輸入金額"
 msgstr "금액을 입력하세요"
 
@@ -1099,16 +1103,16 @@ msgid "讀取 Community 失敗：{0}"
 msgstr "Community 읽기 실패: {0}"
 
 #: src/views/Community/CommunityInvite.tsx:77
-#: src/views/Fundraise/Fundraise.tsx:236
+#: src/views/Fundraise/Fundraise.tsx:242
 msgid "讀取中"
 msgstr "불러오는 중"
 
 #: src/views/Community/CommunityInvite.tsx:76
-#: src/views/Fundraise/Fundraise.tsx:235
+#: src/views/Fundraise/Fundraise.tsx:241
 msgid "讀取失敗"
 msgstr "불러오기 실패"
 
-#: src/views/Fundraise/Fundraise.tsx:250
+#: src/views/Fundraise/Fundraise.tsx:256
 msgid "讀取失敗：{0}"
 msgstr "불러오기 실패: {0}"
 
@@ -1125,7 +1129,7 @@ msgstr "자금 사용처"
 msgid "資金分配總覽"
 msgstr "자금 배분 개요"
 
-#: src/views/Fundraise/Fundraise.tsx:245
+#: src/views/Fundraise/Fundraise.tsx:251
 msgid "超過單地址上限"
 msgstr "주소당 한도 초과"
 
@@ -1141,8 +1145,8 @@ msgstr "지갑 연결"
 msgid "連接錢包後生成邀請連結"
 msgstr "지갑을 연결하면 초대 링크가 생성됩니다"
 
-#: src/views/Fundraise/Fundraise.tsx:64
-#: src/views/Fundraise/Fundraise.tsx:180
+#: src/views/Fundraise/Fundraise.tsx:67
+#: src/views/Fundraise/Fundraise.tsx:183
 msgid "進行中"
 msgstr "진행 중"
 
@@ -1183,7 +1187,7 @@ msgstr "온체인 투명성과 보안"
 msgid "鑄造 / 獲取 NFT"
 msgstr "NFT 민팅 / 획득"
 
-#: src/views/Fundraise/Fundraise.tsx:276
+#: src/views/Fundraise/Fundraise.tsx:282
 msgid "開始時間"
 msgstr "시작 시간"
 
@@ -1215,7 +1219,7 @@ msgstr "예상 풀 비중"
 msgid "預計獲得"
 msgstr "예상 획득량"
 
-#: src/views/Fundraise/Fundraise.tsx:307
+#: src/views/Fundraise/Fundraise.tsx:313
 msgid "預計獲得算力：{expectedText} USDT"
 msgstr "예상 획득 파워: {expectedText} USDT"
 
@@ -1223,7 +1227,7 @@ msgstr "예상 획득 파워: {expectedText} USDT"
 msgid "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
 msgstr "GG 커뮤니티 동적 에미션 보상을 수령할 때, 수령 시점의 GG 실시간 USDT 가치만큼 NFT 권익 한도가 차감됩니다."
 
-#: src/views/Fundraise/Fundraise.tsx:242
+#: src/views/Fundraise/Fundraise.tsx:248
 msgid "額度不足"
 msgstr "한도 부족"
 

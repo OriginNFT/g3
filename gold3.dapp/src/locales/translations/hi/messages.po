@@ -74,7 +74,7 @@ msgstr "GG तीन-टोकन मॉडल और मुख्य तंत�
 msgid "GG 實時價格"
 msgstr "GG रियल-टाइम मूल्य"
 
-#: src/views/Fundraise/Fundraise.tsx:336
+#: src/views/Fundraise/Fundraise.tsx:345
 msgid "GG 市場價格"
 msgstr "GG बाज़ार मूल्य"
 
@@ -150,11 +150,11 @@ msgstr "NFT एसेट (3)"
 msgid "NFT 資產（USD）"
 msgstr "NFT एसेट (USD)"
 
-#: src/views/Fundraise/Fundraise.tsx:335
+#: src/views/Fundraise/Fundraise.tsx:344
 msgid "USDT 計價基準"
 msgstr "USDT मूल्य आधार"
 
-#: src/views/Fundraise/Fundraise.tsx:243
+#: src/views/Fundraise/Fundraise.tsx:249
 msgid "USDT 餘額不足"
 msgstr "USDT बैलेंस अपर्याप्त है"
 
@@ -162,7 +162,7 @@ msgstr "USDT बैलेंस अपर्याप्त है"
 msgid "三區總算力要求"
 msgstr "तीन ज़ोन की कुल पावर आवश्यकता"
 
-#: src/views/Fundraise/Fundraise.tsx:305
+#: src/views/Fundraise/Fundraise.tsx:311
 msgid "上限 {maxText}"
 msgstr "अधिकतम {maxText}"
 
@@ -183,7 +183,7 @@ msgstr "ट्रेड करें"
 msgid "交易對"
 msgstr "ट्रेडिंग पेयर"
 
-#: src/views/Fundraise/Fundraise.tsx:240
+#: src/views/Fundraise/Fundraise.tsx:246
 msgid "交易確認中…"
 msgstr "लेनदेन की पुष्टि हो रही है…"
 
@@ -204,7 +204,7 @@ msgstr "टोकन एसेट"
 msgid "代幣資產（USD）"
 msgstr "टोकन एसेट (USD)"
 
-#: src/views/Fundraise/Fundraise.tsx:254
+#: src/views/Fundraise/Fundraise.tsx:260
 msgid "以 USDT 認購，每筆認購都記錄在鏈上"
 msgstr "USDT से सब्सक्राइब करें, हर सब्सक्रिप्शन ऑन-चेन दर्ज होता है"
 
@@ -220,7 +220,7 @@ msgstr "सोने से जुड़ा · एक टिकाऊ मूल�
 msgid "估值（USD）"
 msgstr "मूल्यांकन (USD)"
 
-#: src/views/Fundraise/Fundraise.tsx:244
+#: src/views/Fundraise/Fundraise.tsx:250
 msgid "低於最低認購金額"
 msgstr "न्यूनतम सब्सक्रिप्शन राशि से कम"
 
@@ -279,11 +279,11 @@ msgstr "इकोसिस्टम की वृद्धि साझा क�
 msgid "其他"
 msgstr "अन्य"
 
-#: src/views/Fundraise/Fundraise.tsx:304
+#: src/views/Fundraise/Fundraise.tsx:310
 msgid "最低 {minText}"
 msgstr "न्यूनतम {minText}"
 
-#: src/views/Fundraise/Fundraise.tsx:337
+#: src/views/Fundraise/Fundraise.tsx:346
 msgid "最低認購金額"
 msgstr "न्यूनतम सब्सक्रिप्शन राशि"
 
@@ -291,7 +291,7 @@ msgstr "न्यूनतम सब्सक्रिप्शन राशि"
 msgid "最新公告"
 msgstr "नवीनतम घोषणाएँ"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "分"
 msgstr "मिनट"
 
@@ -303,7 +303,7 @@ msgstr "रीफ़्रेश"
 msgid "前往查看"
 msgstr "देखें"
 
-#: src/views/Fundraise/Fundraise.tsx:319
+#: src/views/Fundraise/Fundraise.tsx:328
 msgid "剩餘可認購額度"
 msgstr "शेष सब्सक्रिप्शन सीमा"
 
@@ -324,19 +324,19 @@ msgid "募滿即止"
 msgstr "बिक जाने तक"
 
 #: src/components/Sidebar/nav.ts:21
-#: src/views/Fundraise/Fundraise.tsx:254
+#: src/views/Fundraise/Fundraise.tsx:260
 msgid "募資"
 msgstr "फंडरेज़"
 
-#: src/views/Fundraise/Fundraise.tsx:66
+#: src/views/Fundraise/Fundraise.tsx:69
 msgid "募資倒數"
 msgstr "फंडरेज़ काउंटडाउन"
 
-#: src/views/Fundraise/Fundraise.tsx:261
+#: src/views/Fundraise/Fundraise.tsx:267
 msgid "募資合約尚未部署到此網路。"
 msgstr "फंडरेज़ कॉन्ट्रैक्ट अभी इस नेटवर्क पर डिप्लॉय नहीं हुआ है।"
 
-#: src/views/Fundraise/Fundraise.tsx:237
+#: src/views/Fundraise/Fundraise.tsx:243
 msgid "募資已關閉"
 msgstr "फंडरेज़ बंद है"
 
@@ -368,7 +368,7 @@ msgstr "प्रोटोकॉल रिज़र्व पूल"
 msgid "協議儲備池詳情"
 msgstr "प्रोटोकॉल रिज़र्व पूल विवरण"
 
-#: src/views/Fundraise/Fundraise.tsx:268
+#: src/views/Fundraise/Fundraise.tsx:274
 msgid "協議共建進度"
 msgstr "प्रोटोकॉल सह-निर्माण प्रगति"
 
@@ -432,7 +432,7 @@ msgstr "उपलब्ध"
 msgid "可用 2 | 已使用 1"
 msgstr "उपलब्ध 2 | उपयोग किए गए 1"
 
-#: src/views/Fundraise/Fundraise.tsx:285
+#: src/views/Fundraise/Fundraise.tsx:291
 msgid "可用餘額：{balanceText} USDT"
 msgstr "उपलब्ध बैलेंस: {balanceText} USDT"
 
@@ -448,7 +448,7 @@ msgstr "कॉन्ट्रैक्ट पता"
 msgid "單個地址最大限額：<0>{maxText}</0>"
 msgstr "प्रति पता अधिकतम सीमा: <0>{maxText}</0>"
 
-#: src/views/Fundraise/Fundraise.tsx:338
+#: src/views/Fundraise/Fundraise.tsx:347
 msgid "單地址認購上限"
 msgstr "प्रति पता सब्सक्रिप्शन सीमा"
 
@@ -468,7 +468,7 @@ msgstr "लिक्विडिटी की गहराई बढ़ाएँ
 msgid "多維度數據統計 · 追蹤社區貢獻"
 msgstr "बहुआयामी आँकड़े · समुदाय के योगदान को ट्रैक करें"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "天"
 msgstr "दिन"
 
@@ -485,16 +485,20 @@ msgstr "आधिकारिक घोषणाएँ"
 msgid "官方文檔"
 msgstr "आधिकारिक दस्तावेज़"
 
+#: src/views/Fundraise/Fundraise.tsx:315
+msgid "實際認購：{effectiveText} USDT（以 100 USDT 為單位）"
+msgstr ""
+
 #: src/views/Community/CommunityLevelsPanel.tsx:16
 msgid "專屬 NFT 空投"
 msgstr "विशेष NFT एयरड्रॉप"
 
-#: src/views/Fundraise/Fundraise.tsx:233
-#: src/views/Fundraise/Fundraise.tsx:260
+#: src/views/Fundraise/Fundraise.tsx:239
+#: src/views/Fundraise/Fundraise.tsx:266
 msgid "尚未上線"
 msgstr "अभी लाइव नहीं"
 
-#: src/views/Fundraise/Fundraise.tsx:238
+#: src/views/Fundraise/Fundraise.tsx:244
 msgid "尚未開始"
 msgstr "अभी शुरू नहीं हुआ"
 
@@ -517,7 +521,7 @@ msgstr "रेफ़रर बाइंड हो चुका है"
 msgid "已複製"
 msgstr "कॉपी हो गया"
 
-#: src/views/Fundraise/Fundraise.tsx:346
+#: src/views/Fundraise/Fundraise.tsx:355
 msgid "已認購"
 msgstr "सब्सक्राइब किया गया"
 
@@ -529,7 +533,7 @@ msgstr "सब्सक्राइब किया गया"
 msgid "已釋放"
 msgstr "रिलीज़ हो चुका"
 
-#: src/views/Fundraise/Fundraise.tsx:179
+#: src/views/Fundraise/Fundraise.tsx:182
 msgid "已關閉"
 msgstr "बंद"
 
@@ -584,7 +588,7 @@ msgstr "मेरे NFT ({0})"
 msgid "我的社區"
 msgstr "मेरा समुदाय"
 
-#: src/views/Fundraise/Fundraise.tsx:343
+#: src/views/Fundraise/Fundraise.tsx:352
 msgid "我的認購"
 msgstr "मेरे सब्सक्रिप्शन"
 
@@ -593,7 +597,7 @@ msgstr "मेरे सब्सक्रिप्शन"
 msgid "我的資產"
 msgstr "मेरे एसेट"
 
-#: src/views/Fundraise/Fundraise.tsx:246
+#: src/views/Fundraise/Fundraise.tsx:252
 msgid "授權 USDT"
 msgstr "USDT अप्रूव करें"
 
@@ -655,11 +659,11 @@ msgstr "डेटा अवलोकन"
 msgid "數量"
 msgstr "मात्रा"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "時"
 msgstr "घंटे"
 
-#: src/views/Fundraise/Fundraise.tsx:63
+#: src/views/Fundraise/Fundraise.tsx:66
 msgid "時間未公布"
 msgstr "समय अभी घोषित नहीं"
 
@@ -672,11 +676,11 @@ msgstr "अभी कोई रिकॉर्ड नहीं"
 msgid "更多權益"
 msgstr "और अधिकार"
 
-#: src/views/Fundraise/Fundraise.tsx:353
+#: src/views/Fundraise/Fundraise.tsx:362
 msgid "有效算力"
 msgstr "प्रभावी पावर"
 
-#: src/views/Fundraise/Fundraise.tsx:180
+#: src/views/Fundraise/Fundraise.tsx:183
 msgid "未開始"
 msgstr "शुरू नहीं हुआ"
 
@@ -738,7 +742,7 @@ msgstr "अधिकार कोटा"
 msgid "每區 500,000 DAI"
 msgstr "प्रति ज़ोन 500,000 DAI"
 
-#: src/views/Fundraise/Fundraise.tsx:323
+#: src/views/Fundraise/Fundraise.tsx:332
 msgid "每筆認購都會記錄在鏈上"
 msgstr "हर सब्सक्रिप्शन ऑन-चेन दर्ज होता है"
 
@@ -888,7 +892,7 @@ msgstr "मूल्य सुरक्षा और बाज़ार सं�
 msgid "用於生態建設、算力排放、流動性支持等"
 msgstr "इकोसिस्टम निर्माण, पावर एमिशन, लिक्विडिटी सहायता आदि के लिए"
 
-#: src/views/Fundraise/Fundraise.tsx:275
+#: src/views/Fundraise/Fundraise.tsx:281
 msgid "當前共建目標"
 msgstr "वर्तमान सह-निर्माण लक्ष्य"
 
@@ -924,7 +928,7 @@ msgstr "समुदाय पावर राजस्व साझेदार
 msgid "社區算力統計"
 msgstr "समुदाय पावर आँकड़े"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "秒"
 msgstr "सेकंड"
 
@@ -1059,16 +1063,16 @@ msgstr "कॉपी विफल: {0}"
 msgid "規則說明"
 msgstr "नियम"
 
-#: src/views/Fundraise/Fundraise.tsx:332
+#: src/views/Fundraise/Fundraise.tsx:341
 msgid "計價與限額"
 msgstr "मूल्य निर्धारण और सीमाएँ"
 
-#: src/views/Fundraise/Fundraise.tsx:247
-#: src/views/Fundraise/Fundraise.tsx:284
+#: src/views/Fundraise/Fundraise.tsx:253
+#: src/views/Fundraise/Fundraise.tsx:290
 msgid "認購"
 msgstr "सब्सक्राइब करें"
 
-#: src/views/Fundraise/Fundraise.tsx:352
+#: src/views/Fundraise/Fundraise.tsx:361
 msgid "認購次數"
 msgstr "सब्सक्रिप्शन की संख्या"
 
@@ -1077,12 +1081,12 @@ msgid "語言"
 msgstr "भाषा"
 
 #: src/views/Community/CommunityInvite.tsx:75
-#: src/views/Fundraise/Fundraise.tsx:234
+#: src/views/Fundraise/Fundraise.tsx:240
 msgid "請先連接錢包"
 msgstr "कृपया पहले वॉलेट कनेक्ट करें"
 
 #: src/views/Community/CommunityInvite.tsx:82
-#: src/views/Fundraise/Fundraise.tsx:239
+#: src/views/Fundraise/Fundraise.tsx:245
 msgid "請在錢包確認"
 msgstr "कृपया वॉलेट में पुष्टि करें"
 
@@ -1090,7 +1094,7 @@ msgstr "कृपया वॉलेट में पुष्टि करे�
 msgid "請輸入推薦人地址"
 msgstr "कृपया रेफ़रर का पता दर्ज करें"
 
-#: src/views/Fundraise/Fundraise.tsx:241
+#: src/views/Fundraise/Fundraise.tsx:247
 msgid "請輸入金額"
 msgstr "कृपया राशि दर्ज करें"
 
@@ -1099,16 +1103,16 @@ msgid "讀取 Community 失敗：{0}"
 msgstr "Community पढ़ने में विफल: {0}"
 
 #: src/views/Community/CommunityInvite.tsx:77
-#: src/views/Fundraise/Fundraise.tsx:236
+#: src/views/Fundraise/Fundraise.tsx:242
 msgid "讀取中"
 msgstr "लोड हो रहा है"
 
 #: src/views/Community/CommunityInvite.tsx:76
-#: src/views/Fundraise/Fundraise.tsx:235
+#: src/views/Fundraise/Fundraise.tsx:241
 msgid "讀取失敗"
 msgstr "लोड करने में विफल"
 
-#: src/views/Fundraise/Fundraise.tsx:250
+#: src/views/Fundraise/Fundraise.tsx:256
 msgid "讀取失敗：{0}"
 msgstr "लोड करने में विफल: {0}"
 
@@ -1125,7 +1129,7 @@ msgstr "फंड का उपयोग"
 msgid "資金分配總覽"
 msgstr "फंड आवंटन अवलोकन"
 
-#: src/views/Fundraise/Fundraise.tsx:245
+#: src/views/Fundraise/Fundraise.tsx:251
 msgid "超過單地址上限"
 msgstr "प्रति पता सीमा से अधिक"
 
@@ -1141,8 +1145,8 @@ msgstr "वॉलेट कनेक्ट करें"
 msgid "連接錢包後生成邀請連結"
 msgstr "आमंत्रण लिंक बनाने के लिए वॉलेट कनेक्ट करें"
 
-#: src/views/Fundraise/Fundraise.tsx:64
-#: src/views/Fundraise/Fundraise.tsx:180
+#: src/views/Fundraise/Fundraise.tsx:67
+#: src/views/Fundraise/Fundraise.tsx:183
 msgid "進行中"
 msgstr "जारी है"
 
@@ -1183,7 +1187,7 @@ msgstr "ऑन-चेन पारदर्शिता और सुरक्�
 msgid "鑄造 / 獲取 NFT"
 msgstr "NFT मिंट करें / प्राप्त करें"
 
-#: src/views/Fundraise/Fundraise.tsx:276
+#: src/views/Fundraise/Fundraise.tsx:282
 msgid "開始時間"
 msgstr "प्रारंभ समय"
 
@@ -1215,7 +1219,7 @@ msgstr "अनुमानित पूल हिस्सा"
 msgid "預計獲得"
 msgstr "अनुमानित प्राप्ति"
 
-#: src/views/Fundraise/Fundraise.tsx:307
+#: src/views/Fundraise/Fundraise.tsx:313
 msgid "預計獲得算力：{expectedText} USDT"
 msgstr "अनुमानित पावर: {expectedText} USDT"
 
@@ -1223,7 +1227,7 @@ msgstr "अनुमानित पावर: {expectedText} USDT"
 msgid "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
 msgstr "GG समुदाय डायनेमिक एमिशन रिवॉर्ड क्लेम करते समय, क्लेम के समय GG के रियल-टाइम USDT मूल्य के अनुसार NFT अधिकार कोटा घटाया जाएगा।"
 
-#: src/views/Fundraise/Fundraise.tsx:242
+#: src/views/Fundraise/Fundraise.tsx:248
 msgid "額度不足"
 msgstr "कोटा अपर्याप्त"
 

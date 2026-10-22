@@ -22,6 +22,9 @@ const DEPLOYED = FUNDRAISE_ADDRESS !== zeroAddress;
 const DASH = "——";
 // USDT participation counts 2.5x towards power (spec §04).
 const POWER_X10 = 25n;
+// subscribe() rounds the amount down to a whole multiple of 100 USDT and pulls
+// only that (Gold3Fundraise.STEP): 105 subscribes 100.
+const STEP = 100n * 10n ** BigInt(USDT_DECIMALS);
 const AMOUNT_PATTERN = new RegExp(`^\\d*(\\.\\d{0,${USDT_DECIMALS}})?$`);
 
 function fmt(value: bigint): string {
@@ -181,17 +184,20 @@ function Fundraise() {
     }
 
     const parsed = amount ? parseUnits(amount, USDT_DECIMALS) : 0n;
-    const insufficient = balance !== undefined && parsed > balance;
-    const needsApproval = allowance !== undefined && parsed > allowance;
-    const belowMin = hasMin && parsed < minContribution;
-    const overRemaining = remaining !== undefined && parsed > remaining;
+    // What subscribe() will actually pull; every check and figure below uses it.
+    const effective = parsed - (parsed % STEP);
+    const insufficient = balance !== undefined && effective > balance;
+    const needsApproval = allowance !== undefined && effective > allowance;
+    const belowMin = effective < STEP || (hasMin && effective < minContribution);
+    const overRemaining = remaining !== undefined && effective > remaining;
     // Room left under the target; below minContribution nobody can get in.
     const room = hasTarget && raised !== undefined ? (target > raised ? target - raised : 0n) : undefined;
-    const quotaFull = room !== undefined && ((hasMin && room < minContribution) || parsed > room);
+    const quotaFull = room !== undefined && ((hasMin && room < minContribution) || effective > room);
 
     const balanceText = balance !== undefined ? fmt(balance) : DASH;
-    const expectedText = fmt((parsed * POWER_X10) / 10n);
-    const amountPercent = hasMax ? Number((parsed * 10_000n) / maxPerAddress) / 100 : 0;
+    const expectedText = fmt((effective * POWER_X10) / 10n);
+    const effectiveText = fmt(effective);
+    const amountPercent = hasMax ? Number((effective * 10_000n) / maxPerAddress) / 100 : 0;
     const remainingText =
         hasMax && remaining !== undefined ? `${fmt(remaining)} / ${fmt(maxPerAddress)} USDT` : `${DASH} USDT`;
     const myTotalText = myTotal !== undefined ? fmt(myTotal) : DASH;
@@ -204,7 +210,7 @@ function Fundraise() {
                 address: USDT_ADDRESS,
                 abi: erc20Abi,
                 functionName: "approve",
-                args: [FUNDRAISE_ADDRESS, parsed],
+                args: [FUNDRAISE_ADDRESS, effective],
                 chainId: ANUBIS_CHAIN_ID,
             });
         } catch (err) {
@@ -220,7 +226,7 @@ function Fundraise() {
                 address: FUNDRAISE_ADDRESS,
                 abi: GOLD3_FUNDRAISE_ABI,
                 functionName: "subscribe",
-                args: [parsed],
+                args: [effective],
                 chainId: ANUBIS_CHAIN_ID,
             });
         } catch (err) {
@@ -305,6 +311,9 @@ function Fundraise() {
                         <span>{t`上限 ${maxText}`}</span>
                     </div>
                     <div className="gp-small">{t`預計獲得算力：${expectedText} USDT`}</div>
+                    {effective !== parsed && (
+                        <div className="gp-muted gp-small">{t`實際認購：${effectiveText} USDT（以 100 USDT 為單位）`}</div>
+                    )}
 
                     <button
                         type="button"

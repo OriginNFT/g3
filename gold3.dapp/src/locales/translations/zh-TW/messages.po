@@ -74,7 +74,7 @@ msgstr "GG 三幣模型與核心機制概覽。"
 msgid "GG 實時價格"
 msgstr "GG 實時價格"
 
-#: src/views/Fundraise/Fundraise.tsx:336
+#: src/views/Fundraise/Fundraise.tsx:345
 msgid "GG 市場價格"
 msgstr "GG 市場價格"
 
@@ -150,11 +150,11 @@ msgstr "NFT 資產（3）"
 msgid "NFT 資產（USD）"
 msgstr "NFT 資產（USD）"
 
-#: src/views/Fundraise/Fundraise.tsx:335
+#: src/views/Fundraise/Fundraise.tsx:344
 msgid "USDT 計價基準"
 msgstr "USDT 計價基準"
 
-#: src/views/Fundraise/Fundraise.tsx:243
+#: src/views/Fundraise/Fundraise.tsx:249
 msgid "USDT 餘額不足"
 msgstr "USDT 餘額不足"
 
@@ -162,7 +162,7 @@ msgstr "USDT 餘額不足"
 msgid "三區總算力要求"
 msgstr "三區總算力要求"
 
-#: src/views/Fundraise/Fundraise.tsx:305
+#: src/views/Fundraise/Fundraise.tsx:311
 msgid "上限 {maxText}"
 msgstr "上限 {maxText}"
 
@@ -183,7 +183,7 @@ msgstr "交易"
 msgid "交易對"
 msgstr "交易對"
 
-#: src/views/Fundraise/Fundraise.tsx:240
+#: src/views/Fundraise/Fundraise.tsx:246
 msgid "交易確認中…"
 msgstr "交易確認中…"
 
@@ -204,7 +204,7 @@ msgstr "代幣資產"
 msgid "代幣資產（USD）"
 msgstr "代幣資產（USD）"
 
-#: src/views/Fundraise/Fundraise.tsx:254
+#: src/views/Fundraise/Fundraise.tsx:260
 msgid "以 USDT 認購，每筆認購都記錄在鏈上"
 msgstr "以 USDT 認購，每筆認購都記錄在鏈上"
 
@@ -220,7 +220,7 @@ msgstr "以黃金為錨 · 構建可持續的價值生態"
 msgid "估值（USD）"
 msgstr "估值（USD）"
 
-#: src/views/Fundraise/Fundraise.tsx:244
+#: src/views/Fundraise/Fundraise.tsx:250
 msgid "低於最低認購金額"
 msgstr "低於最低認購金額"
 
@@ -279,11 +279,11 @@ msgstr "共享生態增長"
 msgid "其他"
 msgstr "其他"
 
-#: src/views/Fundraise/Fundraise.tsx:304
+#: src/views/Fundraise/Fundraise.tsx:310
 msgid "最低 {minText}"
 msgstr "最低 {minText}"
 
-#: src/views/Fundraise/Fundraise.tsx:337
+#: src/views/Fundraise/Fundraise.tsx:346
 msgid "最低認購金額"
 msgstr "最低認購金額"
 
@@ -291,7 +291,7 @@ msgstr "最低認購金額"
 msgid "最新公告"
 msgstr "最新公告"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "分"
 msgstr "分"
 
@@ -303,7 +303,7 @@ msgstr "刷新"
 msgid "前往查看"
 msgstr "前往查看"
 
-#: src/views/Fundraise/Fundraise.tsx:319
+#: src/views/Fundraise/Fundraise.tsx:328
 msgid "剩餘可認購額度"
 msgstr "剩餘可認購額度"
 
@@ -324,19 +324,19 @@ msgid "募滿即止"
 msgstr "募滿即止"
 
 #: src/components/Sidebar/nav.ts:21
-#: src/views/Fundraise/Fundraise.tsx:254
+#: src/views/Fundraise/Fundraise.tsx:260
 msgid "募資"
 msgstr "募資"
 
-#: src/views/Fundraise/Fundraise.tsx:66
+#: src/views/Fundraise/Fundraise.tsx:69
 msgid "募資倒數"
 msgstr "募資倒數"
 
-#: src/views/Fundraise/Fundraise.tsx:261
+#: src/views/Fundraise/Fundraise.tsx:267
 msgid "募資合約尚未部署到此網路。"
 msgstr "募資合約尚未部署到此網路。"
 
-#: src/views/Fundraise/Fundraise.tsx:237
+#: src/views/Fundraise/Fundraise.tsx:243
 msgid "募資已關閉"
 msgstr "募資已關閉"
 
@@ -368,7 +368,7 @@ msgstr "協議儲備池"
 msgid "協議儲備池詳情"
 msgstr "協議儲備池詳情"
 
-#: src/views/Fundraise/Fundraise.tsx:268
+#: src/views/Fundraise/Fundraise.tsx:274
 msgid "協議共建進度"
 msgstr "協議共建進度"
 
@@ -432,7 +432,7 @@ msgstr "可用"
 msgid "可用 2 | 已使用 1"
 msgstr "可用 2 | 已使用 1"
 
-#: src/views/Fundraise/Fundraise.tsx:285
+#: src/views/Fundraise/Fundraise.tsx:291
 msgid "可用餘額：{balanceText} USDT"
 msgstr "可用餘額：{balanceText} USDT"
 
@@ -448,7 +448,7 @@ msgstr "合約地址"
 msgid "單個地址最大限額：<0>{maxText}</0>"
 msgstr "單個地址最大限額：<0>{maxText}</0>"
 
-#: src/views/Fundraise/Fundraise.tsx:338
+#: src/views/Fundraise/Fundraise.tsx:347
 msgid "單地址認購上限"
 msgstr "單地址認購上限"
 
@@ -468,7 +468,7 @@ msgstr "增強流動性深度 · 穩定價格運行"
 msgid "多維度數據統計 · 追蹤社區貢獻"
 msgstr "多維度數據統計 · 追蹤社區貢獻"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "天"
 msgstr "天"
 
@@ -485,16 +485,20 @@ msgstr "官方公告"
 msgid "官方文檔"
 msgstr "官方文檔"
 
+#: src/views/Fundraise/Fundraise.tsx:315
+msgid "實際認購：{effectiveText} USDT（以 100 USDT 為單位）"
+msgstr "實際認購：{effectiveText} USDT（以 100 USDT 為單位）"
+
 #: src/views/Community/CommunityLevelsPanel.tsx:16
 msgid "專屬 NFT 空投"
 msgstr "專屬 NFT 空投"
 
-#: src/views/Fundraise/Fundraise.tsx:233
-#: src/views/Fundraise/Fundraise.tsx:260
+#: src/views/Fundraise/Fundraise.tsx:239
+#: src/views/Fundraise/Fundraise.tsx:266
 msgid "尚未上線"
 msgstr "尚未上線"
 
-#: src/views/Fundraise/Fundraise.tsx:238
+#: src/views/Fundraise/Fundraise.tsx:244
 msgid "尚未開始"
 msgstr "尚未開始"
 
@@ -517,7 +521,7 @@ msgstr "已綁定推薦人"
 msgid "已複製"
 msgstr "已複製"
 
-#: src/views/Fundraise/Fundraise.tsx:346
+#: src/views/Fundraise/Fundraise.tsx:355
 msgid "已認購"
 msgstr "已認購"
 
@@ -529,7 +533,7 @@ msgstr "已認購"
 msgid "已釋放"
 msgstr "已釋放"
 
-#: src/views/Fundraise/Fundraise.tsx:179
+#: src/views/Fundraise/Fundraise.tsx:182
 msgid "已關閉"
 msgstr "已關閉"
 
@@ -588,7 +592,7 @@ msgstr "我的社區"
 #~ msgid "我的社區等級"
 #~ msgstr "我的社區等級"
 
-#: src/views/Fundraise/Fundraise.tsx:343
+#: src/views/Fundraise/Fundraise.tsx:352
 msgid "我的認購"
 msgstr "我的認購"
 
@@ -597,7 +601,7 @@ msgstr "我的認購"
 msgid "我的資產"
 msgstr "我的資產"
 
-#: src/views/Fundraise/Fundraise.tsx:246
+#: src/views/Fundraise/Fundraise.tsx:252
 msgid "授權 USDT"
 msgstr "授權 USDT"
 
@@ -659,11 +663,11 @@ msgstr "數據總覽"
 msgid "數量"
 msgstr "數量"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "時"
 msgstr "時"
 
-#: src/views/Fundraise/Fundraise.tsx:63
+#: src/views/Fundraise/Fundraise.tsx:66
 msgid "時間未公布"
 msgstr "時間未公布"
 
@@ -676,11 +680,11 @@ msgstr "暫無記錄"
 msgid "更多權益"
 msgstr "更多權益"
 
-#: src/views/Fundraise/Fundraise.tsx:353
+#: src/views/Fundraise/Fundraise.tsx:362
 msgid "有效算力"
 msgstr "有效算力"
 
-#: src/views/Fundraise/Fundraise.tsx:180
+#: src/views/Fundraise/Fundraise.tsx:183
 msgid "未開始"
 msgstr "未開始"
 
@@ -746,7 +750,7 @@ msgstr "權益額度"
 msgid "每區 500,000 DAI"
 msgstr "每區 500,000 DAI"
 
-#: src/views/Fundraise/Fundraise.tsx:323
+#: src/views/Fundraise/Fundraise.tsx:332
 msgid "每筆認購都會記錄在鏈上"
 msgstr "每筆認購都會記錄在鏈上"
 
@@ -896,7 +900,7 @@ msgstr "用於價格保護及市場調節"
 msgid "用於生態建設、算力排放、流動性支持等"
 msgstr "用於生態建設、算力排放、流動性支持等"
 
-#: src/views/Fundraise/Fundraise.tsx:275
+#: src/views/Fundraise/Fundraise.tsx:281
 msgid "當前共建目標"
 msgstr "當前共建目標"
 
@@ -944,7 +948,7 @@ msgstr "社區算力統計"
 #~ msgid "社區總算力 (DAI)"
 #~ msgstr "社區總算力 (DAI)"
 
-#: src/views/Fundraise/Fundraise.tsx:55
+#: src/views/Fundraise/Fundraise.tsx:58
 msgid "秒"
 msgstr "秒"
 
@@ -1079,16 +1083,16 @@ msgstr "複製失敗：{0}"
 msgid "規則說明"
 msgstr "規則說明"
 
-#: src/views/Fundraise/Fundraise.tsx:332
+#: src/views/Fundraise/Fundraise.tsx:341
 msgid "計價與限額"
 msgstr "計價與限額"
 
-#: src/views/Fundraise/Fundraise.tsx:247
-#: src/views/Fundraise/Fundraise.tsx:284
+#: src/views/Fundraise/Fundraise.tsx:253
+#: src/views/Fundraise/Fundraise.tsx:290
 msgid "認購"
 msgstr "認購"
 
-#: src/views/Fundraise/Fundraise.tsx:352
+#: src/views/Fundraise/Fundraise.tsx:361
 msgid "認購次數"
 msgstr "認購次數"
 
@@ -1097,12 +1101,12 @@ msgid "語言"
 msgstr "語言"
 
 #: src/views/Community/CommunityInvite.tsx:75
-#: src/views/Fundraise/Fundraise.tsx:234
+#: src/views/Fundraise/Fundraise.tsx:240
 msgid "請先連接錢包"
 msgstr "請先連接錢包"
 
 #: src/views/Community/CommunityInvite.tsx:82
-#: src/views/Fundraise/Fundraise.tsx:239
+#: src/views/Fundraise/Fundraise.tsx:245
 msgid "請在錢包確認"
 msgstr "請在錢包確認"
 
@@ -1110,7 +1114,7 @@ msgstr "請在錢包確認"
 msgid "請輸入推薦人地址"
 msgstr "請輸入推薦人地址"
 
-#: src/views/Fundraise/Fundraise.tsx:241
+#: src/views/Fundraise/Fundraise.tsx:247
 msgid "請輸入金額"
 msgstr "請輸入金額"
 
@@ -1119,16 +1123,16 @@ msgid "讀取 Community 失敗：{0}"
 msgstr "讀取 Community 失敗：{0}"
 
 #: src/views/Community/CommunityInvite.tsx:77
-#: src/views/Fundraise/Fundraise.tsx:236
+#: src/views/Fundraise/Fundraise.tsx:242
 msgid "讀取中"
 msgstr "讀取中"
 
 #: src/views/Community/CommunityInvite.tsx:76
-#: src/views/Fundraise/Fundraise.tsx:235
+#: src/views/Fundraise/Fundraise.tsx:241
 msgid "讀取失敗"
 msgstr "讀取失敗"
 
-#: src/views/Fundraise/Fundraise.tsx:250
+#: src/views/Fundraise/Fundraise.tsx:256
 msgid "讀取失敗：{0}"
 msgstr "讀取失敗：{0}"
 
@@ -1145,7 +1149,7 @@ msgstr "資金使用方向"
 msgid "資金分配總覽"
 msgstr "資金分配總覽"
 
-#: src/views/Fundraise/Fundraise.tsx:245
+#: src/views/Fundraise/Fundraise.tsx:251
 msgid "超過單地址上限"
 msgstr "超過單地址上限"
 
@@ -1165,8 +1169,8 @@ msgstr "連接錢包"
 msgid "連接錢包後生成邀請連結"
 msgstr "連接錢包後生成邀請連結"
 
-#: src/views/Fundraise/Fundraise.tsx:64
-#: src/views/Fundraise/Fundraise.tsx:180
+#: src/views/Fundraise/Fundraise.tsx:67
+#: src/views/Fundraise/Fundraise.tsx:183
 msgid "進行中"
 msgstr "進行中"
 
@@ -1207,7 +1211,7 @@ msgstr "鏈上透明與安全"
 msgid "鑄造 / 獲取 NFT"
 msgstr "鑄造 / 獲取 NFT"
 
-#: src/views/Fundraise/Fundraise.tsx:276
+#: src/views/Fundraise/Fundraise.tsx:282
 msgid "開始時間"
 msgstr "開始時間"
 
@@ -1239,7 +1243,7 @@ msgstr "預計池子佔比"
 msgid "預計獲得"
 msgstr "預計獲得"
 
-#: src/views/Fundraise/Fundraise.tsx:307
+#: src/views/Fundraise/Fundraise.tsx:313
 msgid "預計獲得算力：{expectedText} USDT"
 msgstr "預計獲得算力：{expectedText} USDT"
 
@@ -1247,7 +1251,7 @@ msgstr "預計獲得算力：{expectedText} USDT"
 msgid "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
 msgstr "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
 
-#: src/views/Fundraise/Fundraise.tsx:242
+#: src/views/Fundraise/Fundraise.tsx:248
 msgid "額度不足"
 msgstr "額度不足"
 

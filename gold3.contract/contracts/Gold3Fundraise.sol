@@ -22,13 +22,17 @@ import "./interface/IGold3Fundraise.sol";
  *  `minContribution` (floor for one subscription) and `maxPerAddress`
  *  (lifetime cap per subscriber). 0 turns a limit off. `closed` stops new
  *  subscriptions outright; `startTime` holds them back until that unix time
- *  (0 = no start time). Raised USDT stays here until DEFAULT_ADMIN_ROLE
- *  withdraws it.
+ *  (0 = no start time). subscribe() rounds the amount down to a whole
+ *  multiple of STEP (100 USDT) and pulls only that. Raised USDT stays here
+ *  until DEFAULT_ADMIN_ROLE withdraws it.
  */
 contract Gold3Fundraise is AccessControlEnumerableUpgradeable, ReentrancyGuardUpgradeable, IGold3Fundraise {
     using SafeERC20 for IERC20;
 
-    uint256 public constant IMPL_REV = 2;
+    uint256 public constant IMPL_REV = 3;
+
+    // IMPL_REV 3: a subscription must be a whole multiple of 100 USDT (6 decimals).
+    uint256 public constant STEP = 100e6;
 
     // ============ Storage ============
 
@@ -74,12 +78,16 @@ contract Gold3Fundraise is AccessControlEnumerableUpgradeable, ReentrancyGuardUp
         require(!closed, "Fundraise: closed");
         require(block.timestamp >= startTime, "Fundraise: not started");
         require(amount > 0, "Fundraise: zero amount");
+        // Rounded down to a whole multiple of STEP: 105 USDT pulls 100.
+        amount -= amount % STEP;
+        require(amount > 0, "Fundraise: below STEP");
 
         IERC20 token = IERC20(usdt);
         uint256 balBefore = token.balanceOf(address(this));
         token.safeTransferFrom(msg.sender, address(this), amount);
         uint256 received = token.balanceOf(address(this)) - balBefore;
         require(received > 0, "Fundraise: nothing received");
+        require(received % STEP == 0, "Fundraise: not a multiple of STEP");
         require(minContribution == 0 || received >= minContribution, "Fundraise: below minimum");
         require(
             maxPerAddress == 0 || totalUsdtOf[msg.sender] + received <= maxPerAddress,
