@@ -1,0 +1,36 @@
+# GOLDEN PACT - repository-wide ignores. Each module also carries its own,
+# narrower .gitignore that never contradicts this one.
+
+# macOS
+.DS_Store
+._*
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# dependencies and build output
+node_modules/
+dist/
+.swc/
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# hardhat
+gold3.contract/artifacts/
+gold3.contract/cache/
+gold3.contract/typechain-types/
+gold3.contract/coverage/
+gold3.contract/coverage.json
+gold3.contract/.openzeppelin/unknown-*.json
+
+# logs
+*.log
+design
+design/

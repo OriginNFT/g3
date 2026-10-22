@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+
+.env
+.env.*
+!.env.example
+
+artifacts/
+cache/
+typechain-types/
+coverage/
+coverage.json
+
+# `.openzeppelin/<network>.json` must stay tracked; only ad-hoc chain ids are ignored.
+.openzeppelin/unknown-*.json

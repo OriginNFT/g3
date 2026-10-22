@@ -1,0 +1,1227 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-10-19 22:14+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: zh-TW\n"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:76
+msgid "{CURRENT} 專屬權益"
+msgstr "{CURRENT} 專屬權益"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:54
+msgid "{CURRENT} 等級要求"
+msgstr "{CURRENT} 等級要求"
+
+#: src/views/Overview/EmissionDetail.tsx:80
+msgid "{year}年"
+msgstr "{year}年"
+
+#: src/views/Liquidity/PoolCard.tsx:47
+#: src/views/Overview/Overview.tsx:77
+msgid "24h 交易量"
+msgstr "24h 交易量"
+
+#: src/views/Liquidity/Liquidity.tsx:44
+#: src/views/Liquidity/mock.ts:67
+#: src/views/Liquidity/mock.ts:94
+#: src/views/Liquidity/PoolDetail.tsx:50
+#: src/views/Liquidity/PoolTable.tsx:17
+msgid "24h 交易量 (USD)"
+msgstr "24h 交易量 (USD)"
+
+#: src/views/Liquidity/mock.ts:69
+#: src/views/Liquidity/mock.ts:96
+msgid "30日交易量 (USD)"
+msgstr "30日交易量 (USD)"
+
+#: src/views/Liquidity/mock.ts:68
+#: src/views/Liquidity/mock.ts:95
+msgid "7日交易量 (USD)"
+msgstr "7日交易量 (USD)"
+
+#: src/views/Liquidity/mock.ts:26
+#: src/views/Liquidity/mock.ts:80
+#: src/views/Overview/mock.ts:53
+msgid "AUG / GG 池"
+msgstr "AUG / GG 池"
+
+#: src/views/Community/CommunityStatsPanel.tsx:19
+msgid "DAI 參與算力"
+msgstr "DAI 參與算力"
+
+#: src/views/Docs/Docs.tsx:59
+msgid "GG 三幣模型與核心機制概覽。"
+msgstr "GG 三幣模型與核心機制概覽。"
+
+#: src/views/Overview/Overview.tsx:65
+msgid "GG 實時價格"
+msgstr "GG 實時價格"
+
+#: src/views/Fundraise/Fundraise.tsx:279
+msgid "GG 市場價格"
+msgstr "GG 市場價格"
+
+#: src/views/Overview/EmissionDetail.tsx:20
+msgid "GG 排放進度"
+msgstr "GG 排放進度"
+
+#: src/views/Overview/Overview.tsx:95
+msgid "GG 排放進度（10年計劃）"
+msgstr "GG 排放進度（10年計劃）"
+
+#: src/views/Overview/AllocationDetail.tsx:23
+#: src/views/Overview/Overview.tsx:117
+msgid "GG 總量"
+msgstr "GG 總量"
+
+#: src/views/Overview/Overview.tsx:56
+msgid "GG 聖甲蟲"
+msgstr "GG 聖甲蟲"
+
+#: src/views/Community/CommunityStatsPanel.tsx:21
+msgid "GG 貢獻算力"
+msgstr "GG 貢獻算力"
+
+#: src/views/Docs/Docs.tsx:37
+msgid "GG 黃金協議白皮書"
+msgstr "GG 黃金協議白皮書"
+
+#: src/views/Overview/Overview.tsx:43
+msgid "GG 黃金本位倉"
+msgstr "GG 黃金本位倉"
+
+#: src/views/Liquidity/mock.ts:12
+#: src/views/Liquidity/mock.ts:53
+#: src/views/Overview/mock.ts:39
+msgid "GOT2 / GG 池"
+msgstr "GOT2 / GG 池"
+
+#: src/views/Community/CommunityStatsPanel.tsx:20
+msgid "GOT2 貢獻算力"
+msgstr "GOT2 貢獻算力"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:76
+msgid "LP 代幣數量"
+msgstr "LP 代幣數量"
+
+#: src/views/Overview/Overview.tsx:36
+msgid "NFT 已發放數量"
+msgstr "NFT 已發放數量"
+
+#: src/components/Sidebar/nav.ts:23
+#: src/views/Nft/Nft.tsx:33
+msgid "NFT 權益"
+msgstr "NFT 權益"
+
+#: src/views/Nft/Nft.tsx:135
+msgid "NFT 權益額度通過銷毀 GG（3 倍）或 GOT2（2 倍）獲得，具體規則請查看官方文檔。"
+msgstr "NFT 權益額度通過銷毀 GG（3 倍）或 GOT2（2 倍）獲得，具體規則請查看官方文檔。"
+
+#: src/views/Assets/Assets.tsx:63
+msgid "NFT 資產"
+msgstr "NFT 資產"
+
+#: src/views/Assets/Assets.tsx:137
+msgid "NFT 資產（3）"
+msgstr "NFT 資產（3）"
+
+#: src/views/Assets/Assets.tsx:72
+msgid "NFT 資產（USD）"
+msgstr "NFT 資產（USD）"
+
+#: src/views/Fundraise/Fundraise.tsx:278
+msgid "USDT 計價基準"
+msgstr "USDT 計價基準"
+
+#: src/views/Fundraise/Fundraise.tsx:192
+msgid "USDT 餘額不足"
+msgstr "USDT 餘額不足"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:70
+msgid "三區總算力要求"
+msgstr "三區總算力要求"
+
+#: src/views/Fundraise/Fundraise.tsx:248
+msgid "上限 {maxText}"
+msgstr "上限 {maxText}"
+
+#: src/views/Docs/Docs.tsx:71
+msgid "了解協議機制 · 掌握最新動態"
+msgstr "了解協議機制 · 掌握最新動態"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:28
+msgid "了解等級要求 · 查看專屬權益"
+msgstr "了解等級要求 · 查看專屬權益"
+
+#: src/views/Assets/Assets.tsx:124
+msgid "交易"
+msgstr "交易"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:46
+#: src/views/Liquidity/PoolTable.tsx:15
+msgid "交易對"
+msgstr "交易對"
+
+#: src/views/Fundraise/Fundraise.tsx:189
+msgid "交易確認中…"
+msgstr "交易確認中…"
+
+#: src/views/Liquidity/PoolDetail.tsx:86
+msgid "交易量趨勢（USD）"
+msgstr "交易量趨勢（USD）"
+
+#: src/views/Assets/Assets.tsx:92
+msgid "代幣"
+msgstr "代幣"
+
+#: src/views/Assets/Assets.tsx:62
+#: src/views/Assets/Assets.tsx:87
+msgid "代幣資產"
+msgstr "代幣資產"
+
+#: src/views/Assets/Assets.tsx:71
+msgid "代幣資產（USD）"
+msgstr "代幣資產（USD）"
+
+#: src/views/Fundraise/Fundraise.tsx:203
+msgid "以 USDT 認購，每筆認購都記錄在鏈上"
+msgstr "以 USDT 認購，每筆認購都記錄在鏈上"
+
+#: src/views/Overview/Overview.tsx:44
+msgid "以黃金為錨 · 以算力為驅動 · 構建可持續的價值生態"
+msgstr "以黃金為錨 · 以算力為驅動 · 構建可持續的價值生態"
+
+#: src/components/TopBar/TopBar.tsx:25
+msgid "以黃金為錨 · 構建可持續的價值生態"
+msgstr "以黃金為錨 · 構建可持續的價值生態"
+
+#: src/views/Assets/Assets.tsx:97
+msgid "估值（USD）"
+msgstr "估值（USD）"
+
+#: src/views/Fundraise/Fundraise.tsx:193
+msgid "低於最低認購金額"
+msgstr "低於最低認購金額"
+
+#: src/views/Overview/EcoPoolDetail.tsx:60
+msgid "佔比"
+msgstr "佔比"
+
+#: src/views/Nft/Nft.tsx:124
+msgid "使用權益"
+msgstr "使用權益"
+
+#: src/views/Overview/mock.ts:25
+#: src/views/Overview/mock.ts:31
+msgid "使用比例"
+msgstr "使用比例"
+
+#: src/views/Nft/Nft.tsx:117
+msgid "使用說明"
+msgstr "使用說明"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:61
+msgid "個人本位倉算力"
+msgstr "個人本位倉算力"
+
+#: src/views/Overview/AllocationDetail.tsx:43
+#: src/views/Overview/mock.ts:19
+#: src/views/Overview/Overview.tsx:143
+msgid "價格保護合約池"
+msgstr "價格保護合約池"
+
+#: src/views/Assets/Assets.tsx:118
+msgid "充幣"
+msgstr "充幣"
+
+#: src/views/Docs/Docs.tsx:101
+msgid "全部文檔"
+msgstr "全部文檔"
+
+#: src/views/Nft/Nft.tsx:59
+msgid "全部狀態"
+msgstr "全部狀態"
+
+#: src/views/Assets/Assets.tsx:61
+msgid "全部資產"
+msgstr "全部資產"
+
+#: src/views/Docs/Docs.tsx:57
+msgid "公告"
+msgstr "公告"
+
+#: src/views/Liquidity/Liquidity.tsx:19
+msgid "共享生態增長"
+msgstr "共享生態增長"
+
+#: src/views/Liquidity/PoolDetail.tsx:59
+msgid "其他"
+msgstr "其他"
+
+#: src/views/Fundraise/Fundraise.tsx:247
+msgid "最低 {minText}"
+msgstr "最低 {minText}"
+
+#: src/views/Fundraise/Fundraise.tsx:280
+msgid "最低認購金額"
+msgstr "最低認購金額"
+
+#: src/views/Docs/Docs.tsx:31
+msgid "最新公告"
+msgstr "最新公告"
+
+#: src/views/Fundraise/Fundraise.tsx:40
+msgid "分"
+msgstr "分"
+
+#: src/views/Assets/Assets.tsx:49
+msgid "刷新"
+msgstr "刷新"
+
+#: src/views/Nft/Nft.tsx:138
+msgid "前往查看"
+msgstr "前往查看"
+
+#: src/views/Fundraise/Fundraise.tsx:262
+msgid "剩餘可認購額度"
+msgstr "剩餘可認購額度"
+
+#: src/views/Nft/Nft.tsx:42
+msgid "剩餘額度"
+msgstr "剩餘額度"
+
+#: src/views/Fundraise/FundraiseRules.tsx:29
+msgid "創世募資"
+msgstr "創世募資"
+
+#: src/views/Docs/Docs.tsx:89
+msgid "加入 Telegram"
+msgstr "加入 Telegram"
+
+#: src/components/Sidebar/nav.ts:19
+#: src/views/Fundraise/Fundraise.tsx:203
+msgid "募資"
+msgstr "募資"
+
+#: src/views/Fundraise/Fundraise.tsx:42
+msgid "募資倒數"
+msgstr "募資倒數"
+
+#: src/views/Fundraise/Fundraise.tsx:210
+msgid "募資合約尚未部署到此網路。"
+msgstr "募資合約尚未部署到此網路。"
+
+#: src/views/Fundraise/Fundraise.tsx:187
+msgid "募資已關閉"
+msgstr "募資已關閉"
+
+#: src/views/Fundraise/FundraiseRules.tsx:45
+msgid "募資時間"
+msgstr "募資時間"
+
+#: src/views/Fundraise/FundraiseRules.tsx:34
+msgid "募資總量：<0>{DASH} USDT</0>"
+msgstr "募資總量：<0>{DASH} USDT</0>"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:50
+msgid "升級至 P4 還需 800,000 DAI"
+msgstr "升級至 P4 還需 800,000 DAI"
+
+#: src/views/Overview/AllocationDetail.tsx:30
+#: src/views/Overview/mock.ts:18
+#: src/views/Overview/Overview.tsx:126
+#: src/views/Overview/ReserveDetail.tsx:25
+#: src/views/Overview/ReserveDetail.tsx:28
+msgid "協議儲備池"
+msgstr "協議儲備池"
+
+#: src/views/Overview/ReserveDetail.tsx:23
+msgid "協議儲備池詳情"
+msgstr "協議儲備池詳情"
+
+#: src/views/Fundraise/Fundraise.tsx:217
+msgid "協議共建進度"
+msgstr "協議共建進度"
+
+#: src/views/Docs/Docs.tsx:28
+msgid "協議文檔"
+msgstr "協議文檔"
+
+#: src/views/Docs/Docs.tsx:43
+msgid "協議規則說明"
+msgstr "協議規則說明"
+
+#: src/views/Power/Power.tsx:28
+msgid "即將開放"
+msgstr "即將開放"
+
+#: src/views/Overview/EcoPoolDetail.tsx:73
+msgid "去兌換"
+msgstr "去兌換"
+
+#: src/views/Overview/EcoPoolDetail.tsx:70
+msgid "去質押"
+msgstr "去質押"
+
+#: src/views/Assets/Assets.tsx:96
+msgid "參考價格（USD）"
+msgstr "參考價格（USD）"
+
+#: src/views/Fundraise/FundraiseRules.tsx:66
+msgid "參與 <0>{DASH} USDT</0>，獲得：<1>{DASH}</1>"
+msgstr "參與 <0>{DASH} USDT</0>，獲得：<1>{DASH}</1>"
+
+#: src/views/Docs/Docs.tsx:61
+msgid "參與前需了解的風險說明與注意事項。"
+msgstr "參與前需了解的風險說明與注意事項。"
+
+#: src/views/Liquidity/Liquidity.tsx:49
+#: src/views/Liquidity/mock.ts:71
+#: src/views/Liquidity/mock.ts:98
+msgid "參與地址數"
+msgstr "參與地址數"
+
+#: src/views/Fundraise/FundraiseRules.tsx:60
+msgid "參與權益"
+msgstr "參與權益"
+
+#: src/views/Docs/Docs.tsx:90
+msgid "參與社區交流"
+msgstr "參與社區交流"
+
+#: src/components/NftCard/NftCard.tsx:18
+#: src/views/Assets/Assets.tsx:94
+#: src/views/Nft/Nft.tsx:60
+msgid "可用"
+msgstr "可用"
+
+#: src/views/Nft/Nft.tsx:38
+msgid "可用 2 | 已使用 1"
+msgstr "可用 2 | 已使用 1"
+
+#: src/views/Fundraise/Fundraise.tsx:228
+msgid "可用餘額：{balanceText} USDT"
+msgstr "可用餘額：{balanceText} USDT"
+
+#: src/views/Nft/Nft.tsx:104
+msgid "合約地址"
+msgstr "合約地址"
+
+#: src/views/Fundraise/FundraiseRules.tsx:39
+msgid "單個地址最大限額：<0>{DASH} USDT</0>"
+msgstr "單個地址最大限額：<0>{DASH} USDT</0>"
+
+#: src/views/Fundraise/Fundraise.tsx:281
+msgid "單地址認購上限"
+msgstr "單地址認購上限"
+
+#: src/views/Community/CommunityInvite.tsx:81
+msgid "地址不合法"
+msgstr "地址不合法"
+
+#: src/views/Liquidity/Liquidity.tsx:16
+msgid "增強流動性深度"
+msgstr "增強流動性深度"
+
+#: src/views/Liquidity/mock.ts:54
+msgid "增強流動性深度 · 穩定價格運行"
+msgstr "增強流動性深度 · 穩定價格運行"
+
+#: src/views/Community/CommunityStatsPanel.tsx:33
+msgid "多維度數據統計 · 追蹤社區貢獻"
+msgstr "多維度數據統計 · 追蹤社區貢獻"
+
+#: src/views/Fundraise/Fundraise.tsx:40
+msgid "天"
+msgstr "天"
+
+#: src/views/Docs/Docs.tsx:38
+msgid "完整了解 GG 黃金協議的願景、機制與經濟模型。"
+msgstr "完整了解 GG 黃金協議的願景、機制與經濟模型。"
+
+#: src/views/Docs/Docs.tsx:55
+msgid "官方公告"
+msgstr "官方公告"
+
+#: src/components/Sidebar/nav.ts:25
+#: src/views/Docs/Docs.tsx:70
+msgid "官方文檔"
+msgstr "官方文檔"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:16
+msgid "專屬 NFT 空投"
+msgstr "專屬 NFT 空投"
+
+#: src/views/Fundraise/Fundraise.tsx:183
+#: src/views/Fundraise/Fundraise.tsx:209
+msgid "尚未上線"
+msgstr "尚未上線"
+
+#: src/components/NftCard/NftCard.tsx:18
+#: src/views/Nft/Nft.tsx:61
+#: src/views/Overview/mock.ts:23
+#: src/views/Overview/mock.ts:30
+msgid "已使用"
+msgstr "已使用"
+
+#: src/views/Nft/Nft.tsx:41
+msgid "已使用額度"
+msgstr "已使用額度"
+
+#: src/views/Community/CommunityInvite.tsx:79
+msgid "已綁定推薦人"
+msgstr "已綁定推薦人"
+
+#: src/views/Community/CommunityInvite.tsx:129
+msgid "已複製"
+msgstr "已複製"
+
+#: src/views/Fundraise/Fundraise.tsx:289
+msgid "已認購"
+msgstr "已認購"
+
+#: src/views/Overview/EmissionDetail.tsx:27
+#: src/views/Overview/EmissionDetail.tsx:33
+#: src/views/Overview/EmissionDetail.tsx:43
+#: src/views/Overview/Overview.tsx:99
+#: src/views/Overview/Overview.tsx:105
+msgid "已釋放"
+msgstr "已釋放"
+
+#: src/views/Fundraise/Fundraise.tsx:131
+msgid "已關閉"
+msgstr "已關閉"
+
+#: src/views/Docs/Docs.tsx:30
+msgid "常見問題"
+msgstr "常見問題"
+
+#: src/views/Docs/Docs.tsx:49
+msgid "常見問題（FAQ）"
+msgstr "常見問題（FAQ）"
+
+#: src/views/Liquidity/PoolTable.tsx:18
+msgid "年化收益 (參考)"
+msgstr "年化收益 (參考)"
+
+#: src/views/Liquidity/mock.ts:66
+#: src/views/Liquidity/mock.ts:93
+#: src/views/Liquidity/PoolCard.tsx:43
+#: src/views/Overview/EcoPoolDetail.tsx:41
+#: src/views/Overview/Overview.tsx:168
+msgid "年化收益（參考）"
+msgstr "年化收益（參考）"
+
+#: src/views/Overview/EmissionDetail.tsx:28
+#: src/views/Overview/EmissionDetail.tsx:51
+#: src/views/Overview/mock.ts:24
+#: src/views/Overview/Overview.tsx:100
+msgid "待釋放"
+msgstr "待釋放"
+
+#: src/views/Assets/Assets.tsx:76
+msgid "待領取收益（USD）"
+msgstr "待領取收益（USD）"
+
+#: src/views/Nft/Nft.tsx:50
+msgid "我的 NFT"
+msgstr "我的 NFT"
+
+#: src/views/Nft/Nft.tsx:33
+msgid "我的 NFT · 查看權益與使用記錄"
+msgstr "我的 NFT · 查看權益與使用記錄"
+
+#: src/views/Nft/Nft.tsx:36
+msgid "我的 NFT 數量"
+msgstr "我的 NFT 數量"
+
+#: src/views/Nft/Nft.tsx:72
+msgid "我的 NFT（{0}）"
+msgstr "我的 NFT（{0}）"
+
+#: src/components/Sidebar/nav.ts:22
+#: src/views/Community/Community.tsx:18
+msgid "我的社區"
+msgstr "我的社區"
+
+#: src/views/Community/Community.tsx:24
+msgid "我的社區等級"
+msgstr "我的社區等級"
+
+#: src/views/Fundraise/Fundraise.tsx:286
+msgid "我的認購"
+msgstr "我的認購"
+
+#: src/components/Sidebar/nav.ts:24
+#: src/views/Assets/Assets.tsx:35
+msgid "我的資產"
+msgstr "我的資產"
+
+#: src/views/Fundraise/Fundraise.tsx:195
+msgid "授權 USDT"
+msgstr "授權 USDT"
+
+#: src/views/Overview/EmissionDetail.tsx:78
+msgid "排放曲線圖（10年）"
+msgstr "排放曲線圖（10年）"
+
+#: src/views/Overview/EmissionDetail.tsx:62
+msgid "排放階段明細"
+msgstr "排放階段明細"
+
+#: src/views/Community/CommunityInvite.tsx:139
+msgid "推薦人地址 0x…"
+msgstr "推薦人地址 0x…"
+
+#: src/views/Community/CommunityInvite.tsx:116
+msgid "推薦關係"
+msgstr "推薦關係"
+
+#: src/views/Liquidity/Liquidity.tsx:18
+msgid "提升資金效率"
+msgstr "提升資金效率"
+
+#: src/views/Liquidity/mock.ts:81
+msgid "提升資金效率 · 共享生態增長"
+msgstr "提升資金效率 · 共享生態增長"
+
+#: src/views/Assets/Assets.tsx:121
+msgid "提幣"
+msgstr "提幣"
+
+#: src/views/Assets/Assets.tsx:98
+#: src/views/Liquidity/PoolTable.tsx:20
+msgid "操作"
+msgstr "操作"
+
+#: src/views/Docs/Docs.tsx:60
+msgid "收益來源、分配邏輯與計算方式。"
+msgstr "收益來源、分配邏輯與計算方式。"
+
+#: src/views/Docs/Docs.tsx:60
+msgid "收益機制說明"
+msgstr "收益機制說明"
+
+#: src/views/Assets/Assets.tsx:64
+#: src/views/Assets/Assets.tsx:147
+msgid "收益資產"
+msgstr "收益資產"
+
+#: src/views/Assets/Assets.tsx:73
+msgid "收益資產（USD）"
+msgstr "收益資產（USD）"
+
+#: src/components/Sidebar/nav.ts:18
+msgid "數據總覽"
+msgstr "數據總覽"
+
+#: src/views/Assets/Assets.tsx:93
+msgid "數量"
+msgstr "數量"
+
+#: src/views/Fundraise/Fundraise.tsx:40
+msgid "時"
+msgstr "時"
+
+#: src/views/Fundraise/Fundraise.tsx:42
+msgid "時間未公布"
+msgstr "時間未公布"
+
+#: src/views/Assets/Assets.tsx:148
+#: src/views/Nft/Nft.tsx:129
+msgid "暫無記錄"
+msgstr "暫無記錄"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:19
+msgid "更多權益"
+msgstr "更多權益"
+
+#: src/views/Fundraise/Fundraise.tsx:296
+msgid "有效算力"
+msgstr "有效算力"
+
+#: src/components/Sidebar/nav.ts:20
+#: src/views/Power/Power.tsx:12
+msgid "本位倉算力"
+msgstr "本位倉算力"
+
+#: src/views/Overview/Overview.tsx:33
+msgid "本位倉總算力（DAI）"
+msgstr "本位倉總算力（DAI）"
+
+#: src/views/Liquidity/PoolDetail.tsx:58
+msgid "本池"
+msgstr "本池"
+
+#: src/views/Assets/Assets.tsx:36
+msgid "查看帳戶資產與收益情況"
+msgstr "查看帳戶資產與收益情況"
+
+#: src/views/Docs/Docs.tsx:131
+msgid "查看文檔"
+msgstr "查看文檔"
+
+#: src/views/Assets/Assets.tsx:137
+msgid "查看更多"
+msgstr "查看更多"
+
+#: src/views/Community/Community.tsx:28
+msgid "查看權益"
+msgstr "查看權益"
+
+#: src/views/Liquidity/PoolList.tsx:12
+msgid "查看與管理所有生態流動性池"
+msgstr "查看與管理所有生態流動性池"
+
+#: src/views/Overview/AllocationDetail.tsx:38
+#: src/views/Overview/AllocationDetail.tsx:51
+#: src/views/Overview/Overview.tsx:95
+#: src/views/Overview/Overview.tsx:113
+#: src/views/Overview/Overview.tsx:159
+msgid "查看詳情"
+msgstr "查看詳情"
+
+#: src/views/Docs/Docs.tsx:56
+msgid "查看項目最新動態、重要通知與執行進展。"
+msgstr "查看項目最新動態、重要通知與執行進展。"
+
+#: src/views/Liquidity/Liquidity.tsx:27
+msgid "構建深度流動性 · 穩定市場運行 · 共享生態增長"
+msgstr "構建深度流動性 · 穩定市場運行 · 共享生態增長"
+
+#: src/views/Nft/Nft.tsx:51
+msgid "權益使用記錄"
+msgstr "權益使用記錄"
+
+#: src/components/NftCard/NftCard.tsx:50
+#: src/views/Nft/Nft.tsx:100
+msgid "權益額度"
+msgstr "權益額度"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:71
+msgid "每區 500,000 DAI"
+msgstr "每區 500,000 DAI"
+
+#: src/views/Fundraise/Fundraise.tsx:266
+msgid "每筆認購都會記錄在鏈上"
+msgstr "每筆認購都會記錄在鏈上"
+
+#: src/views/Liquidity/PoolTable.tsx:16
+msgid "池子價值 (USD)"
+msgstr "池子價值 (USD)"
+
+#: src/views/Liquidity/mock.ts:70
+#: src/views/Liquidity/mock.ts:97
+msgid "池子創建時間"
+msgstr "池子創建時間"
+
+#: src/views/Liquidity/PoolDetail.tsx:73
+msgid "池子總價值"
+msgstr "池子總價值"
+
+#: src/views/Liquidity/PoolDetail.tsx:49
+msgid "池子總價值 (USD)"
+msgstr "池子總價值 (USD)"
+
+#: src/views/Liquidity/PoolDetail.tsx:68
+#: src/views/Overview/EcoPoolDetail.tsx:51
+msgid "池子資產構成"
+msgstr "池子資產構成"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:18
+msgid "治理投票權"
+msgstr "治理投票權"
+
+#: src/views/Liquidity/PoolCard.tsx:51
+#: src/views/Liquidity/PoolDetail.tsx:53
+#: src/views/Liquidity/PoolTable.tsx:19
+#: src/views/Overview/EcoPoolDetail.tsx:37
+msgid "流動性佔比"
+msgstr "流動性佔比"
+
+#: src/views/Liquidity/PoolDetail.tsx:99
+msgid "流動性佔比趨勢"
+msgstr "流動性佔比趨勢"
+
+#: src/views/Overview/ReserveDetail.tsx:17
+msgid "流動性支持"
+msgstr "流動性支持"
+
+#: src/views/Liquidity/PoolDetail.tsx:79
+msgid "流動性數據"
+msgstr "流動性數據"
+
+#: src/views/Liquidity/Liquidity.tsx:52
+msgid "流動性池"
+msgstr "流動性池"
+
+#: src/views/Liquidity/Liquidity.tsx:60
+#: src/views/Liquidity/PoolList.tsx:12
+msgid "流動性池列表"
+msgstr "流動性池列表"
+
+#: src/views/Overview/Overview.tsx:80
+msgid "流通數量"
+msgstr "流通數量"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:43
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:71
+#: src/views/Liquidity/PoolCard.tsx:57
+msgid "添加流動性"
+msgstr "添加流動性"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:39
+msgid "添加流動性 / 移除流動性"
+msgstr "添加流動性 / 移除流動性"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:57
+msgid "添加資產"
+msgstr "添加資產"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:67
+msgid "滑點容忍度"
+msgstr "滑點容忍度"
+
+#: src/views/Fundraise/FundraiseRules.tsx:53
+msgid "為期 <0>{DASH}</0> · 每天限額：<1>{DASH} USDT</1>"
+msgstr "為期 <0>{DASH}</0> · 每天限額：<1>{DASH} USDT</1>"
+
+#: src/views/Docs/Docs.tsx:80
+msgid "獲取最新動態"
+msgstr "獲取最新動態"
+
+#: src/components/NftCard/NftCard.tsx:51
+#: src/views/Nft/Nft.tsx:101
+msgid "獲取方式"
+msgstr "獲取方式"
+
+#: src/components/NftCard/NftCard.tsx:52
+#: src/views/Nft/Nft.tsx:102
+msgid "獲取時間"
+msgstr "獲取時間"
+
+#: src/views/Nft/Nft.tsx:52
+msgid "獲取記錄"
+msgstr "獲取記錄"
+
+#: src/views/Overview/ReserveDetail.tsx:15
+msgid "生態建設"
+msgstr "生態建設"
+
+#: src/views/Overview/Overview.tsx:159
+msgid "生態池數據"
+msgstr "生態池數據"
+
+#: src/views/Overview/EcoPoolDetail.tsx:20
+msgid "生態池數據詳情"
+msgstr "生態池數據詳情"
+
+#: src/views/Liquidity/Liquidity.tsx:43
+msgid "生態池總價值 (USD)"
+msgstr "生態池總價值 (USD)"
+
+#: src/views/Overview/Overview.tsx:34
+msgid "生態池總鎖倉（USDT）"
+msgstr "生態池總鎖倉（USDT）"
+
+#: src/components/Sidebar/nav.ts:21
+#: src/views/Liquidity/Liquidity.tsx:26
+msgid "生態流動性"
+msgstr "生態流動性"
+
+#: src/views/Overview/ReserveDetail.tsx:18
+msgid "生態激勵"
+msgstr "生態激勵"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:17
+msgid "生態項目優先權益"
+msgstr "生態項目優先權益"
+
+#: src/views/Docs/Docs.tsx:44
+msgid "產品機制、參與規則、收益分配等詳細說明。"
+msgstr "產品機制、參與規則、收益分配等詳細說明。"
+
+#: src/views/Overview/AllocationDetail.tsx:48
+#: src/views/Overview/Overview.tsx:155
+msgid "用於價格保護及市場調節"
+msgstr "用於價格保護及市場調節"
+
+#: src/views/Overview/AllocationDetail.tsx:35
+#: src/views/Overview/Overview.tsx:138
+#: src/views/Overview/ReserveDetail.tsx:33
+msgid "用於生態建設、算力排放、流動性支持等"
+msgstr "用於生態建設、算力排放、流動性支持等"
+
+#: src/views/Fundraise/Fundraise.tsx:221
+msgid "當前共建目標"
+msgstr "當前共建目標"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:44
+msgid "當前等級 {CURRENT}"
+msgstr "當前等級 {CURRENT}"
+
+#: src/views/Overview/mock.ts:29
+msgid "當前餘額"
+msgstr "當前餘額"
+
+#: src/views/Docs/Docs.tsx:39
+msgid "白皮書"
+msgstr "白皮書"
+
+#: src/views/Overview/Overview.tsx:29
+msgid "社區共建共享"
+msgstr "社區共建共享"
+
+#: src/views/Overview/Overview.tsx:35
+msgid "社區成員總數"
+msgstr "社區成員總數"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:27
+msgid "社區等級與權益"
+msgstr "社區等級與權益"
+
+#: src/views/Community/CommunityLevelsPanel.tsx:15
+msgid "社區算力分潤"
+msgstr "社區算力分潤"
+
+#: src/views/Community/CommunityStatsPanel.tsx:32
+msgid "社區算力統計"
+msgstr "社區算力統計"
+
+#: src/views/Community/Community.tsx:19
+msgid "社區總人數"
+msgstr "社區總人數"
+
+#: src/views/Community/Community.tsx:21
+msgid "社區總收益 (GG)"
+msgstr "社區總收益 (GG)"
+
+#: src/views/Community/Community.tsx:20
+msgid "社區總算力 (DAI)"
+msgstr "社區總算力 (DAI)"
+
+#: src/views/Fundraise/Fundraise.tsx:40
+msgid "秒"
+msgstr "秒"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:75
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:96
+msgid "移除流動性"
+msgstr "移除流動性"
+
+#: src/views/Liquidity/Liquidity.tsx:17
+msgid "穩定價格運行"
+msgstr "穩定價格運行"
+
+#: src/views/Assets/Assets.tsx:80
+msgid "立即領取"
+msgstr "立即領取"
+
+#: src/views/Overview/mock.ts:10
+msgid "第1階段（1–24月）"
+msgstr "第1階段（1–24月）"
+
+#: src/views/Overview/mock.ts:11
+msgid "第2階段（25–48月）"
+msgstr "第2階段（25–48月）"
+
+#: src/views/Overview/mock.ts:12
+msgid "第3階段（49–72月）"
+msgstr "第3階段（49–72月）"
+
+#: src/views/Overview/mock.ts:13
+msgid "第4階段（73–96月）"
+msgstr "第4階段（73–96月）"
+
+#: src/views/Overview/mock.ts:14
+msgid "第5階段（97–120月）"
+msgstr "第5階段（97–120月）"
+
+#: src/views/Overview/ReserveDetail.tsx:16
+msgid "算力排放"
+msgstr "算力排放"
+
+#: src/views/Community/CommunityStatsPanel.tsx:51
+msgid "算力貢獻佔比"
+msgstr "算力貢獻佔比"
+
+#: src/views/Liquidity/PoolTable.tsx:40
+msgid "管理"
+msgstr "管理"
+
+#: src/views/Docs/Docs.tsx:50
+msgid "精選社區高頻問題與官方解答，快速了解關鍵內容。"
+msgstr "精選社區高頻問題與官方解答，快速了解關鍵內容。"
+
+#: src/views/Nft/Nft.tsx:40
+msgid "累計權益額度"
+msgstr "累計權益額度"
+
+#: src/views/Overview/EmissionDetail.tsx:81
+msgid "累計釋放"
+msgstr "累計釋放"
+
+#: src/views/Fundraise/FundraiseRules.tsx:49
+msgid "結束時間："
+msgstr "結束時間："
+
+#: src/views/Community/CommunityInvite.tsx:145
+msgid "綁定"
+msgstr "綁定"
+
+#: src/views/Community/CommunityInvite.tsx:83
+msgid "綁定中…"
+msgstr "綁定中…"
+
+#: src/views/Community/CommunityInvite.tsx:135
+msgid "綁定推薦人"
+msgstr "綁定推薦人"
+
+#: src/views/Community/CommunityInvite.tsx:72
+msgid "綁定推薦人後才可邀請"
+msgstr "綁定推薦人後才可邀請"
+
+#: src/views/Docs/Docs.tsx:59
+msgid "經濟模型簡版"
+msgstr "經濟模型簡版"
+
+#: src/views/Overview/Overview.tsx:76
+msgid "總市值"
+msgstr "總市值"
+
+#: src/views/Liquidity/Liquidity.tsx:46
+msgid "總流動性池數"
+msgstr "總流動性池數"
+
+#: src/views/Community/CommunityStatsPanel.tsx:18
+#: src/views/Community/CommunityStatsPanel.tsx:55
+msgid "總算力 (DAI)"
+msgstr "總算力 (DAI)"
+
+#: src/views/Assets/Assets.tsx:42
+msgid "總資產估值（USD）"
+msgstr "總資產估值（USD）"
+
+#: src/views/Overview/EmissionDetail.tsx:39
+msgid "總量"
+msgstr "總量"
+
+#: src/views/Overview/EcoPoolDetail.tsx:45
+msgid "總鎖倉（USDT）"
+msgstr "總鎖倉（USDT）"
+
+#: src/views/Fundraise/FundraiseRules.tsx:64
+msgid "舉例"
+msgstr "舉例"
+
+#: src/views/Docs/Docs.tsx:62
+msgid "術語詞典"
+msgstr "術語詞典"
+
+#: src/views/Community/CommunityInvite.tsx:129
+msgid "複製"
+msgstr "複製"
+
+#: src/views/Community/CommunityInvite.tsx:95
+msgid "複製失敗：{0}"
+msgstr "複製失敗：{0}"
+
+#: src/views/Docs/Docs.tsx:29
+#: src/views/Docs/Docs.tsx:45
+msgid "規則說明"
+msgstr "規則說明"
+
+#: src/views/Fundraise/Fundraise.tsx:275
+msgid "計價與限額"
+msgstr "計價與限額"
+
+#: src/views/Fundraise/Fundraise.tsx:196
+#: src/views/Fundraise/Fundraise.tsx:227
+msgid "認購"
+msgstr "認購"
+
+#: src/views/Fundraise/Fundraise.tsx:295
+msgid "認購次數"
+msgstr "認購次數"
+
+#: src/views/Community/CommunityInvite.tsx:75
+#: src/views/Fundraise/Fundraise.tsx:184
+msgid "請先連接錢包"
+msgstr "請先連接錢包"
+
+#: src/views/Community/CommunityInvite.tsx:82
+#: src/views/Fundraise/Fundraise.tsx:188
+msgid "請在錢包確認"
+msgstr "請在錢包確認"
+
+#: src/views/Community/CommunityInvite.tsx:80
+msgid "請輸入推薦人地址"
+msgstr "請輸入推薦人地址"
+
+#: src/views/Fundraise/Fundraise.tsx:190
+msgid "請輸入金額"
+msgstr "請輸入金額"
+
+#: src/views/Community/CommunityInvite.tsx:86
+msgid "讀取 Community 失敗：{0}"
+msgstr "讀取 Community 失敗：{0}"
+
+#: src/views/Community/CommunityInvite.tsx:77
+#: src/views/Fundraise/Fundraise.tsx:186
+msgid "讀取中"
+msgstr "讀取中"
+
+#: src/views/Community/CommunityInvite.tsx:76
+#: src/views/Fundraise/Fundraise.tsx:185
+msgid "讀取失敗"
+msgstr "讀取失敗"
+
+#: src/views/Fundraise/Fundraise.tsx:199
+msgid "讀取失敗：{0}"
+msgstr "讀取失敗：{0}"
+
+#: src/views/Assets/Assets.tsx:53
+msgid "資產記錄"
+msgstr "資產記錄"
+
+#: src/views/Overview/ReserveDetail.tsx:37
+msgid "資金使用方向"
+msgstr "資金使用方向"
+
+#: src/views/Overview/AllocationDetail.tsx:17
+#: src/views/Overview/Overview.tsx:113
+msgid "資金分配總覽"
+msgstr "資金分配總覽"
+
+#: src/views/Fundraise/Fundraise.tsx:194
+msgid "超過單地址上限"
+msgstr "超過單地址上限"
+
+#: src/components/PageHeader/PageHeader.tsx:13
+msgid "返回"
+msgstr "返回"
+
+#: src/views/Community/Community.tsx:18
+msgid "連接社區力量 · 共享黃金增長"
+msgstr "連接社區力量 · 共享黃金增長"
+
+#: src/components/TopBar/TopBar.tsx:52
+msgid "連接錢包"
+msgstr "連接錢包"
+
+#: src/views/Community/CommunityInvite.tsx:71
+msgid "連接錢包後生成邀請連結"
+msgstr "連接錢包後生成邀請連結"
+
+#: src/views/Fundraise/Fundraise.tsx:131
+msgid "進行中"
+msgstr "進行中"
+
+#: src/components/TopBar/TopBar.tsx:19
+msgid "選單"
+msgstr "選單"
+
+#: src/views/Community/CommunityInvite.tsx:116
+msgid "邀請好友加入 · 綁定推薦人"
+msgstr "邀請好友加入 · 綁定推薦人"
+
+#: src/views/Community/CommunityInvite.tsx:78
+msgid "邀請未開放"
+msgstr "邀請未開放"
+
+#: src/views/Community/CommunityInvite.tsx:119
+msgid "邀請連結"
+msgstr "邀請連結"
+
+#: src/views/Nft/mock.ts:8
+#: src/views/Nft/mock.ts:10
+msgid "銷毀 GG"
+msgstr "銷毀 GG"
+
+#: src/views/Nft/mock.ts:9
+msgid "銷毀 GOT2"
+msgstr "銷毀 GOT2"
+
+#: src/views/Assets/Assets.tsx:95
+msgid "鎖定"
+msgstr "鎖定"
+
+#: src/views/Overview/Overview.tsx:28
+msgid "鏈上透明與安全"
+msgstr "鏈上透明與安全"
+
+#: src/views/Nft/Nft.tsx:64
+msgid "鑄造 / 獲取 NFT"
+msgstr "鑄造 / 獲取 NFT"
+
+#: src/views/Fundraise/FundraiseRules.tsx:47
+msgid "開始時間："
+msgstr "開始時間："
+
+#: src/views/Docs/Docs.tsx:79
+msgid "關注 X"
+msgstr "關注 X"
+
+#: src/views/Overview/Overview.tsx:176
+msgid "關鍵指標"
+msgstr "關鍵指標"
+
+#: src/views/Docs/Docs.tsx:62
+msgid "關鍵詞術語解釋，幫助快速理解協議內容。"
+msgstr "關鍵詞術語解釋，幫助快速理解協議內容。"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:65
+msgid "預估獲得 LP 代幣"
+msgstr "預估獲得 LP 代幣"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:66
+msgid "預計池子佔比"
+msgstr "預計池子佔比"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:85
+msgid "預計獲得"
+msgstr "預計獲得"
+
+#: src/views/Fundraise/Fundraise.tsx:250
+msgid "預計獲得算力：{expectedText} USDT"
+msgstr "預計獲得算力：{expectedText} USDT"
+
+#: src/views/Nft/Nft.tsx:119
+msgid "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
+msgstr "領取 GG 社區動態排放獎勵時，將按領取時 GG 實時 USDT 價值扣減 NFT 權益額度。"
+
+#: src/views/Fundraise/Fundraise.tsx:191
+msgid "額度不足"
+msgstr "額度不足"
+
+#: src/views/Docs/Docs.tsx:61
+msgid "風險提示"
+msgstr "風險提示"
+
+#: src/views/Liquidity/AddRemoveLiquidity.tsx:28
+msgid "餘額"
+msgstr "餘額"
+
+#: src/views/Overview/Overview.tsx:27
+msgid "黃金本位價值體系"
+msgstr "黃金本位價值體系"
+
+#: src/components/NftCard/NftCard.tsx:34
+#: src/views/Nft/Nft.tsx:88
+msgid "黃金聖甲蟲"
+msgstr "黃金聖甲蟲"
+
+#: src/views/Nft/mock.ts:8
+msgid "黃金聖甲蟲 #001"
+msgstr "黃金聖甲蟲 #001"
+
+#: src/views/Nft/mock.ts:9
+msgid "黃金聖甲蟲 #002"
+msgstr "黃金聖甲蟲 #002"
+
+#: src/views/Nft/mock.ts:10
+msgid "黃金聖甲蟲 #003"
+msgstr "黃金聖甲蟲 #003"
