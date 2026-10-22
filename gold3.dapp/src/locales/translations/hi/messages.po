@@ -487,7 +487,7 @@ msgstr "आधिकारिक दस्तावेज़"
 
 #: src/views/Fundraise/Fundraise.tsx:315
 msgid "實際認購：{effectiveText} USDT（以 100 USDT 為單位）"
-msgstr ""
+msgstr "वास्तविक सब्सक्रिप्शन: {effectiveText} USDT (100 USDT की इकाइयों में)"
 
 #: src/views/Community/CommunityLevelsPanel.tsx:16
 msgid "專屬 NFT 空投"

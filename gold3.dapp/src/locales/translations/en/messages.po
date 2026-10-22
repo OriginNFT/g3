@@ -487,7 +487,7 @@ msgstr "Official Docs"
 
 #: src/views/Fundraise/Fundraise.tsx:315
 msgid "實際認購：{effectiveText} USDT（以 100 USDT 為單位）"
-msgstr ""
+msgstr "Actual subscription: {effectiveText} USDT (in steps of 100 USDT)"
 
 #: src/views/Community/CommunityLevelsPanel.tsx:16
 msgid "專屬 NFT 空投"
