@@ -17,13 +17,13 @@ export type NavItem = {
 };
 
 export const NAV: NavItem[] = [
-    { to: "/overview", icon: "home", label: () => t`數據總覽`, disabled: true },
+    { to: "/overview", icon: "home", label: () => t`數據總覽` },
     { to: "/fundraise", icon: "coins", label: () => t`募資` },
-    { to: "/power", icon: "power", label: () => t`本位倉算力`, disabled: true },
+    { to: "/power", icon: "power", label: () => t`本位倉算力` },
     { to: "/liquidity", icon: "liquidity", label: () => t`生態流動性`, disabled: true },
     { to: "/community", icon: "community", label: () => t`我的社區` },
-    { to: "/nft", icon: "nft", label: () => t`NFT 權益`, disabled: true },
-    { to: "/assets", icon: "assets", label: () => t`我的資產`, disabled: true },
+    { to: "/nft", icon: "nft", label: () => t`NFT 權益` },
+    { to: "/assets", icon: "assets", label: () => t`我的資產` },
     { to: "/docs", icon: "docs", label: () => t`官方文檔` },
 ];
 

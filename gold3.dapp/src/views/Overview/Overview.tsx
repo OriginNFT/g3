@@ -1,27 +1,30 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { t } from "@lingui/macro";
 
 import Card from "src/components/Card/Card";
 import StatCard from "src/components/StatCard/StatCard";
-import Delta from "src/components/Delta/Delta";
 import Icon from "src/components/Icon/Icon";
 import ImageSlot from "src/components/ImageSlot/ImageSlot";
 import KvList from "src/components/KvList/KvList";
 import Legend from "src/components/Legend/Legend";
 import Progress from "src/components/Progress/Progress";
-import Segmented from "src/components/Segmented/Segmented";
 import DonutChart from "src/components/charts/DonutChart";
-import Sparkline from "src/components/charts/Sparkline";
+import { GG_DECIMALS, VALUE_DECIMALS } from "src/constants";
+import { formatAmount } from "src/helpers/format";
 import { ACCENT } from "src/themes/tokens";
-import { allocation, ecoPools, emissionStages, protectionRows, RELEASED_PCT, reserveRows } from "./mock";
+import { ecoPools } from "./mock";
+import { gg, pct, phaseProgress, usdt, useAllocationItems } from "./useOverviewData";
 
-// 數據總覽 - the desktop overview board and its mobile variant.
+// 數據總覽 - the desktop overview board and its mobile variant, on chain
+// figures. 24h 交易量, 生態池 and the community counts have no source yet and
+// render DASH / disabled.
 
-const PRICE_TREND = [10.9, 11.2, 11.0, 11.6, 11.4, 12.0, 11.8, 12.4, 12.68];
+const DASH = "——";
+const PHASE_COLORS = ["#B9D8FA", "#2D7BEF", "#1A5BD0", "#5AA0F2", "#8EC1F5"];
+const PHASE_MONTHS = ["1–12", "13–37", "38–68", "69–95", "96–120"];
 
 function Overview() {
-    const [range, setRange] = useState("1D");
+    const { data: d, legend: allocationLegend } = useAllocationItems();
 
     const features = [
         { icon: "shield" as const, label: t`黃金本位價值體系` },
@@ -29,11 +32,41 @@ function Overview() {
         { icon: "users" as const, label: t`社區共建共享` },
     ];
 
+    const releasedPct = pct(d.released, d.totalBudget);
+    const circulatingPct = pct(d.circulating, d.totalSupply);
+    const marketCap =
+        d.ggPrice !== undefined && d.circulating !== undefined ? (d.circulating * d.ggPrice) / 10n ** BigInt(VALUE_DECIMALS) : undefined;
+    const priceText = d.ggPrice === undefined ? DASH : formatAmount(d.ggPrice, VALUE_DECIMALS);
+    const capText = marketCap === undefined ? DASH : formatAmount(marketCap, GG_DECIMALS, 0);
+
+    const stages = (d.phases ?? []).map((phase, i) => {
+        const n = i + 1;
+        const months = PHASE_MONTHS[i];
+        return {
+            label: t`第${n}階段（${months}月）`,
+            percent: d.totalBudget ? `${pct(phase.budget, d.totalBudget).toFixed(0)}%` : DASH,
+            amount: gg(phase.budget),
+            color: PHASE_COLORS[i],
+            progress: d.lastSettledDay === undefined ? 0 : phaseProgress(d.phases!, i, d.lastSettledDay),
+        };
+    });
+
     const keyMetrics: [string, string][] = [
-        [t`本位倉總算力（DAI）`, "520,860,000"],
-        [t`生態池總鎖倉（USDT）`, "36,520,890"],
-        [t`社區成員總數`, "28,562"],
-        [t`NFT 已發放數量`, "12,680"],
+        [t`本位倉總算力（USDT）`, d.totalPower === undefined ? DASH : formatAmount(d.totalPower, VALUE_DECIMALS, 0)],
+        [t`已結算天數`, d.lastSettledDay === undefined ? DASH : String(d.lastSettledDay)],
+        [t`保險庫餘額（GG）`, gg(d.treasuryBalance)],
+        [t`保險庫已支付（GG）`, gg(d.treasuryPaid)],
+    ];
+
+    const reserveRows: [string, string][] = [
+        [t`累計存入`, `${usdt(d.reserveDeposited)} USDT`],
+        [t`累計提出`, `${usdt(d.reserveWithdrawn)} USDT`],
+        [t`使用比例`, `${pct(d.reserveWithdrawn, d.reserveDeposited).toFixed(2)}%`],
+    ];
+    const protectionRows: [string, string][] = [
+        [t`累計存入`, `${usdt(d.protectionDeposited)} USDT`],
+        [t`已使用`, `${usdt(d.protectionSpent)} USDT`],
+        [t`使用比例`, `${pct(d.protectionSpent, d.protectionDeposited).toFixed(2)}%`],
     ];
 
     return (
@@ -62,29 +95,24 @@ function Overview() {
                         <ImageSlot label="GG" shape="circle" width={52} />
                     </div>
                     <div className="gp-stat-body">
-                        <div className="gp-stat-label">{t`GG 實時價格`}</div>
+                        <div className="gp-stat-label">{t`GG 實時價格（TWAP）`}</div>
                         <div className="gp-row">
-                            <span className="gp-stat-value">$ 12.68</span>
-                            <Delta value="+3.24%" />
-                        </div>
-                        <div className="gp-only-mobile">
-                            <Segmented options={["1D", "7D", "30D", "90D"]} value={range} onChange={setRange} />
+                            <span className="gp-stat-value">$ {priceText}</span>
                         </div>
                     </div>
-                    <Sparkline data={PRICE_TREND} />
                 </div>
-                <StatCard icon="chart" label={t`總市值`} value="$ 1,065,120,000" />
-                <StatCard icon="swap" label={t`24h 交易量`} value="$ 4,286,530" />
+                <StatCard icon="chart" label={t`流通市值`} value={`$ ${capText}`} />
+                <StatCard icon="swap" label={t`24h 交易量`} value={`$ ${DASH}`} className="is-disabled" />
                 <StatCard
                     icon="layers"
                     label={t`流通數量`}
-                    value="52,480,000"
+                    value={gg(d.circulating)}
                     footer={
                         <>
-                            <div className="gp-muted gp-small">/ 84,000,000</div>
+                            <div className="gp-muted gp-small">/ {gg(d.totalSupply)}</div>
                             <div className="gp-row">
-                                <Progress value={RELEASED_PCT} className="gp-grow" />
-                                <span className="gp-small gp-muted">62.48%</span>
+                                <Progress value={circulatingPct} className="gp-grow" />
+                                <span className="gp-small gp-muted">{circulatingPct.toFixed(2)}%</span>
                             </div>
                         </>
                     }
@@ -96,27 +124,27 @@ function Overview() {
                     <div className="gp-donut-row">
                         <DonutChart
                             items={[
-                                { label: t`已釋放`, value: RELEASED_PCT, color: ACCENT },
-                                { label: t`待釋放`, value: 100 - RELEASED_PCT, color: "#CFE3FB" },
+                                { label: t`已釋放`, value: releasedPct, color: ACCENT },
+                                { label: t`待釋放`, value: 100 - releasedPct, color: "#CFE3FB" },
                             ]}
                             size={190}
                         >
-                            <div className="gp-donut-value">62.48%</div>
+                            <div className="gp-donut-value">{releasedPct.toFixed(2)}%</div>
                             <div className="gp-donut-label">{t`已釋放`}</div>
-                            <div className="gp-donut-sub">52,480,000 GG</div>
-                            <div className="gp-donut-sub">/ 84,000,000 GG</div>
+                            <div className="gp-donut-sub">{gg(d.released)} GG</div>
+                            <div className="gp-donut-sub">/ {gg(d.totalBudget)} GG</div>
                         </DonutChart>
-                        <Legend items={emissionStages()} />
+                        <Legend items={stages.map(s => ({ label: s.label, color: s.color, percent: s.percent, amount: s.amount }))} />
                     </div>
                 </Card>
 
                 <Card title={t`資金分配總覽`} action={{ label: t`查看詳情`, to: "/overview/allocation" }}>
                     <div className="gp-donut-row">
-                        <DonutChart items={allocation()} size={190}>
-                            <div className="gp-donut-value">84,000,000</div>
+                        <DonutChart items={allocationLegend} size={190}>
+                            <div className="gp-donut-value">{gg(d.totalSupply)}</div>
                             <div className="gp-donut-label">{t`GG 總量`}</div>
                         </DonutChart>
-                        <Legend items={allocation()} />
+                        <Legend items={allocationLegend} />
                     </div>
                 </Card>
             </div>
@@ -132,11 +160,11 @@ function Overview() {
                     }
                 >
                     <div className="gp-figure-row">
-                        <span className="gp-figure">79,800,000</span>
-                        <span className="gp-figure-pct">95%</span>
+                        <span className="gp-figure">{usdt(d.reserveBalance)}</span>
+                        <span className="gp-figure-pct">USDT</span>
                     </div>
-                    <p className="gp-muted gp-small">{t`用於生態建設、算力排放、流動性支持等`}</p>
-                    <KvList rows={reserveRows()} className="gp-kv--boxed" />
+                    <p className="gp-muted gp-small">{t`本位倉 USDT 的 95%，用於生態建設、流動性支持等`}</p>
+                    <KvList rows={reserveRows} className="gp-kv--boxed" />
                 </Card>
 
                 <Card
@@ -149,24 +177,24 @@ function Overview() {
                     }
                 >
                     <div className="gp-figure-row">
-                        <span className="gp-figure">4,200,000</span>
-                        <span className="gp-figure-pct">5%</span>
+                        <span className="gp-figure">{usdt(d.protectionBalance)}</span>
+                        <span className="gp-figure-pct">USDT</span>
                     </div>
-                    <p className="gp-muted gp-small">{t`用於價格保護及市場調節`}</p>
-                    <KvList rows={protectionRows()} className="gp-kv--boxed" />
+                    <p className="gp-muted gp-small">{t`本位倉 USDT 的 5%，用於價格保護及市場調節`}</p>
+                    <KvList rows={protectionRows} className="gp-kv--boxed" />
                 </Card>
 
-                <Card title={t`生態池數據`} icon="database" action={{ label: t`查看詳情`, to: "/overview/eco-pools" }}>
+                <Card title={t`生態池數據`} icon="database" action={{ label: t`查看詳情`, to: "/overview/eco-pools" }} className="is-disabled">
                     {ecoPools().map(pool => (
                         <div className="gp-pool-mini" key={pool.key}>
                             <ImageSlot label={pool.a} shape="circle" width={44} />
                             <div className="gp-grow">
                                 <div className="gp-strong">{pool.name}</div>
-                                <div className="gp-pool-mini-value">{pool.value}</div>
+                                <div className="gp-pool-mini-value">$ {DASH}</div>
                             </div>
                             <div className="gp-right">
                                 <div className="gp-muted gp-small">{t`年化收益（參考）`}</div>
-                                <div className="gp-positive gp-strong">{pool.apr}</div>
+                                <div className="gp-positive gp-strong">{DASH}</div>
                             </div>
                         </div>
                     ))}

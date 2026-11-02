@@ -1,0 +1,23 @@
+{
+  "name": "gold3.sync",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chain event -> database sync services and keepers for GOLDEN PACT GG",
+  "main": "keepers/daily-settlement.js",
+  "scripts": {
+    "init-schema": "node scripts/init-schema.js",
+    "sync-addresses": "node scripts/sync-addresses.js",
+    "sync-abi": "node scripts/sync-abi.js",
+    "check-abi": "node scripts/check-abi.js",
+    "status": "node scripts/show-status.js",
+    "set-cursor": "node scripts/set-cursor.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.0",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "redis": "^4.7.0",
+    "sequelize": "^6.37.0"
+  }
+}

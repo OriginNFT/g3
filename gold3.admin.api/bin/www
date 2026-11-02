@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+'use strict';
+
+const http = require('node:http');
+
+const app = require('../app');
+const config = require('../config');
+const { sequelize, ready } = require('../model');
+const { closeRedis } = require('../utils/redis');
+
+async function main() {
+    // Fail fast: a service that cannot reach the database has nothing to serve,
+    // so surface it at boot instead of per request.
+    await ready;
+
+    const server = http.createServer(app);
+
+    server.on('error', (err) => {
+        if (err.syscall !== 'listen') throw err;
+        if (err.code === 'EACCES') {
+            console.error(`[FATAL] port ${config.port} requires elevated privileges`);
+            process.exit(1);
+        }
+        if (err.code === 'EADDRINUSE') {
+            console.error(`[FATAL] port ${config.port} is already in use`);
+            process.exit(1);
+        }
+        throw err;
+    });
+
+    server.listen(config.port, () => {
+        console.log(`[INIT] gold3.admin.api network=${config.NETWORK}`);
+        console.log(`[INIT] listening on port ${config.port}`);
+        console.log(
+            `[INIT] cors: ${config.corsOrigins.length > 0 ? config.corsOrigins.join(', ') : 'same origin only'}`
+        );
+        console.log(
+            `[INIT] session ttl ${config.sessionTtlSeconds}s, lockout after ${config.loginMaxAttempts} failures for ${config.loginLockoutSeconds}s`
+        );
+    });
+
+    // Stop accepting connections, let in-flight requests finish, then release
+    // the pool - pm2 restarts never drop a response mid-flight.
+    let stopping = false;
+    for (const signal of ['SIGINT', 'SIGTERM']) {
+        process.on(signal, () => {
+            if (stopping) return;
+            stopping = true;
+            console.log(`[gold3.admin.api] ${signal} received, draining`);
+            server.close(async () => {
+                try {
+                    await sequelize.close();
+                } catch (err) {
+                    console.error('[DB] close failed:', err.message, err);
+                }
+                await closeRedis();
+                console.log('[gold3.admin.api] stopped');
+                process.exit(0);
+            });
+        });
+    }
+}
+
+main().catch((err) => {
+    console.error('[FATAL] gold3.admin.api:', err.message, err);
+    process.exit(1);
+});

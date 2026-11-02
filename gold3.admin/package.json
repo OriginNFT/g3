@@ -1,0 +1,29 @@
+{
+  "name": "gold3.admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Admin panel for GOLDEN PACT GG - settlement reports, the community payout queue and contract settings",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync-abi": "node scripts/sync-abi.js",
+    "sync-addresses": "node scripts/sync-addresses.js"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.0",
+    "@mui/material": "^5.16.0",
+    "ethers": "^6.13.0",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

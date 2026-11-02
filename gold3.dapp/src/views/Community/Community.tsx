@@ -6,12 +6,14 @@
 // import PageHeader from "src/components/PageHeader/PageHeader";
 // import StatCard from "src/components/StatCard/StatCard";
 import CommunityInvite from "./CommunityInvite";
+import CommunityTier from "./CommunityTier";
 // import CommunityLevelsPanel from "./CommunityLevelsPanel";
 // import CommunityStatsPanel from "./CommunityStatsPanel";
 
 // 我的社區 · 主頁 - the community main board (4-1).
 // Hidden for now: every board figure is still mock data, so only the
-// 推薦關係 card (read from the shared Community) is rendered.
+// 推薦關係 card (read from the shared Community) and the 社區等級 card
+// (TierStaking) are rendered.
 
 function Community() {
     return (
@@ -35,6 +37,8 @@ function Community() {
             </div> */}
 
             <CommunityInvite />
+
+            <CommunityTier />
 
             {/* <div className="gp-grid gp-grid-2">
                 <CommunityStatsPanel />

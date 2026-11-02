@@ -4,7 +4,11 @@ pragma solidity 0.8.24;
 import {AccessControlEnumerableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/extensions/AccessControlEnumerableUpgradeable.sol";
 import {ReentrancyGuardUpgradeable} from "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol";
 
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+
 import "./interface/IFeeRouter.sol";
+import "./interface/IBuybackExecutor.sol";
 
 /**
  * @title FeeRouter
@@ -12,9 +16,14 @@ import "./interface/IFeeRouter.sol";
  *           turbine 2.5%  GOT2 buyback-burn 0.5 | GG buyback-burn 0.5 | AUG buyback-burn 0.5 | LP 1
  *           sell    3%    eco reserve 1 | community building 1 | LP 1
  *         Sell sources: USDT/GG, GOT2/GG, AUG/GG.
- * @dev Skeleton: signatures and storage only.
+ *         Fees are pulled from the collector (GGToken's sell hook, the
+ *         turbine). Buyback shares are booked by purpose in BuybackExecutor;
+ *         the LP, eco reserve and community building shares are plain
+ *         transfers to their configured accounts.
  */
 contract FeeRouter is AccessControlEnumerableUpgradeable, ReentrancyGuardUpgradeable, IFeeRouter {
+    using SafeERC20 for IERC20;
+
     uint256 public constant IMPL_REV = 1;
 
     bytes32 public constant COLLECTOR_ROLE = keccak256("COLLECTOR_ROLE");
@@ -73,11 +82,58 @@ contract FeeRouter is AccessControlEnumerableUpgradeable, ReentrancyGuardUpgrade
 
     // ============ Routing ============
 
-    function routeTurbineFee(address token, uint256 amount) external override onlyRole(COLLECTOR_ROLE) nonReentrant {}
+    function routeTurbineFee(address token, uint256 amount) external override onlyRole(COLLECTOR_ROLE) nonReentrant {
+        require(amount > 0, "FeeRouter: zero amount");
+        IERC20(token).safeTransferFrom(msg.sender, address(this), amount);
+
+        uint256 got2Share = amount * TURBINE_GOT2_BUYBACK_BPS / TURBINE_FEE_BPS;
+        uint256 ggShare = amount * TURBINE_GG_BUYBACK_BPS / TURBINE_FEE_BPS;
+        uint256 augShare = amount * TURBINE_AUG_BUYBACK_BPS / TURBINE_FEE_BPS;
+        uint256 lpShare = amount - got2Share - ggShare - augShare;
+
+        _fundBuyback(SOURCE_TURBINE, token, got2Share, PURPOSE_GOT2_BUYBACK);
+        _fundBuyback(SOURCE_TURBINE, token, ggShare, PURPOSE_GG_BUYBACK);
+        _fundBuyback(SOURCE_TURBINE, token, augShare, PURPOSE_AUG_BUYBACK);
+        _send(SOURCE_TURBINE, token, lpStakeVault, lpShare, PURPOSE_LP_INCENTIVE);
+    }
 
     function routeSellFee(
         bytes32 source,
         address token,
         uint256 amount
-    ) external override onlyRole(COLLECTOR_ROLE) nonReentrant {}
+    ) external override onlyRole(COLLECTOR_ROLE) nonReentrant {
+        require(
+            source == SOURCE_USDT_GG_SELL || source == SOURCE_GOT2_GG_SELL || source == SOURCE_AUG_GG_SELL,
+            "FeeRouter: unknown sell source"
+        );
+        require(amount > 0, "FeeRouter: zero amount");
+        IERC20(token).safeTransferFrom(msg.sender, address(this), amount);
+
+        uint256 ecoShare = amount * SELL_ECO_RESERVE_BPS / SELL_FEE_BPS;
+        uint256 communityShare = amount * SELL_COMMUNITY_BPS / SELL_FEE_BPS;
+        uint256 lpShare = amount - ecoShare - communityShare;
+
+        _send(source, token, ecoReserve, ecoShare, PURPOSE_ECO_RESERVE);
+        _send(source, token, communityBuilding, communityShare, PURPOSE_COMMUNITY_BUILDING);
+        _send(source, token, lpStakeVault, lpShare, PURPOSE_LP_INCENTIVE);
+    }
+
+    // ============ Internal ============
+
+    function _fundBuyback(bytes32 source, address token, uint256 amount, bytes32 purpose) internal {
+        if (amount == 0) {
+            return;
+        }
+        IERC20(token).forceApprove(buybackExecutor, amount);
+        IBuybackExecutor(buybackExecutor).fund(purpose, token, amount);
+        emit FeeRouted(source, token, buybackExecutor, amount, purpose);
+    }
+
+    function _send(bytes32 source, address token, address to, uint256 amount, bytes32 purpose) internal {
+        if (amount == 0) {
+            return;
+        }
+        IERC20(token).safeTransfer(to, amount);
+        emit FeeRouted(source, token, to, amount, purpose);
+    }
 }

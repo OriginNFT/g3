@@ -7,14 +7,44 @@ import DonutChart from "src/components/charts/DonutChart";
 import LineChart from "src/components/charts/LineChart";
 import { formatWan } from "src/helpers/format";
 import { ACCENT } from "src/themes/tokens";
-import { emissionStages, RELEASED_PCT } from "./mock";
+import { gg, pct, phaseProgress, useOverviewData } from "./useOverviewData";
 
-// GG 排放進度 - the emission detail board.
+// GG 排放進度 - the emission detail board, from EmissionController: the five
+// phase budgets, their last protocol days and what is settled so far.
 
-const CURVE_YEARS = [1, 2, 4, 6, 8, 10];
-const CURVE_CUMULATIVE = [3_360_000, 6_720_000, 26_040_000, 51_240_000, 70_560_000, 84_000_000];
+const DASH = "——";
+const PHASE_MONTHS = ["1–12", "13–37", "38–68", "69–95", "96–120"];
 
 function EmissionDetail() {
+    const d = useOverviewData();
+    const releasedPct = pct(d.released, d.totalBudget);
+    const pending = d.released !== undefined && d.totalBudget !== undefined ? d.totalBudget - d.released : undefined;
+
+    const settledDay = d.lastSettledDay === undefined ? DASH : String(d.lastSettledDay);
+    const stages = (d.phases ?? []).map((phase, i) => {
+        const n = i + 1;
+        const months = PHASE_MONTHS[i];
+        const endDay = phase.endDay === 0n ? DASH : String(phase.endDay);
+        return {
+            label: t`第${n}階段（${months}月）`,
+            percent: d.totalBudget ? `${pct(phase.budget, d.totalBudget).toFixed(0)}%` : DASH,
+            amount: gg(phase.budget),
+            endDayText: t`至第 ${endDay} 天`,
+            progress: d.lastSettledDay === undefined ? 0 : phaseProgress(d.phases!, i, d.lastSettledDay),
+        };
+    });
+    const curveLabels = [t`創世`, ...PHASE_MONTHS.map(months => {
+        const end = months.split("–")[1];
+        return t`第${end}月`;
+    })];
+
+    // Cumulative plan at each phase end, in whole GG.
+    let cumulative = 0n;
+    const curve = (d.phases ?? []).map(phase => {
+        cumulative += phase.budget;
+        return Number(cumulative / 10n ** 18n);
+    });
+
     return (
         <div className="gp-stack">
             <PageHeader title={t`GG 排放進度`} back="/overview" />
@@ -24,35 +54,45 @@ function EmissionDetail() {
                     <div className="gp-donut-row">
                         <DonutChart
                             items={[
-                                { label: t`已釋放`, value: RELEASED_PCT, color: ACCENT },
-                                { label: t`待釋放`, value: 100 - RELEASED_PCT, color: "#CFE3FB" },
+                                { label: t`已釋放`, value: releasedPct, color: ACCENT },
+                                { label: t`待釋放`, value: 100 - releasedPct, color: "#CFE3FB" },
                             ]}
                             size={200}
                         >
-                            <div className="gp-donut-value">62.48%</div>
+                            <div className="gp-donut-value">{releasedPct.toFixed(2)}%</div>
                             <div className="gp-donut-label">{t`已釋放`}</div>
-                            <div className="gp-donut-sub">52,480,000 GG</div>
-                            <div className="gp-donut-sub">/ 84,000,000 GG</div>
+                            <div className="gp-donut-sub">{gg(d.released)} GG</div>
+                            <div className="gp-donut-sub">/ {gg(d.totalBudget)} GG</div>
                         </DonutChart>
                         <div className="gp-figure-stack">
                             <div>
-                                <div className="gp-muted gp-small">{t`總量`}</div>
-                                <div className="gp-strong-lg">84,000,000 GG</div>
+                                <div className="gp-muted gp-small">{t`排放總量`}</div>
+                                <div className="gp-strong-lg">{gg(d.totalBudget)} GG</div>
                             </div>
                             <div>
-                                <div className="gp-muted gp-small">{t`已釋放`}</div>
-                                <div className="gp-strong-lg">52,480,000 GG</div>
+                                <div className="gp-muted gp-small">{t`已釋放（至第 ${settledDay} 天）`}</div>
+                                <div className="gp-strong-lg">{gg(d.released)} GG</div>
                                 <div className="gp-row">
-                                    <Progress value={62.48} className="gp-grow" />
-                                    <span className="gp-small gp-muted">62.48%</span>
+                                    <Progress value={releasedPct} className="gp-grow" />
+                                    <span className="gp-small gp-muted">{releasedPct.toFixed(2)}%</span>
                                 </div>
                             </div>
                             <div>
                                 <div className="gp-muted gp-small">{t`待釋放`}</div>
-                                <div className="gp-strong-lg">31,520,000 GG</div>
+                                <div className="gp-strong-lg">{gg(pending)} GG</div>
                                 <div className="gp-row">
-                                    <Progress value={37.52} tone="gold" className="gp-grow" />
-                                    <span className="gp-small gp-muted">37.52%</span>
+                                    <Progress value={100 - releasedPct} tone="gold" className="gp-grow" />
+                                    <span className="gp-small gp-muted">{(100 - releasedPct).toFixed(2)}%</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="gp-muted gp-small">{t`創世時間`}</div>
+                                <div className="gp-strong-lg">
+                                    {d.genesis === undefined
+                                        ? DASH
+                                        : d.genesis === 0n
+                                          ? t`未設定`
+                                          : `${new Date(Number(d.genesis) * 1000).toLocaleString("sv-SE", { timeZone: "Asia/Singapore" }).slice(0, 16)} SGT`}
                                 </div>
                             </div>
                         </div>
@@ -60,25 +100,30 @@ function EmissionDetail() {
                 </Card>
 
                 <Card title={t`排放階段明細`}>
-                    <ol className="gp-timeline">
-                        {emissionStages().map(stage => (
-                            <li key={stage.label}>
-                                <div className="gp-timeline-head">
-                                    <span>{stage.label}</span>
-                                    <span className="gp-strong">{stage.percent}</span>
-                                    <span className="gp-muted">{stage.amount} GG</span>
-                                </div>
-                                <Progress value={stage.progress} />
-                            </li>
-                        ))}
-                    </ol>
+                    {stages.length === 0 ? (
+                        <div className="gp-empty">{DASH}</div>
+                    ) : (
+                        <ol className="gp-timeline">
+                            {stages.map(stage => (
+                                <li key={stage.label}>
+                                    <div className="gp-timeline-head">
+                                        <span>{stage.label}</span>
+                                        <span className="gp-strong">{stage.percent}</span>
+                                        <span className="gp-muted">{stage.amount} GG</span>
+                                        <span className="gp-muted gp-small">{stage.endDayText}</span>
+                                    </div>
+                                    <Progress value={stage.progress} />
+                                </li>
+                            ))}
+                        </ol>
+                    )}
                 </Card>
             </div>
 
             <Card title={t`排放曲線圖（10年）`}>
                 <LineChart
-                    labels={CURVE_YEARS.map(year => t`${year}年`)}
-                    series={[{ label: t`累計釋放`, data: CURVE_CUMULATIVE }]}
+                    labels={curveLabels}
+                    series={[{ label: t`累計釋放`, data: [0, ...curve] }]}
                     yFormat={formatWan}
                     height={280}
                 />

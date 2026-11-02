@@ -23,11 +23,17 @@ interface IComputingVault {
     event TokensBurned(address indexed token, address indexed from, uint256 amount);
     event HoldingRewardNotified(uint256 indexed dayId, uint256 amount);
     event HoldingRewardClaimed(address indexed account, uint256 amount);
+    event TurbineSet(address turbine);
 
     function participate(address asset, uint256 amount, uint256 minPower) external returns (uint256 positionId);
 
-    function notifyHoldingReward(uint256 dayId, uint256 amount) external;
+    /// @notice Receive the holding half of `dayId`'s emission: pulls what it
+    ///         distributes (amount - undistributed) from the caller, which
+    ///         must have approved it. EMISSION_ROLE only.
+    /// @return undistributed The part no position could receive (the whole amount when no power is active).
+    function notifyHoldingReward(uint256 dayId, uint256 amount) external returns (uint256 undistributed);
 
+    /// @notice Settle the caller's holding reward and deliver it to the turbine.
     function claimHoldingReward() external returns (uint256 amount);
 
     function pendingHoldingReward(address account) external view returns (uint256);

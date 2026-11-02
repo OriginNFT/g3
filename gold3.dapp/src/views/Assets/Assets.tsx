@@ -1,33 +1,135 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { t } from "@lingui/macro";
+import { erc20Abi, zeroAddress } from "viem";
+import { useAccount, useReadContracts } from "wagmi";
 
+import { CLAIM_CONTROLLER_ABI } from "src/abi/ClaimController";
+import { COMMUNITY_ENGINE_ABI } from "src/abi/CommunityEngine";
+import { COMPUTING_VAULT_ABI } from "src/abi/ComputingVault";
+import { NFT_RIGHTS_LEDGER_ABI } from "src/abi/NFTRightsLedger";
+import { ORACLE_ADAPTER_ABI } from "src/abi/OracleAdapter";
+import { TIER_STAKING_ABI } from "src/abi/TierStaking";
 import Card from "src/components/Card/Card";
-import Delta from "src/components/Delta/Delta";
 import Icon from "src/components/Icon/Icon";
-import NftCard from "src/components/NftCard/NftCard";
+import KvList from "src/components/KvList/KvList";
 import PageHeader from "src/components/PageHeader/PageHeader";
 import StatCard from "src/components/StatCard/StatCard";
 import Tabs from "src/components/Tabs/Tabs";
 import TokenIcon from "src/components/TokenIcon/TokenIcon";
-import { myNfts } from "src/views/Nft/mock";
+import {
+    ANUBIS_CHAIN_ID,
+    AUG_ADDRESS,
+    CLAIM_CONTROLLER_ADDRESS,
+    COMMUNITY_ENGINE_ADDRESS,
+    COMPUTING_VAULT_ADDRESS,
+    GG_ADDRESS,
+    GG_DECIMALS,
+    GOT2_ADDRESS,
+    NFT_RIGHTS_LEDGER_ADDRESS,
+    ORACLE_ADAPTER_ADDRESS,
+    TIER_STAKING_ADDRESS,
+    USDT_ADDRESS,
+    USDT_DECIMALS,
+    VALUE_DECIMALS,
+} from "src/constants";
+import { errorMessage, formatAmount } from "src/helpers/format";
 
-// 我的資產 - the assets board (4-7). 收益資產 has no board yet and shows empty.
+// 我的資產 - wallet balances of the four tokens priced by the OracleAdapter,
+// the NFT rights ledger and the pending earnings (holding reward, community
+// credits). Every value is 1e18 = 1 USDT. 充幣 / 提幣 / 交易 have no home
+// here yet and stay disabled.
 
 type Tab = "all" | "token" | "nft" | "earning";
+const DASH = "——";
+const SCALE = 10n ** BigInt(VALUE_DECIMALS);
 
 const TOKENS = [
-    { symbol: "DAI", amount: "125,680.50", available: "98,650.20", locked: "27,030.30", price: "$1.00", value: "125,680.50" },
-    { symbol: "GOT2", amount: "8,950.00", available: "6,200.00", locked: "2,750.00", price: "$2.15", value: "19,242.50" },
-    { symbol: "GG", amount: "4,920.00", available: "3,200.00", locked: "1,720.00", price: "$10.20", value: "50,184.00" },
-    { symbol: "USDT", amount: "38,250.00", available: "38,250.00", locked: "0.00", price: "$1.00", value: "38,250.00" },
-    { symbol: "ETH", amount: "5.2000", available: "4.0000", locked: "1.2000", price: "$2,650.00", value: "13,780.00" },
-];
+    { symbol: "USDT", address: USDT_ADDRESS },
+    { symbol: "GOT2", address: GOT2_ADDRESS },
+    { symbol: "GG", address: GG_ADDRESS },
+    { symbol: "AUG", address: AUG_ADDRESS },
+] as const;
+
+function cell<T>(entry: { status: "success" | "failure"; result?: unknown } | undefined): T | undefined {
+    return entry?.status === "success" ? (entry.result as T) : undefined;
+}
+
+function fmtValue(value: bigint | undefined): string {
+    return value === undefined ? DASH : formatAmount(value, VALUE_DECIMALS);
+}
 
 function Assets() {
     const [tab, setTab] = useState<Tab>("all");
+    const { address, isConnected } = useAccount();
+    const account = address ?? zeroAddress;
 
+    // Per token: balanceOf, decimals, priceUSDT. A zero token address or a
+    // token without a pair fails only its own cells.
+    const tokens = useReadContracts({
+        contracts: TOKENS.flatMap(token => [
+            { address: token.address, abi: erc20Abi, functionName: "balanceOf", args: [account], chainId: ANUBIS_CHAIN_ID } as const,
+            { address: token.address, abi: erc20Abi, functionName: "decimals", chainId: ANUBIS_CHAIN_ID } as const,
+            { address: ORACLE_ADAPTER_ADDRESS, abi: ORACLE_ADAPTER_ABI, functionName: "priceUSDT", args: [token.address], chainId: ANUBIS_CHAIN_ID } as const,
+        ]),
+        query: { enabled: !!address },
+    });
+    const earnings = useReadContracts({
+        contracts: [
+            { address: COMPUTING_VAULT_ADDRESS, abi: COMPUTING_VAULT_ABI, functionName: "powerOf", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: COMPUTING_VAULT_ADDRESS, abi: COMPUTING_VAULT_ABI, functionName: "pendingHoldingReward", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: COMMUNITY_ENGINE_ADDRESS, abi: COMMUNITY_ENGINE_ABI, functionName: "creditsOf", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: CLAIM_CONTROLLER_ADDRESS, abi: CLAIM_CONTROLLER_ABI, functionName: "claimable", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: NFT_RIGHTS_LEDGER_ADDRESS, abi: NFT_RIGHTS_LEDGER_ABI, functionName: "rightsOf", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: NFT_RIGHTS_LEDGER_ADDRESS, abi: NFT_RIGHTS_LEDGER_ABI, functionName: "totalCreatedOf", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: NFT_RIGHTS_LEDGER_ADDRESS, abi: NFT_RIGHTS_LEDGER_ABI, functionName: "totalConsumedOf", args: [account], chainId: ANUBIS_CHAIN_ID },
+            { address: TIER_STAKING_ADDRESS, abi: TIER_STAKING_ABI, functionName: "lockedOf", args: [account], chainId: ANUBIS_CHAIN_ID },
+        ],
+        query: { enabled: !!address },
+    });
+
+    useEffect(() => {
+        if (tokens.error) console.error("assets: token reads failed:", tokens.error.message, tokens.error);
+    }, [tokens.error]);
+    useEffect(() => {
+        if (earnings.error) console.error("assets: earning reads failed:", earnings.error.message, earnings.error);
+    }, [earnings.error]);
+
+    const e = earnings.data;
+    const power = cell<bigint>(e?.[0]);
+    const pending = cell<bigint>(e?.[1]);
+    const credits = cell<bigint>(e?.[2]);
+    const claimable = cell<bigint>(e?.[3]);
+    const rights = cell<bigint>(e?.[4]);
+    const rightsCreated = cell<bigint>(e?.[5]);
+    const rightsConsumed = cell<bigint>(e?.[6]);
+    const locked = cell<bigint>(e?.[7]);
+
+    const rows = TOKENS.map((token, i) => {
+        const deployed = token.address !== zeroAddress;
+        const balance = cell<bigint>(tokens.data?.[i * 3]);
+        const decimals = cell<number>(tokens.data?.[i * 3 + 1]);
+        const price = cell<bigint>(tokens.data?.[i * 3 + 2]);
+        const lockedHere = token.symbol === "GG" ? locked ?? 0n : 0n;
+        const total = balance !== undefined ? balance + lockedHere : undefined;
+        const value =
+            total !== undefined && decimals !== undefined && price !== undefined ? (total * price) / 10n ** BigInt(decimals) : undefined;
+        return { ...token, deployed, balance, decimals, price, locked: lockedHere, total, value };
+    });
+    const tokenTotal = rows.every(row => !row.deployed || row.value !== undefined)
+        ? rows.reduce((sum, row) => sum + (row.value ?? 0n), 0n)
+        : undefined;
+    const ggPrice = rows[2].price;
+    const pendingGG = pending !== undefined && credits !== undefined ? pending + credits : undefined;
+    const pendingValue = pendingGG !== undefined && ggPrice !== undefined ? (pendingGG * ggPrice) / SCALE : undefined;
+    const totalValue = tokenTotal !== undefined && rights !== undefined ? tokenTotal + rights + (pendingValue ?? 0n) : undefined;
+
+    const readError = tokens.error ?? earnings.error;
+    const message = readError ? t`讀取失敗：${errorMessage(readError)}` : "";
+    const gg = (value: bigint | undefined) => (value === undefined ? DASH : formatAmount(value, GG_DECIMALS));
     const showTokens = tab === "all" || tab === "token";
     const showNfts = tab === "all" || tab === "nft";
+    const showEarning = tab === "all" || tab === "earning";
 
     return (
         <div className="gp-stack">
@@ -40,11 +142,18 @@ function Assets() {
                             <Icon name="eye" size={20} />
                             <div>
                                 <div className="gp-muted gp-small">{t`總資產估值（USD）`}</div>
-                                <div className="gp-figure gp-accent">365,280.50</div>
-                                <Delta value="+12.6%" suffix="(24H)" />
+                                <div className="gp-figure gp-accent">{isConnected ? fmtValue(totalValue) : DASH}</div>
                             </div>
                         </div>
-                        <button type="button" className="gp-btn gp-btn-outline" disabled>
+                        <button
+                            type="button"
+                            className="gp-btn gp-btn-outline"
+                            disabled={!isConnected || tokens.isFetching || earnings.isFetching}
+                            onClick={() => {
+                                tokens.refetch();
+                                earnings.refetch();
+                            }}
+                        >
                             <Icon name="refresh" size={16} />
                             {t`刷新`}
                         </button>
@@ -67,18 +176,26 @@ function Assets() {
                 onChange={setTab}
             />
 
+            {!isConnected && <div className="gp-empty">{t`請先連接錢包`}</div>}
+            {message && <p className="gp-fundraise-error gp-small">{message}</p>}
+
             <div className="gp-grid gp-grid-4">
-                <StatCard icon="coins" label={t`代幣資產（USD）`} value="245,680.30" delta="+10.2%" />
-                <StatCard icon="nft" label={t`NFT 資產（USD）`} value="68,500.00" delta="+18.6%" />
-                <StatCard icon="sprout" label={t`收益資產（USD）`} value="51,100.20" delta="+9.8%" />
+                <StatCard icon="coins" label={t`代幣資產（USD）`} value={fmtValue(tokenTotal)} />
+                <StatCard icon="nft" label={t`NFT 權益額度（USDT）`} value={fmtValue(rights)} />
+                <StatCard icon="power" label={t`本位倉算力（USDT）`} value={fmtValue(power)} />
                 <StatCard
                     icon="clock"
-                    label={t`待領取收益（USD）`}
-                    value="12,650.00"
+                    label={t`待領取收益（GG）`}
+                    value={gg(pendingGG)}
                     footer={
-                        <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
-                            {t`立即領取`}
-                        </button>
+                        <div className="gp-row">
+                            <Link className="gp-btn gp-btn-outline gp-btn-sm" to="/power">
+                                {t`持倉獎勵`}
+                            </Link>
+                            <Link className="gp-btn gp-btn-outline gp-btn-sm" to="/nft">
+                                {t`社區 GG`}
+                            </Link>
+                        </div>
                     }
                 />
             </div>
@@ -99,53 +216,69 @@ function Assets() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {TOKENS.map(token => (
-                                    <tr key={token.symbol}>
-                                        <td>
-                                            <div className="gp-row">
-                                                <TokenIcon symbol={token.symbol} />
-                                                <span className="gp-strong">{token.symbol}</span>
-                                            </div>
-                                        </td>
-                                        <td className="gp-strong">{token.amount}</td>
-                                        <td>{token.available}</td>
-                                        <td>{token.locked}</td>
-                                        <td>{token.price}</td>
-                                        <td className="gp-strong">{token.value}</td>
-                                        <td>
-                                            <div className="gp-row">
-                                                <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
-                                                    {t`充幣`}
-                                                </button>
-                                                <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
-                                                    {t`提幣`}
-                                                </button>
-                                                <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
-                                                    {t`交易`}
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                ))}
+                                {rows.map(row => {
+                                    const amount = (value: bigint | undefined) =>
+                                        value === undefined || row.decimals === undefined ? DASH : formatAmount(value, row.decimals);
+                                    return (
+                                        <tr key={row.symbol} className={row.deployed ? "" : "is-disabled"}>
+                                            <td>
+                                                <div className="gp-row">
+                                                    <TokenIcon symbol={row.symbol} />
+                                                    <span className="gp-strong">{row.symbol}</span>
+                                                </div>
+                                            </td>
+                                            <td className="gp-strong">{amount(row.total)}</td>
+                                            <td>{amount(row.balance)}</td>
+                                            <td>{amount(row.locked)}</td>
+                                            <td>{fmtValue(row.price)}</td>
+                                            <td className="gp-strong">{fmtValue(row.value)}</td>
+                                            <td>
+                                                <div className="gp-row">
+                                                    <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
+                                                        {t`充幣`}
+                                                    </button>
+                                                    <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
+                                                        {t`提幣`}
+                                                    </button>
+                                                    <button type="button" className="gp-btn gp-btn-outline gp-btn-sm" disabled>
+                                                        {t`交易`}
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
                             </tbody>
                         </table>
                     </div>
+                    <div className="gp-muted gp-small">{t`鎖定 = TierStaking 質押中的 GG；價格為 OracleAdapter TWAP，USDT 以 ${USDT_DECIMALS} 位小數計。`}</div>
                 </Card>
             )}
 
             {showNfts && (
-                <Card title={t`NFT 資產（3）`} action={{ label: t`查看更多`, to: "/nft" }}>
-                    <div className="gp-grid gp-grid-3 gp-grid-tight">
-                        {myNfts().map(nft => (
-                            <NftCard key={nft.key} nft={nft} layout="horizontal" />
-                        ))}
-                    </div>
+                <Card title={t`NFT 權益`} action={{ label: t`查看更多`, to: "/nft" }}>
+                    <KvList
+                        className="gp-kv--boxed"
+                        rows={[
+                            [t`剩餘額度`, `${fmtValue(rights)} USDT`],
+                            [t`累計獲得`, `${fmtValue(rightsCreated)} USDT`],
+                            [t`已使用`, `${fmtValue(rightsConsumed)} USDT`],
+                        ]}
+                    />
                 </Card>
             )}
 
-            {tab === "earning" && (
-                <Card title={t`收益資產`} className="is-disabled">
-                    <div className="gp-empty">{t`暫無記錄`}</div>
+            {showEarning && (
+                <Card title={t`收益資產`}>
+                    <KvList
+                        className="gp-kv--boxed"
+                        rows={[
+                            [t`待領取持倉獎勵`, `${gg(pending)} GG`],
+                            [t`社區積分（未領取）`, `${gg(credits)} GG`],
+                            [t`額度可覆蓋的社區 GG`, `${gg(claimable)} GG`],
+                            [t`待領取估值（USD）`, fmtValue(pendingValue)],
+                        ]}
+                    />
                 </Card>
             )}
         </div>

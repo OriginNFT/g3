@@ -1,0 +1,14 @@
+# Narrower than the repository root .gitignore, and never in conflict with it.
+node_modules/
+.DS_Store
+
+.env
+.env.*
+!.env.sample
+
+dist/
+
+# NOT ignored, on purpose: src/assets/abi/ and src/assets/addresses.json are
+# written by `npm run sync-abi` / `npm run sync-addresses` and committed anyway.
+# src/chain/client.js imports the address book, so a fresh checkout cannot build
+# without a tracked copy. Regenerate after every deploy that moves an address.

@@ -1,0 +1,67 @@
+// Deploys the NFTRightsLedger proxy. Depends on: GOT2_ADDRESS, GG_ADDRESS, ORACLE_ADAPTER_ADDRESS.
+// Writes NFT_RIGHTS_LEDGER_ADDRESS. The deployer gets DEFAULT_ADMIN_ROLE and owns the ProxyAdmin.
+const { ethers, upgrades, network } = require("hardhat");
+const { allAddress, updateAddress } = require("../utils/config");
+
+const ZERO = "0x0000000000000000000000000000000000000000";
+
+async function main() {
+    const addresses = await allAddress(network.name);
+
+    const [deployer] = await ethers.getSigners();
+    const balance = await ethers.provider.getBalance(deployer.address);
+    console.log(`network:  ${network.name}`);
+    console.log(`deployer: ${deployer.address}`);
+    console.log(`balance:  ${ethers.formatEther(balance)}`);
+
+    const got2 = addresses.GOT2_ADDRESS;
+    if (!got2 || !ethers.isAddress(got2) || got2 === ZERO) {
+        throw new Error(`invalid or missing ${network.name}.GOT2_ADDRESS: ${got2} (fill config/addresses.json)`);
+    }
+    console.log(`GOT2_ADDRESS: ${got2}`);
+
+    const gg = addresses.GG_ADDRESS;
+    if (!gg || !ethers.isAddress(gg) || gg === ZERO) {
+        throw new Error(`invalid or missing ${network.name}.GG_ADDRESS: ${gg} (run deploy/10-gg-token.js first)`);
+    }
+    console.log(`GG_ADDRESS: ${gg}`);
+
+    const oracleAdapter = addresses.ORACLE_ADAPTER_ADDRESS;
+    if (!oracleAdapter || !ethers.isAddress(oracleAdapter) || oracleAdapter === ZERO) {
+        throw new Error(`invalid or missing ${network.name}.ORACLE_ADAPTER_ADDRESS: ${oracleAdapter} (run deploy/12-oracle-adapter.js first)`);
+    }
+    console.log(`ORACLE_ADAPTER_ADDRESS: ${oracleAdapter}`);
+
+    // Refuse to replace a live proxy. To redeploy on purpose, clear the key.
+    const existing = addresses.NFT_RIGHTS_LEDGER_ADDRESS;
+    if (existing && ethers.isAddress(existing) && existing !== ZERO) {
+        const code = await ethers.provider.getCode(existing);
+        if (code !== "0x") {
+            throw new Error(
+                `${network.name}.NFT_RIGHTS_LEDGER_ADDRESS is already ${existing} and has code on this chain - refusing to deploy a second one. ` +
+                    "To redeploy on purpose, clear that key in config/addresses.json first.",
+            );
+        }
+    }
+
+    const Factory = await ethers.getContractFactory("NFTRightsLedger");
+    console.log("deploying NFTRightsLedger (proxy) ...");
+    const proxy = await upgrades.deployProxy(Factory, [got2, gg, oracleAdapter], {
+        initializer: "initialize",
+        kind: "transparent",
+    });
+    await proxy.waitForDeployment();
+    const proxyAddress = await proxy.getAddress();
+    const impl = await upgrades.erc1967.getImplementationAddress(proxyAddress);
+    console.log(`NFTRightsLedger proxy: ${proxyAddress}`);
+    console.log(`NFTRightsLedger impl:  ${impl}`);
+
+    await updateAddress(network.name, "NFT_RIGHTS_LEDGER_ADDRESS", proxyAddress);
+}
+
+main()
+    .then(() => process.exit(0))
+    .catch(error => {
+        console.error(error);
+        process.exit(1);
+    });

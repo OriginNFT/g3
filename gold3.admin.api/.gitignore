@@ -1,0 +1,15 @@
+# Narrower than the repository root .gitignore, and never in conflict with it.
+# It exists so this module still behaves if it is ever pulled out into a
+# repository of its own; inside the monorepo the root file is what governs.
+
+node_modules/
+.DS_Store
+
+.env
+.env.*
+!.env.sample
+
+# pm2 writes here (see ecosystem.config.js). The directory is tracked through
+# .gitkeep because pm2 wants it to exist; nothing written into it is.
+logs/*
+!logs/.gitkeep
